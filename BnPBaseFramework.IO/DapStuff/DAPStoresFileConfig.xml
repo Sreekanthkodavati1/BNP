@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DAPDirectives xmlns="http://www.brierley.com/DAPFileProcessing">
+
+  <!-- General Configuration Parameters -->
+  <DAPConfiguration>
+      <DAPDataType>Stores</DAPDataType>
+      <DateConversionFormat></DateConversionFormat>
+      <TrimStrings>true</TrimStrings>
+      <!-- <EmailInformation> -->
+        <!-- <SMTPServer>cypwebmail.brierleyweb.com</SMTPServer> -->
+        <!-- <SenderEmail>dap_admin@brierley.com</SenderEmail> -->
+        <!-- <SenderDisplayName>Brierley DAP Administrator</SenderDisplayName> -->
+        <!-- <RecepientEmail>pkholia@brierley.com</RecepientEmail> -->
+      <!-- </EmailInformation> -->
+      <!--<DoNotProcess>true</DoNotProcess>-->
+  </DAPConfiguration>
+  
+  <!-- Configuration parameters for message acquisition -->
+  <InputProvider MessageProcessingScheme="Single" DebugOutputPath="E:\DapStuff\Data\Stores\Stage1Out">
+    <FlatFileInput>
+      <CollectionRoot Name="Stores" Structure="Delimited" Delimiter="NL" TagName="">
+        <Record Name="Store" Structure="Delimited" Delimiter="|" TagName="">
+          <Fields>
+            <RecordField Name="Directive" Type="String" Justification="Left" Length=""/>
+            <RecordField Name="StoreId" Type="Number" />
+            <RecordField Name="StoreNumber" Type="String" />
+            <RecordField Name="StoreName" Type="String" />
+            <RecordField Name="BrandName" Type="String" />
+            <RecordField Name="BrandStoreNumber" Type="String" />
+            <RecordField Name="PhoneNumber" Type="String" />
+            <RecordField Name="AddressLineOne" Type="String" />
+            <RecordField Name="AddressLineTwo" Type="String" />
+            <RecordField Name="City" Type="String" />
+            <RecordField Name="StateOrProvince" Type="String" />
+            <RecordField Name="ZipOrPostalCode" Type="String" />
+            <RecordField Name="County" Type="String" />
+            <RecordField Name="Country" Type="String" />
+            <RecordField Name="Status" Type="String" />
+			<RecordField Name="StoreType" Type="String" />
+            <RecordField Name="OpenDate" Type="String" />
+            <RecordField Name="CloseDate" Type="String" />
+            <RecordField Name="Longitude" Type="String" />
+            <RecordField Name="Latitude" Type="String" />
+            <RecordField Name="Region" Type="String" />
+            <RecordField Name="District" Type="String" />
+            <RecordField Name="Zone" Type="String" />
+          </Fields>
+        </Record>
+      </CollectionRoot>
+    </FlatFileInput>
+  </InputProvider>
+  
+  <!-- Output provider -->
+  <OutputProvider>
+    <FrameworkOutput>
+      <!-- Configuration for Dispatcher messages over threads -->
+      <DispatcherConfiguration>
+        <ThreadPoolSize>10</ThreadPoolSize>
+        <RequestsPerThread></RequestsPerThread>
+        <SerializeMembers>false</SerializeMembers>
+      </DispatcherConfiguration>
+      <!-- Final processing directives -->
+      <FrameworkBoundMessageProcessingDirectives>
+        <FrameworkReferenceData>
+          <StoreLoadDirective SanitizationSvcUrl="http://10.4.10.79:8080/axis2/services/CorrectAddressService" SanitizeAddress="false" StoreLoadMethod="StoreId"/>
+        </FrameworkReferenceData>
+      </FrameworkBoundMessageProcessingDirectives>
+    </FrameworkOutput>
+  </OutputProvider>  
+</DAPDirectives>

@@ -1,0 +1,31 @@
+[
+  {
+    "Execution": "Web_Navigator_Smoke",
+    "TestCases": [
+      "Bnp.Core.Tests.Web.Navigator.BTA79_Navigator_Create_Admin_Users.BTA79_Navigator_CreateAdminUser_And_Login_With_AdminUser",
+      "Bnp.Core.Tests.Web.Navigator.BTA79_Navigator_Create_Admin_Users.BTA79_Navigator_CreateDBAAdminUser_And_Login_With_DBAAdminUser",
+      "Bnp.Core.Tests.Web.Navigator.BTA79_Navigator_Create_Admin_Users.BTA79_Navigator_CreateKEYAdminUser_And_Login_With_KEYAdminUser",
+      "Bnp.Core.Tests.Web.Navigator.BTA79_Navigator_Create_Admin_Users.BTA79_Navigator_CreateWEBAdminUser_And_Login_With_WEBAdminUser",
+      "Bnp.Core.Tests.Web.Navigator.BTA80_Navigator_Create_Organizations_And_Environments.BTA80_Navigator_CreateOrganizationsAndEnvironments",
+      "Bnp.Core.Tests.Web.Navigator.BTA81_Navigator_GenerateKeys_AddinConfigfolder.BTA81_Navigator_GenerateKeys",
+      "Bnp.Core.Tests.Web.Navigator.BTA82_Navigator_GenerateDBconfig_AddinConfigfolder.BTA82_Navigator_GenerateDBConfig",
+      "Bnp.Core.Tests.Web.Navigator.BTA83_Navigator_Generate_FrameworkConfigFiles.BTA83_Navigator_GenerateFrameworkCfgFile",
+      "Bnp.Core.Tests.Web.Navigator.BTA84_Navigator_UserWithAllPermission_And_AssigningOrganization.BTA84_Navigator_CreateUserWithAllPermissions",
+      "Bnp.Core.Tests.Web.Navigator.BTA86_Navigator_Create_CSPortal_MPPortals.BTA86_Navigator_Create_CSPortal_MemberPortal",
+      "Bnp.Core.Tests.Web.Navigator.BTA114_Navigator_Create_Product_Category_And_Create_Product_ProductVariants_ProductRewards.BTA_114_Navigator_CreateProductCategory_Product_ProductVariant_Reward",
+      "Bnp.Core.Tests.Web.Navigator.BTA115_Navigator_Create_Bonus_Category_And_Create_Bonus.BTA115_Navigator_Create_BonusCategory_And_Bonus",
+      "Bnp.Core.Tests.Web.Navigator.BTA116_Navigator_Create_Coupon_Category_And_Create_Coupons.BTA_116_Navigator_CreateCouponCategory_Coupon",
+      "Bnp.Core.Tests.Web.Navigator.BTA119_Navigator_Create_Attribute_For_EachContentType_And_AllContentTypes.BTA119_Navigator_Create_Attribute_For_EachContentType_AllContentType_And_VerifyPage",
+      "Bnp.Core.Tests.Web.Navigator.BTA119_Navigator_Create_Attribute_For_EachContentType_And_AllContentTypes.BTA119_Navigator_VerifyAttributes_On_ExtendedAttributesPage",
+      "Bnp.Core.Tests.Web.Navigator.BTA114_Navigator_Create_Product_Category_And_Create_Product_ProductVariants_ProductRewards.BTA_114_Navigator_CreateProductCategory_With_ExtendedAttributes",
+      "Bnp.Core.Tests.Web.Navigator.BTA115_Navigator_Create_Bonus_Category_And_Create_Bonus.BTA115_Navigator_Create_BonusCategory_And_BonusWithExtendedAttributeSet",
+      "Bnp.Core.Tests.Web.Navigator.BTA116_Navigator_Create_Coupon_Category_And_Create_Coupons.BTA_116_Navigator_CreateCouponCategoryWithExtendedAttributeSet",
+      "Bnp.Core.Tests.Web.Navigator.BTA117_Navigator_CreatMailingName.BTA117_Navigator_CreatMailingNames",
+      "Bnp.Core.Tests.Web.Navigator.BTA118_Navigator_CreateSMSMessage.BTA118_Navigator_CreateSMSMessages",
+      "Bnp.Core.Tests.Web.Navigator.BTA120_Navigator_Create_Promotion.BTA120_Navigator_Create_Targeted_Promotion",
+      "Bnp.Core.Tests.Web.Navigator.BTA573_Navigator_GenerateAssembly_clientAssembly.BTA573_Navigator_GenerateAssembly",
+      "Bnp.Core.Tests.Web.Navigator.BTA281_Navigator_Create_Message.BTA281_Navigator_Create_New_Message",
+      "Bnp.Core.Tests.Web.Navigator.BTA85_Navigator_Users_CreateAttributSet.BTA85_Navigator_Users_CreateAttributSets"
+    ]
+  }
+]

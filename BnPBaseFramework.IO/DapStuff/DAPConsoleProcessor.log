@@ -1,0 +1,863 @@
+2018-11-16 08:18:50,165 [1] INFO  [LWDataAcquisitionService] - DAPConsoleProcessor:Main: Initialized log4net using config file 'C:\Users\kconners\Desktop\DapStuff\Brierley.DataAcquisition\DAPConsole\log4net.xml'
+2018-11-16 08:18:51,395 [1] INFO  [LWDataAcquisitionService] - DAPMain:InitializeConfiguration: Initialization configuration file C:\Users\kconners\Desktop\DapStuff\DAPStoresFileConfig.xml
+2018-11-16 08:18:51,963 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: Initializing DAP job.
+2018-11-16 08:19:03,363 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: New job 1801 created to process file C:\Users\kconners\Desktop\DapStuff\Stores.txt
+2018-11-16 08:19:03,367 [14] INFO  [AsyncJobLogger] - JobId:1442 JobNumber:1801 JobName:
+2018-11-16 08:19:03,376 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetOutboundDAPProvider: Creating a framework output provider.
+2018-11-16 08:19:03,410 [1] INFO  [LWDataAcquisitionService] - DAPMessageDispatcherImpl:Initialize: Initializing thread pool manager for job 1801 with 10 threads.
+2018-11-16 08:19:03,488 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetInboundDAPProvider: Creating a file provider.
+2018-11-16 08:19:03,490 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: Initializing...
+2018-11-16 08:19:03,490 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: File to process: C:\Users\kconners\Desktop\DapStuff\Stores.txt
+2018-11-16 08:19:06,292 [1] ERROR [LWDataAcquisitionService] - DAPProviderUtil:GetNextMessage: Error getting next message.
+Exception Message: Error getting input record.
+Exception Type: LWDAPInputProviderException
+Stack Trace: 
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Input.FileProvider.FlatFileSchema.GetNextRecord(StreamReader reader) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Input\FileProvider\FlatFileSchema.cs:line 226
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Input.FileProvider.DAPFlatFileProvider.GetNextMessage() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Input\FileProvider\DAPFlatFileProvider.cs:line 97
+Inner Exception Message: Index was outside the bounds of the array.
+Inner Exception Type: IndexOutOfRangeException
+Inner Exception Stack Trace: 
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Input.FileProvider.FlatFileSchema.ConvertToNode(XElement rootNode, RecordType meta, String buffer) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Input\FileProvider\FlatFileSchema.cs:line 59
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Input.FileProvider.FlatFileSchema.GetNextRecord(StreamReader reader) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Input\FileProvider\FlatFileSchema.cs:line 185
+
+2018-11-16 08:19:06,299 [15] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:BTADEV_QA LogSource:  Message:Directive|StoreId|StoreNumber|StoreName|BrandName|BrandStoreNmbr|PhoneNumber|AddressLineOne|AddressLineTwo|City|StateOrProvince|ZipOrPostalCode|County|Country|Status|OpenDate|CloseDate|Longitude|Latitude|Region|District|Zone Error:Error getting input record.   at Brierley.LoyaltyWare.DataAcquisition.Core.Input.FileProvider.FlatFileSchema.GetNextRecord(StreamReader reader) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Input\FileProvider\FlatFileSchema.cs:line 226
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Input.FileProvider.DAPFlatFileProvider.GetNextMessage() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Input\FileProvider\DAPFlatFileProvider.cs:line 111
+   at Brierley.LoyaltyWare.DataAcquisition.Core.DAPMain.SingleMessageProcessing(IDAPInputProvider provider) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\DAPMain.cs:line 359
+2018-11-16 08:19:06,905 [1] ERROR [LWDataAcquisitionService] - DAPProviderUtil:GetNextMessage: Error getting next message.
+Exception Message: Error getting input record.
+Exception Type: LWDAPInputProviderException
+Stack Trace: 
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Input.FileProvider.FlatFileSchema.GetNextRecord(StreamReader reader) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Input\FileProvider\FlatFileSchema.cs:line 226
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Input.FileProvider.DAPFlatFileProvider.GetNextMessage() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Input\FileProvider\DAPFlatFileProvider.cs:line 97
+Inner Exception Message: Index was outside the bounds of the array.
+Inner Exception Type: IndexOutOfRangeException
+Inner Exception Stack Trace: 
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Input.FileProvider.FlatFileSchema.ConvertToNode(XElement rootNode, RecordType meta, String buffer) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Input\FileProvider\FlatFileSchema.cs:line 59
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Input.FileProvider.FlatFileSchema.GetNextRecord(StreamReader reader) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Input\FileProvider\FlatFileSchema.cs:line 185
+
+2018-11-16 08:19:06,906 [15] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:BTADEV_QA LogSource:  Message:C|11235|DemoStore235|Frisco Store|ABC||6667778989|3400 Parker Road||Plano|TX|75034|Collin|USA|1|1|||9012|3456|Southwest| Error:Error getting input record.   at Brierley.LoyaltyWare.DataAcquisition.Core.Input.FileProvider.FlatFileSchema.GetNextRecord(StreamReader reader) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Input\FileProvider\FlatFileSchema.cs:line 226
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Input.FileProvider.DAPFlatFileProvider.GetNextMessage() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Input\FileProvider\DAPFlatFileProvider.cs:line 111
+   at Brierley.LoyaltyWare.DataAcquisition.Core.DAPMain.SingleMessageProcessing(IDAPInputProvider provider) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\DAPMain.cs:line 359
+2018-11-16 08:19:06,911 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-11-16 08:19:06,911 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 1 is being shutdown.
+2018-11-16 08:19:06,912 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 2 is being shutdown.
+2018-11-16 08:19:06,912 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 3 is being shutdown.
+2018-11-16 08:19:06,912 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 4 is being shutdown.
+2018-11-16 08:19:06,912 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 5 is being shutdown.
+2018-11-16 08:19:06,912 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 6 is being shutdown.
+2018-11-16 08:19:06,912 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 7 is being shutdown.
+2018-11-16 08:19:06,912 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 8 is being shutdown.
+2018-11-16 08:19:06,913 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 9 is being shutdown.
+2018-11-16 08:19:07,508 [17] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region named 'StoresByLocationGroup' created using defaults - Max items: 1000. Items to scavenge: 10
+2018-11-16 08:19:08,056 [17] INFO  [LWDataAcquisitionService] - LWDAPStoreProcessor:ProcessStoreDef: Successfully created store with id 1445
+2018-11-16 08:19:08,370 [17] INFO  [LWDataAcquisitionService] - LWDAPStoreProcessor:ProcessStoreDef: Successfully created store with id 1447
+2018-11-16 08:19:08,428 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-11-16 08:19:08,429 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 1 is being shutdown.
+2018-11-16 08:19:08,430 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 2 is being shutdown.
+2018-11-16 08:19:08,431 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 3 is being shutdown.
+2018-11-16 08:19:08,431 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 4 is being shutdown.
+2018-11-16 08:19:08,432 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 5 is being shutdown.
+2018-11-16 08:19:08,433 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 6 is being shutdown.
+2018-11-16 08:19:08,434 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 7 is being shutdown.
+2018-11-16 08:19:08,434 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 8 is being shutdown.
+2018-11-16 08:19:08,435 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 9 is being shutdown.
+2018-11-16 08:19:08,445 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWAsyncJobLogger is being shutdown.
+2018-11-16 08:19:11,356 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 1801 finished.  Summarizing it.
+2018-11-16 08:19:11,539 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 1801 has finished.  2 messages received - 2 messages failed.
+2018-11-16 08:19:11,689 [1] INFO  [AsyncJobLogger] - JobId:1442 JobNumber:1801 JobName:
+2018-11-16 08:22:11,430 [1] INFO  [LWDataAcquisitionService] - DAPConsoleProcessor:Main: Initialized log4net using config file 'C:\Users\kconners\Desktop\DapStuff\Brierley.DataAcquisition\DAPConsole\log4net.xml'
+2018-11-16 08:22:11,456 [1] INFO  [LWDataAcquisitionService] - DAPMain:InitializeConfiguration: Initialization configuration file C:\Users\kconners\Desktop\DapStuff\DAPStoresFileConfig.xml
+2018-11-16 08:22:11,475 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: Initializing DAP job.
+2018-11-16 08:22:11,971 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: New job 1851 created to process file C:\Users\kconners\Desktop\DapStuff\Stores.txt
+2018-11-16 08:22:11,976 [12] INFO  [AsyncJobLogger] - JobId:1449 JobNumber:1851 JobName:
+2018-11-16 08:22:11,984 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetOutboundDAPProvider: Creating a framework output provider.
+2018-11-16 08:22:11,998 [1] INFO  [LWDataAcquisitionService] - DAPMessageDispatcherImpl:Initialize: Initializing thread pool manager for job 1851 with 10 threads.
+2018-11-16 08:22:12,007 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetInboundDAPProvider: Creating a file provider.
+2018-11-16 08:22:12,008 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: Initializing...
+2018-11-16 08:22:12,009 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: File to process: C:\Users\kconners\Desktop\DapStuff\Stores.txt
+2018-11-16 08:22:12,017 [1] ERROR [LWDataAcquisitionService] - DAPProviderUtil:GetNextMessage: Error getting next message.
+Exception Message: Error getting input record.
+Exception Type: LWDAPInputProviderException
+Stack Trace: 
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Input.FileProvider.FlatFileSchema.GetNextRecord(StreamReader reader) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Input\FileProvider\FlatFileSchema.cs:line 226
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Input.FileProvider.DAPFlatFileProvider.GetNextMessage() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Input\FileProvider\DAPFlatFileProvider.cs:line 97
+Inner Exception Message: Index was outside the bounds of the array.
+Inner Exception Type: IndexOutOfRangeException
+Inner Exception Stack Trace: 
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Input.FileProvider.FlatFileSchema.ConvertToNode(XElement rootNode, RecordType meta, String buffer) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Input\FileProvider\FlatFileSchema.cs:line 59
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Input.FileProvider.FlatFileSchema.GetNextRecord(StreamReader reader) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Input\FileProvider\FlatFileSchema.cs:line 185
+
+2018-11-16 08:22:12,022 [14] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:BTADEV_QA LogSource:  Message:Directive|StoreId|StoreNumber|StoreName|BrandName|BrandStoreNmbr|PhoneNumber|AddressLineOne|AddressLineTwo|City|StateOrProvince|ZipOrPostalCode|County|Country|Status|OpenDate|CloseDate|Longitude|Latitude|Region|District|Zone Error:Error getting input record.   at Brierley.LoyaltyWare.DataAcquisition.Core.Input.FileProvider.FlatFileSchema.GetNextRecord(StreamReader reader) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Input\FileProvider\FlatFileSchema.cs:line 226
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Input.FileProvider.DAPFlatFileProvider.GetNextMessage() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Input\FileProvider\DAPFlatFileProvider.cs:line 111
+   at Brierley.LoyaltyWare.DataAcquisition.Core.DAPMain.SingleMessageProcessing(IDAPInputProvider provider) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\DAPMain.cs:line 359
+2018-11-16 08:22:12,035 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-11-16 08:22:12,035 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 1 is being shutdown.
+2018-11-16 08:22:12,035 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 2 is being shutdown.
+2018-11-16 08:22:12,035 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 3 is being shutdown.
+2018-11-16 08:22:12,036 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 4 is being shutdown.
+2018-11-16 08:22:12,036 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 5 is being shutdown.
+2018-11-16 08:22:12,036 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 6 is being shutdown.
+2018-11-16 08:22:12,036 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 7 is being shutdown.
+2018-11-16 08:22:12,036 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 8 is being shutdown.
+2018-11-16 08:22:12,036 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 9 is being shutdown.
+2018-11-16 08:22:12,059 [17] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region named 'StoresByLocationGroup' created using defaults - Max items: 1000. Items to scavenge: 10
+2018-11-16 08:22:13,848 [16] ERROR [LoyaltyWareFramework] - DaoBase:SaveEntity: Error saving object of type Brierley.FrameWork.Data.DomainModel.StoreDef
+Exception Message: ORA-00001: unique constraint (OE_3.UQ_STOREDEF_STORENUMBER) violated
+Exception Type: OracleException
+Stack Trace: 
+   at OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean& hasMoreRowsInDB, Boolean bFirstIterationDone)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at PetaPoco.Database.ExecuteNonQueryHelper(IDbCommand cmd) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 2103
+   at PetaPoco.DatabaseTypes.OracleDatabaseType.ExecuteInsert(Database db, IDbCommand cmd, String PrimaryKeyName) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 4195
+   at PetaPoco.Database.Insert(String tableName, String primaryKeyName, Boolean autoIncrement, Object poco) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 1199
+   at PetaPoco.Database.Insert(Object poco) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 1213
+   at Brierley.FrameWork.Data.DataAccess.DaoBase`1.SaveEntity(Object entity) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\DataAccess\DaoBase.cs:line 226
+
+2018-11-16 08:22:13,849 [17] ERROR [LoyaltyWareFramework] - DaoBase:SaveEntity: Error saving object of type Brierley.FrameWork.Data.DomainModel.StoreDef
+Exception Message: ORA-00001: unique constraint (OE_3.UQ_STOREDEF_STORENUMBER) violated
+Exception Type: OracleException
+Stack Trace: 
+   at OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean& hasMoreRowsInDB, Boolean bFirstIterationDone)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at PetaPoco.Database.ExecuteNonQueryHelper(IDbCommand cmd) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 2103
+   at PetaPoco.DatabaseTypes.OracleDatabaseType.ExecuteInsert(Database db, IDbCommand cmd, String PrimaryKeyName) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 4195
+   at PetaPoco.Database.Insert(String tableName, String primaryKeyName, Boolean autoIncrement, Object poco) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 1199
+   at PetaPoco.Database.Insert(Object poco) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 1213
+   at Brierley.FrameWork.Data.DataAccess.DaoBase`1.SaveEntity(Object entity) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\DataAccess\DaoBase.cs:line 226
+
+2018-11-16 08:22:14,472 [17] ERROR [LWDataAcquisitionService] - LWDAPStoreProcessor:ProcessStore: Error while processing store.
+Exception Message: ORA-00001: unique constraint (OE_3.UQ_STOREDEF_STORENUMBER) violated
+Exception Type: OracleException
+Stack Trace: 
+   at OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean& hasMoreRowsInDB, Boolean bFirstIterationDone)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at PetaPoco.Database.ExecuteNonQueryHelper(IDbCommand cmd) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 2103
+   at PetaPoco.DatabaseTypes.OracleDatabaseType.ExecuteInsert(Database db, IDbCommand cmd, String PrimaryKeyName) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 4195
+   at PetaPoco.Database.Insert(String tableName, String primaryKeyName, Boolean autoIncrement, Object poco) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 1199
+   at PetaPoco.Database.Insert(Object poco) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 1213
+   at Brierley.FrameWork.Data.DataAccess.DaoBase`1.SaveEntity(Object entity) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\DataAccess\DaoBase.cs:line 244
+   at Brierley.FrameWork.Data.DataAccess.ContentDefDaoBase`1.Create(T t) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\DataAccess\ContentDefDaoBase.cs:line 74
+   at Brierley.FrameWork.Data.ContentService.CreateStoreDef(StoreDef store) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\ContentService.cs:line 2611
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPStoreProcessor.ProcessStoreDef(String whatToDo, StoreDef storeDef) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPStoreProcessor.cs:line 304
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPStoreProcessor.ProcessStore(FwkRefDataInboundDirectives inDirectives) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPStoreProcessor.cs:line 164
+
+2018-11-16 08:22:14,472 [16] ERROR [LWDataAcquisitionService] - LWDAPStoreProcessor:ProcessStore: Error while processing store.
+Exception Message: ORA-00001: unique constraint (OE_3.UQ_STOREDEF_STORENUMBER) violated
+Exception Type: OracleException
+Stack Trace: 
+   at OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean& hasMoreRowsInDB, Boolean bFirstIterationDone)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at PetaPoco.Database.ExecuteNonQueryHelper(IDbCommand cmd) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 2103
+   at PetaPoco.DatabaseTypes.OracleDatabaseType.ExecuteInsert(Database db, IDbCommand cmd, String PrimaryKeyName) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 4195
+   at PetaPoco.Database.Insert(String tableName, String primaryKeyName, Boolean autoIncrement, Object poco) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 1199
+   at PetaPoco.Database.Insert(Object poco) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 1213
+   at Brierley.FrameWork.Data.DataAccess.DaoBase`1.SaveEntity(Object entity) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\DataAccess\DaoBase.cs:line 244
+   at Brierley.FrameWork.Data.DataAccess.ContentDefDaoBase`1.Create(T t) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\DataAccess\ContentDefDaoBase.cs:line 74
+   at Brierley.FrameWork.Data.ContentService.CreateStoreDef(StoreDef store) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\ContentService.cs:line 2611
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPStoreProcessor.ProcessStoreDef(String whatToDo, StoreDef storeDef) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPStoreProcessor.cs:line 304
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPStoreProcessor.ProcessStore(FwkRefDataInboundDirectives inDirectives) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPStoreProcessor.cs:line 164
+
+2018-11-16 08:22:14,494 [17] ERROR [LWDataAcquisitionService] - AttributeSetProcessingBase:ProcessRequest: Error during processing.
+Exception Message: ORA-00001: unique constraint (OE_3.UQ_STOREDEF_STORENUMBER) violated
+Exception Type: OracleException
+Stack Trace: 
+   at OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean& hasMoreRowsInDB, Boolean bFirstIterationDone)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at PetaPoco.Database.ExecuteNonQueryHelper(IDbCommand cmd) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 2103
+   at PetaPoco.DatabaseTypes.OracleDatabaseType.ExecuteInsert(Database db, IDbCommand cmd, String PrimaryKeyName) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 4195
+   at PetaPoco.Database.Insert(String tableName, String primaryKeyName, Boolean autoIncrement, Object poco) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 1199
+   at PetaPoco.Database.Insert(Object poco) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 1213
+   at Brierley.FrameWork.Data.DataAccess.DaoBase`1.SaveEntity(Object entity) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\DataAccess\DaoBase.cs:line 244
+   at Brierley.FrameWork.Data.DataAccess.ContentDefDaoBase`1.Create(T t) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\DataAccess\ContentDefDaoBase.cs:line 74
+   at Brierley.FrameWork.Data.ContentService.CreateStoreDef(StoreDef store) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\ContentService.cs:line 2611
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPStoreProcessor.ProcessStoreDef(String whatToDo, StoreDef storeDef) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPStoreProcessor.cs:line 304
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPStoreProcessor.ProcessStore(FwkRefDataInboundDirectives inDirectives) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPStoreProcessor.cs:line 176
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPStoreProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPStoreProcessor.cs:line 362
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+
+2018-11-16 08:22:14,495 [14] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:BTADEV_QA LogSource:  Message:<Stores>
+  <Store>
+    <Directive>C</Directive>
+    <StoreId>11236</StoreId>
+    <StoreNumber>DemoStore236</StoreNumber>
+    <StoreName>Dallas Store</StoreName>
+    <BrandName>DEF</BrandName>
+    <BrandStoreNumber></BrandStoreNumber>
+    <PhoneNumber>6667778989</PhoneNumber>
+    <AddressLineOne>5809 Dove Creek lane</AddressLineOne>
+    <AddressLineTwo></AddressLineTwo>
+    <City>Plano</City>
+    <StateOrProvince>TX</StateOrProvince>
+    <ZipOrPostalCode>75039</ZipOrPostalCode>
+    <County>Collin</County>
+    <Country>USA</Country>
+    <Status>1</Status>
+    <StoreType>2</StoreType>
+    <OpenDate></OpenDate>
+    <CloseDate></CloseDate>
+    <Longitude>7890</Longitude>
+    <Latitude>1234</Latitude>
+    <Region>Midwest</Region>
+    <District>Southwest</District>
+    <Zone></Zone>
+  </Store>
+</Stores> Error:ORA-00001: unique constraint (OE_3.UQ_STOREDEF_STORENUMBER) violated   at OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean& hasMoreRowsInDB, Boolean bFirstIterationDone)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at PetaPoco.Database.ExecuteNonQueryHelper(IDbCommand cmd) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 2103
+   at PetaPoco.DatabaseTypes.OracleDatabaseType.ExecuteInsert(Database db, IDbCommand cmd, String PrimaryKeyName) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 4195
+   at PetaPoco.Database.Insert(String tableName, String primaryKeyName, Boolean autoIncrement, Object poco) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 1199
+   at PetaPoco.Database.Insert(Object poco) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 1213
+   at Brierley.FrameWork.Data.DataAccess.DaoBase`1.SaveEntity(Object entity) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\DataAccess\DaoBase.cs:line 244
+   at Brierley.FrameWork.Data.DataAccess.ContentDefDaoBase`1.Create(T t) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\DataAccess\ContentDefDaoBase.cs:line 74
+   at Brierley.FrameWork.Data.ContentService.CreateStoreDef(StoreDef store) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\ContentService.cs:line 2611
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPStoreProcessor.ProcessStoreDef(String whatToDo, StoreDef storeDef) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPStoreProcessor.cs:line 304
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPStoreProcessor.ProcessStore(FwkRefDataInboundDirectives inDirectives) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPStoreProcessor.cs:line 176
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPStoreProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPStoreProcessor.cs:line 362
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+2018-11-16 08:22:14,496 [16] ERROR [LWDataAcquisitionService] - AttributeSetProcessingBase:ProcessRequest: Error during processing.
+Exception Message: ORA-00001: unique constraint (OE_3.UQ_STOREDEF_STORENUMBER) violated
+Exception Type: OracleException
+Stack Trace: 
+   at OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean& hasMoreRowsInDB, Boolean bFirstIterationDone)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at PetaPoco.Database.ExecuteNonQueryHelper(IDbCommand cmd) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 2103
+   at PetaPoco.DatabaseTypes.OracleDatabaseType.ExecuteInsert(Database db, IDbCommand cmd, String PrimaryKeyName) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 4195
+   at PetaPoco.Database.Insert(String tableName, String primaryKeyName, Boolean autoIncrement, Object poco) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 1199
+   at PetaPoco.Database.Insert(Object poco) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 1213
+   at Brierley.FrameWork.Data.DataAccess.DaoBase`1.SaveEntity(Object entity) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\DataAccess\DaoBase.cs:line 244
+   at Brierley.FrameWork.Data.DataAccess.ContentDefDaoBase`1.Create(T t) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\DataAccess\ContentDefDaoBase.cs:line 74
+   at Brierley.FrameWork.Data.ContentService.CreateStoreDef(StoreDef store) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\ContentService.cs:line 2611
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPStoreProcessor.ProcessStoreDef(String whatToDo, StoreDef storeDef) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPStoreProcessor.cs:line 304
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPStoreProcessor.ProcessStore(FwkRefDataInboundDirectives inDirectives) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPStoreProcessor.cs:line 176
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPStoreProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPStoreProcessor.cs:line 362
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+
+2018-11-16 08:22:14,498 [14] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:BTADEV_QA LogSource:  Message:<Stores>
+  <Store>
+    <Directive>C</Directive>
+    <StoreId>11234</StoreId>
+    <StoreNumber>DemoStore234</StoreNumber>
+    <StoreName>Plano Store</StoreName>
+    <BrandName>BSG</BrandName>
+    <BrandStoreNumber></BrandStoreNumber>
+    <PhoneNumber>6667778989</PhoneNumber>
+    <AddressLineOne>3400 Parker Road</AddressLineOne>
+    <AddressLineTwo></AddressLineTwo>
+    <City>Plano</City>
+    <StateOrProvince>TX</StateOrProvince>
+    <ZipOrPostalCode>75034</ZipOrPostalCode>
+    <County>Collin</County>
+    <Country>USA</Country>
+    <Status>1</Status>
+    <StoreType>0</StoreType>
+    <OpenDate></OpenDate>
+    <CloseDate></CloseDate>
+    <Longitude>1234</Longitude>
+    <Latitude>5678</Latitude>
+    <Region>SouthWest</Region>
+    <District>Southwest</District>
+    <Zone></Zone>
+  </Store>
+</Stores> Error:ORA-00001: unique constraint (OE_3.UQ_STOREDEF_STORENUMBER) violated   at OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean& hasMoreRowsInDB, Boolean bFirstIterationDone)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at PetaPoco.Database.ExecuteNonQueryHelper(IDbCommand cmd) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 2103
+   at PetaPoco.DatabaseTypes.OracleDatabaseType.ExecuteInsert(Database db, IDbCommand cmd, String PrimaryKeyName) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 4195
+   at PetaPoco.Database.Insert(String tableName, String primaryKeyName, Boolean autoIncrement, Object poco) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 1199
+   at PetaPoco.Database.Insert(Object poco) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Models\PetaPoco.cs:line 1213
+   at Brierley.FrameWork.Data.DataAccess.DaoBase`1.SaveEntity(Object entity) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\DataAccess\DaoBase.cs:line 244
+   at Brierley.FrameWork.Data.DataAccess.ContentDefDaoBase`1.Create(T t) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\DataAccess\ContentDefDaoBase.cs:line 74
+   at Brierley.FrameWork.Data.ContentService.CreateStoreDef(StoreDef store) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\ContentService.cs:line 2611
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPStoreProcessor.ProcessStoreDef(String whatToDo, StoreDef storeDef) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPStoreProcessor.cs:line 304
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPStoreProcessor.ProcessStore(FwkRefDataInboundDirectives inDirectives) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPStoreProcessor.cs:line 176
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPStoreProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPStoreProcessor.cs:line 362
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+2018-11-16 08:22:14,571 [16] INFO  [LWDataAcquisitionService] - LWDAPStoreProcessor:ProcessStoreDef: Successfully created store with id 1453
+2018-11-16 08:22:14,586 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-11-16 08:22:14,587 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 1 is being shutdown.
+2018-11-16 08:22:14,588 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 2 is being shutdown.
+2018-11-16 08:22:14,589 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 3 is being shutdown.
+2018-11-16 08:22:14,589 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 4 is being shutdown.
+2018-11-16 08:22:14,590 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 5 is being shutdown.
+2018-11-16 08:22:14,591 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 6 is being shutdown.
+2018-11-16 08:22:14,591 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 7 is being shutdown.
+2018-11-16 08:22:14,592 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 8 is being shutdown.
+2018-11-16 08:22:14,592 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 9 is being shutdown.
+2018-11-16 08:22:14,602 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWAsyncJobLogger is being shutdown.
+2018-11-16 08:22:17,970 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 1851 finished.  Summarizing it.
+2018-11-16 08:22:17,971 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 1851 has finished.  3 messages received - 2 messages failed.
+2018-11-16 08:22:18,003 [1] INFO  [AsyncJobLogger] - JobId:1449 JobNumber:1851 JobName:
+2018-11-16 08:31:24,967 [1] INFO  [LWDataAcquisitionService] - DAPConsoleProcessor:Main: Initialized log4net using config file 'C:\Users\kconners\Desktop\DapStuff\Brierley.DataAcquisition\DAPConsole\log4net.xml'
+2018-11-16 08:31:25,005 [1] INFO  [LWDataAcquisitionService] - DAPMain:InitializeConfiguration: Initialization configuration file C:\Users\kconners\Desktop\DapStuff\DAPStoresFileConfig.xml
+2018-11-16 08:31:25,025 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: Initializing DAP job.
+2018-11-16 08:31:25,727 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: New job 1901 created to process file C:\Users\kconners\Desktop\DapStuff\Stores.txt
+2018-11-16 08:31:25,729 [14] INFO  [AsyncJobLogger] - JobId:1457 JobNumber:1901 JobName:
+2018-11-16 08:31:25,739 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetOutboundDAPProvider: Creating a framework output provider.
+2018-11-16 08:31:25,816 [1] INFO  [LWDataAcquisitionService] - DAPMessageDispatcherImpl:Initialize: Initializing thread pool manager for job 1901 with 10 threads.
+2018-11-16 08:31:25,847 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetInboundDAPProvider: Creating a file provider.
+2018-11-16 08:31:25,851 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: Initializing...
+2018-11-16 08:31:25,853 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: File to process: C:\Users\kconners\Desktop\DapStuff\Stores.txt
+2018-11-16 08:31:25,870 [1] ERROR [LWDataAcquisitionService] - DAPProviderUtil:GetNextMessage: Error getting next message.
+Exception Message: Error getting input record.
+Exception Type: LWDAPInputProviderException
+Stack Trace: 
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Input.FileProvider.FlatFileSchema.GetNextRecord(StreamReader reader) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Input\FileProvider\FlatFileSchema.cs:line 226
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Input.FileProvider.DAPFlatFileProvider.GetNextMessage() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Input\FileProvider\DAPFlatFileProvider.cs:line 97
+Inner Exception Message: Index was outside the bounds of the array.
+Inner Exception Type: IndexOutOfRangeException
+Inner Exception Stack Trace: 
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Input.FileProvider.FlatFileSchema.ConvertToNode(XElement rootNode, RecordType meta, String buffer) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Input\FileProvider\FlatFileSchema.cs:line 59
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Input.FileProvider.FlatFileSchema.GetNextRecord(StreamReader reader) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Input\FileProvider\FlatFileSchema.cs:line 185
+
+2018-11-16 08:31:25,874 [15] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:BTADEV_QA LogSource:  Message:Directive|StoreId|StoreNumber|StoreName|BrandName|BrandStoreNmbr|PhoneNumber|AddressLineOne|AddressLineTwo|City|StateOrProvince|ZipOrPostalCode|County|Country|Status|OpenDate|CloseDate|Longitude|Latitude|Region|District|Zone Error:Error getting input record.   at Brierley.LoyaltyWare.DataAcquisition.Core.Input.FileProvider.FlatFileSchema.GetNextRecord(StreamReader reader) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Input\FileProvider\FlatFileSchema.cs:line 226
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Input.FileProvider.DAPFlatFileProvider.GetNextMessage() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Input\FileProvider\DAPFlatFileProvider.cs:line 111
+   at Brierley.LoyaltyWare.DataAcquisition.Core.DAPMain.SingleMessageProcessing(IDAPInputProvider provider) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\DAPMain.cs:line 359
+2018-11-16 08:31:25,887 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-11-16 08:31:25,888 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 1 is being shutdown.
+2018-11-16 08:31:25,888 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 2 is being shutdown.
+2018-11-16 08:31:25,888 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 3 is being shutdown.
+2018-11-16 08:31:25,888 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 4 is being shutdown.
+2018-11-16 08:31:25,888 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 5 is being shutdown.
+2018-11-16 08:31:25,889 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 6 is being shutdown.
+2018-11-16 08:31:25,889 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 7 is being shutdown.
+2018-11-16 08:31:25,889 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 8 is being shutdown.
+2018-11-16 08:31:25,889 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 9 is being shutdown.
+2018-11-16 08:31:25,914 [18] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region named 'StoresByLocationGroup' created using defaults - Max items: 1000. Items to scavenge: 10
+2018-11-16 08:31:26,071 [18] INFO  [LWDataAcquisitionService] - LWDAPStoreProcessor:ProcessStoreDef: Successfully created store with id 1459
+2018-11-16 08:31:26,083 [17] INFO  [LWDataAcquisitionService] - LWDAPStoreProcessor:ProcessStoreDef: Successfully created store with id 1460
+2018-11-16 08:31:26,218 [17] INFO  [LWDataAcquisitionService] - LWDAPStoreProcessor:ProcessStoreDef: Successfully created store with id 1463
+2018-11-16 08:31:27,842 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-11-16 08:31:27,843 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 1 is being shutdown.
+2018-11-16 08:31:27,844 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 2 is being shutdown.
+2018-11-16 08:31:27,845 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 3 is being shutdown.
+2018-11-16 08:31:27,846 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 4 is being shutdown.
+2018-11-16 08:31:27,847 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 5 is being shutdown.
+2018-11-16 08:31:27,848 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 6 is being shutdown.
+2018-11-16 08:31:27,849 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 7 is being shutdown.
+2018-11-16 08:31:27,849 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 8 is being shutdown.
+2018-11-16 08:31:27,850 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 9 is being shutdown.
+2018-11-16 08:31:27,860 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWAsyncJobLogger is being shutdown.
+2018-11-16 08:31:31,752 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 1901 finished.  Summarizing it.
+2018-11-16 08:31:31,834 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 1901 has finished.  3 messages received - 1 messages failed.
+2018-11-16 08:31:31,850 [1] INFO  [AsyncJobLogger] - JobId:1457 JobNumber:1901 JobName:
+2018-11-16 08:57:33,638 [1] INFO  [LWDataAcquisitionService] - DAPConsoleProcessor:Main: Initialized log4net using config file 'C:\Users\kconners\Desktop\DapStuff\Brierley.DataAcquisition\DAPConsole\log4net.xml'
+2018-11-16 08:57:33,667 [1] INFO  [LWDataAcquisitionService] - DAPMain:InitializeConfiguration: Initialization configuration file C:\Users\kconners\Desktop\DapStuff\DAPEnrollmentFileConfig.xml
+2018-11-16 08:57:33,750 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: Initializing DAP job.
+2018-11-16 08:57:34,197 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: New job 1951 created to process file C:\Users\kconners\Desktop\DapStuff\Enrollment.txt
+2018-11-16 08:57:34,198 [13] INFO  [AsyncJobLogger] - JobId:1473 JobNumber:1951 JobName:
+2018-11-16 08:57:34,202 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetOutboundDAPProvider: Creating a framework output provider.
+2018-11-16 08:57:34,219 [1] INFO  [LWDataAcquisitionService] - DAPMessageDispatcherImpl:Initialize: Initializing thread pool manager for job 1951 with 1 threads.
+2018-11-16 08:57:34,226 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetInboundDAPProvider: Creating a file provider.
+2018-11-16 08:57:34,228 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: Initializing...
+2018-11-16 08:57:34,229 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: File to process: C:\Users\kconners\Desktop\DapStuff\Enrollment.txt
+2018-11-16 08:57:34,576 [1] INFO  [LoyaltyWareFramework] - DynamicCodeUtil:CompileDynamicCode: Compiling dynamic scripts.
+2018-11-16 08:57:34,598 [1] INFO  [LoyaltyWareFramework] - DynamicCodeUtil:CompileDynamicCode: generating code for dynamic script SetNonMemberProperty
+2018-11-16 08:57:38,231 [1] INFO  [LoyaltyWareFramework] - MessagingBus:Initialize: Initializing message bus...
+2018-11-16 08:57:38,312 [1] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: MemberByLoyaltyId
+2018-11-16 08:57:38,552 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-11-16 08:57:38,846 [16] INFO  [LoyaltyWareFramework] - LWIntegrationUtilities:HandleInitialMemberSatusTransientProperty: A non-member is being created with the transient property set to true.
+2018-11-16 08:57:38,848 [16] INFO  [LWDataAcquisitionService] - LWDAPMemberAttributeSetsProcessor:ProcessMember: Encountered non-member with ipcode -1 encountered.  Skipping it.
+2018-11-16 08:57:38,934 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: AttributeSetMetaDataByName
+2018-11-16 08:57:39,083 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: AttributeSetMetaDataById
+2018-11-16 08:57:39,976 [16] INFO  [LoyaltyWareFramework] - ClassLoaderUtil:ResolveAssemblyFromPath: Brierley.Clients.BTADEV.DataModel has been resolved from C:\Users\kconners\Desktop\DapStuff.  Version number not considered.
+2018-11-16 08:57:39,982 [16] INFO  [LoyaltyWareFramework] - ClassLoaderUtil:ResolveAssemblyFromPath: Assembly file C:\Users\kconners\Desktop\DapStuff\Brierley.Clients.BTADEV.DataModel.dll has been successfully loaded
+2018-11-16 08:57:41,052 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: ValidatorTriggerByAttribute
+2018-11-16 08:57:41,431 [16] INFO  [LoyaltyWareFramework] - LoyaltyDataService:VerifyMember: Verifying member before updating it.
+2018-11-16 08:57:41,896 [16] ERROR [LoyaltyWareFramework] - LoyaltyDataService:VerifyMember: Found existing member with same primary email = johndoe1001@test.com.
+2018-11-16 08:57:42,263 [16] ERROR [LWDataAcquisitionService] - AttributeSetProcessingBase:ProcessRequest: Error during processing.
+Exception Message: Found existing member with same primary email = johndoe1001@test.com.
+Exception Type: LWDataServiceException
+Stack Trace: 
+   at Brierley.FrameWork.Data.LoyaltyDataService.VerifyMember(Member m) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 6124
+   at Brierley.FrameWork.Data.LoyaltyDataService.SaveMember(Member member, List`1 results, RuleExecutionMode mode, Boolean skipRules, ContextObject context) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 804
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+
+2018-11-16 08:57:42,279 [14] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:BTADEV_QA LogSource:  Message:<Member NonMember="true" FirstName="John1001" MiddleName="Henry" LastName="Doe1001" BirthDate="" NamePrefix="" NameSuffix="" AlternateId="10011" Username="jd1001" Password="Password1***" PrimaryEmailAddress="johndoe1001@test.com" PrimaryPhoneNumber="123456789" PrimaryPostalCode="75093">
+  <VirtualCard LoyaltyIdNumber="10011" />
+  <MemberDetails AddressLineOne="5809 Dove Creek Lane" AddressLineTwo="" AddressLineThree="" City="Plano" StateOrProvince="TX" ZipOrPostalCode="75093" County="Collin" Country="USA" AddressMailable="" HomePhone="" MobilePhone="" WorkPhone="2143653626" SecondaryEmailAddress="" EmailAddressMailable="false" MemberStatusCode="" DirectMailOptInDate="" EmailOptInDate="" SMSOptInDate="" EnrollDate="" Gender="Male" MemberSource="" LanguagePreference="" SecurityQuestion="" SecurityAnswer="" />
+</Member> Error:Found existing member with same primary email = johndoe1001@test.com.   at Brierley.FrameWork.Data.LoyaltyDataService.VerifyMember(Member m) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 6124
+   at Brierley.FrameWork.Data.LoyaltyDataService.SaveMember(Member member, List`1 results, RuleExecutionMode mode, Boolean skipRules, ContextObject context) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 804
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+2018-11-16 08:57:42,303 [16] INFO  [LoyaltyWareFramework] - LWIntegrationUtilities:HandleInitialMemberSatusTransientProperty: A non-member is being created with the transient property set to true.
+2018-11-16 08:57:42,303 [16] INFO  [LWDataAcquisitionService] - LWDAPMemberAttributeSetsProcessor:ProcessMember: Encountered non-member with ipcode -1 encountered.  Skipping it.
+2018-11-16 08:57:42,322 [16] INFO  [LoyaltyWareFramework] - LoyaltyDataService:VerifyMember: Verifying member before updating it.
+2018-11-16 08:57:42,337 [16] ERROR [LoyaltyWareFramework] - LoyaltyDataService:VerifyMember: Found existing member with same primary email = johndoe1002@test.com.
+2018-11-16 08:57:42,345 [16] ERROR [LWDataAcquisitionService] - AttributeSetProcessingBase:ProcessRequest: Error during processing.
+Exception Message: Found existing member with same primary email = johndoe1002@test.com.
+Exception Type: LWDataServiceException
+Stack Trace: 
+   at Brierley.FrameWork.Data.LoyaltyDataService.VerifyMember(Member m) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 6124
+   at Brierley.FrameWork.Data.LoyaltyDataService.SaveMember(Member member, List`1 results, RuleExecutionMode mode, Boolean skipRules, ContextObject context) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 804
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+
+2018-11-16 08:57:42,346 [14] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:BTADEV_QA LogSource:  Message:<Member NonMember="true" FirstName="John1002" MiddleName="" LastName="Doe1002" BirthDate="" NamePrefix="" NameSuffix="" AlternateId="10021" Username="jd1002" Password="Password1***" PrimaryEmailAddress="johndoe1002@test.com" PrimaryPhoneNumber="123456789" PrimaryPostalCode="75093">
+  <VirtualCard LoyaltyIdNumber="10021" />
+  <MemberDetails AddressLineOne="5809 Dove Creek Lane" AddressLineTwo="" AddressLineThree="" City="Plano" StateOrProvince="TX" ZipOrPostalCode="75093" County="" Country="USA" AddressMailable="" HomePhone="" MobilePhone="" WorkPhone="2143653626" SecondaryEmailAddress="" EmailAddressMailable="false" MemberStatusCode="" DirectMailOptInDate="" EmailOptInDate="" SMSOptInDate="" EnrollDate="" Gender="Male" MemberSource="" LanguagePreference="" SecurityQuestion="" SecurityAnswer="" />
+</Member> Error:Found existing member with same primary email = johndoe1002@test.com.   at Brierley.FrameWork.Data.LoyaltyDataService.VerifyMember(Member m) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 6124
+   at Brierley.FrameWork.Data.LoyaltyDataService.SaveMember(Member member, List`1 results, RuleExecutionMode mode, Boolean skipRules, ContextObject context) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 804
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+2018-11-16 08:57:42,367 [16] INFO  [LoyaltyWareFramework] - LWIntegrationUtilities:HandleInitialMemberSatusTransientProperty: A non-member is being created with the transient property set to true.
+2018-11-16 08:57:42,368 [16] INFO  [LWDataAcquisitionService] - LWDAPMemberAttributeSetsProcessor:ProcessMember: Encountered non-member with ipcode -1 encountered.  Skipping it.
+2018-11-16 08:57:42,393 [16] INFO  [LoyaltyWareFramework] - LoyaltyDataService:VerifyMember: Verifying member before updating it.
+2018-11-16 08:57:42,406 [16] ERROR [LoyaltyWareFramework] - LoyaltyDataService:VerifyMember: Found existing member with same primary email = johndoe1003@test.com.
+2018-11-16 08:57:42,414 [16] ERROR [LWDataAcquisitionService] - AttributeSetProcessingBase:ProcessRequest: Error during processing.
+Exception Message: Found existing member with same primary email = johndoe1003@test.com.
+Exception Type: LWDataServiceException
+Stack Trace: 
+   at Brierley.FrameWork.Data.LoyaltyDataService.VerifyMember(Member m) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 6124
+   at Brierley.FrameWork.Data.LoyaltyDataService.SaveMember(Member member, List`1 results, RuleExecutionMode mode, Boolean skipRules, ContextObject context) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 804
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+
+2018-11-16 08:57:42,415 [14] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:BTADEV_QA LogSource:  Message:<Member NonMember="true" FirstName="John1003" MiddleName="Smiley" LastName="Doe1003" BirthDate="" NamePrefix="" NameSuffix="" AlternateId="10031" Username="jd1003" Password="Password1***" PrimaryEmailAddress="johndoe1003@test.com" PrimaryPhoneNumber="123456789" PrimaryPostalCode="75093">
+  <VirtualCard LoyaltyIdNumber="10031" />
+  <MemberDetails AddressLineOne="5809 Dove Creek Lane" AddressLineTwo="" AddressLineThree="" City="Plano" StateOrProvince="TX" ZipOrPostalCode="75093" County="Collin" Country="USA" AddressMailable="" HomePhone="" MobilePhone="" WorkPhone="2143653626" SecondaryEmailAddress="" EmailAddressMailable="false" MemberStatusCode="" DirectMailOptInDate="" EmailOptInDate="" SMSOptInDate="" EnrollDate="" Gender="Male" MemberSource="" LanguagePreference="" SecurityQuestion="" SecurityAnswer="" />
+</Member> Error:Found existing member with same primary email = johndoe1003@test.com.   at Brierley.FrameWork.Data.LoyaltyDataService.VerifyMember(Member m) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 6124
+   at Brierley.FrameWork.Data.LoyaltyDataService.SaveMember(Member member, List`1 results, RuleExecutionMode mode, Boolean skipRules, ContextObject context) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 804
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+2018-11-16 08:57:42,421 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-11-16 08:57:42,427 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWAsyncJobLogger is being shutdown.
+2018-11-16 08:57:46,208 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 1951 finished.  Summarizing it.
+2018-11-16 08:57:46,285 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 1951 has finished.  3 messages received - 3 messages failed.
+2018-11-16 08:57:46,306 [1] INFO  [AsyncJobLogger] - JobId:1473 JobNumber:1951 JobName:
+2018-11-16 09:00:18,216 [1] INFO  [LWDataAcquisitionService] - DAPConsoleProcessor:Main: Initialized log4net using config file 'C:\Users\kconners\Desktop\DapStuff\Brierley.DataAcquisition\DAPConsole\log4net.xml'
+2018-11-16 09:00:18,234 [1] INFO  [LWDataAcquisitionService] - DAPMain:InitializeConfiguration: Initialization configuration file C:\Users\kconners\Desktop\DapStuff\DAPEnrollmentFileConfig.xml
+2018-11-16 09:00:18,263 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: Initializing DAP job.
+2018-11-16 09:00:19,487 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: New job 2001 created to process file C:\Users\kconners\Desktop\DapStuff\Enrollment.txt
+2018-11-16 09:00:19,489 [14] INFO  [AsyncJobLogger] - JobId:1477 JobNumber:2001 JobName:
+2018-11-16 09:00:19,494 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetOutboundDAPProvider: Creating a framework output provider.
+2018-11-16 09:00:19,509 [1] INFO  [LWDataAcquisitionService] - DAPMessageDispatcherImpl:Initialize: Initializing thread pool manager for job 2001 with 1 threads.
+2018-11-16 09:00:19,515 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetInboundDAPProvider: Creating a file provider.
+2018-11-16 09:00:19,517 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: Initializing...
+2018-11-16 09:00:19,517 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: File to process: C:\Users\kconners\Desktop\DapStuff\Enrollment.txt
+2018-11-16 09:00:19,527 [1] INFO  [LoyaltyWareFramework] - DynamicCodeUtil:CompileDynamicCode: Compiling dynamic scripts.
+2018-11-16 09:00:19,527 [1] INFO  [LoyaltyWareFramework] - DynamicCodeUtil:CompileDynamicCode: generating code for dynamic script SetNonMemberProperty
+2018-11-16 09:00:19,781 [1] INFO  [LoyaltyWareFramework] - MessagingBus:Initialize: Initializing message bus...
+2018-11-16 09:00:19,810 [1] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: MemberByLoyaltyId
+2018-11-16 09:00:19,898 [17] INFO  [LoyaltyWareFramework] - LWIntegrationUtilities:HandleInitialMemberSatusTransientProperty: A non-member is being created with the transient property set to true.
+2018-11-16 09:00:19,900 [17] INFO  [LWDataAcquisitionService] - LWDAPMemberAttributeSetsProcessor:ProcessMember: Encountered non-member with ipcode -1 encountered.  Skipping it.
+2018-11-16 09:00:19,918 [17] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: AttributeSetMetaDataByName
+2018-11-16 09:00:19,922 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-11-16 09:00:20,040 [17] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: AttributeSetMetaDataById
+2018-11-16 09:00:20,050 [17] INFO  [LoyaltyWareFramework] - ClassLoaderUtil:ResolveAssemblyFromPath: Brierley.Clients.BTADEV.DataModel has been resolved from C:\Users\kconners\Desktop\DapStuff.  Version number not considered.
+2018-11-16 09:00:20,052 [17] INFO  [LoyaltyWareFramework] - ClassLoaderUtil:ResolveAssemblyFromPath: Assembly file C:\Users\kconners\Desktop\DapStuff\Brierley.Clients.BTADEV.DataModel.dll has been successfully loaded
+2018-11-16 09:00:20,115 [17] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: ValidatorTriggerByAttribute
+2018-11-16 09:00:20,425 [17] INFO  [LoyaltyWareFramework] - LoyaltyDataService:VerifyMember: Verifying member before updating it.
+2018-11-16 09:00:20,462 [17] ERROR [LoyaltyWareFramework] - LoyaltyDataService:VerifyMember: Found existing member with same username = jd1001.
+2018-11-16 09:00:20,487 [17] ERROR [LWDataAcquisitionService] - AttributeSetProcessingBase:ProcessRequest: Error during processing.
+Exception Message: Found existing member with same username = jd1001.
+Exception Type: LWDataServiceException
+Stack Trace: 
+   at Brierley.FrameWork.Data.LoyaltyDataService.VerifyMember(Member m) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 6148
+   at Brierley.FrameWork.Data.LoyaltyDataService.SaveMember(Member member, List`1 results, RuleExecutionMode mode, Boolean skipRules, ContextObject context) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 804
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+
+2018-11-16 09:00:20,490 [15] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:BTADEV_QA LogSource:  Message:<Member NonMember="true" FirstName="John1001" MiddleName="Henry" LastName="Doe1001" BirthDate="" NamePrefix="" NameSuffix="" AlternateId="10011" Username="jd1001" Password="Password1***" PrimaryEmailAddress="johndoe10011@test.com" PrimaryPhoneNumber="123456789" PrimaryPostalCode="75093">
+  <VirtualCard LoyaltyIdNumber="10011" />
+  <MemberDetails AddressLineOne="5809 Dove Creek Lane" AddressLineTwo="" AddressLineThree="" City="Plano" StateOrProvince="TX" ZipOrPostalCode="75093" County="Collin" Country="USA" AddressMailable="" HomePhone="" MobilePhone="" WorkPhone="2143653626" SecondaryEmailAddress="" EmailAddressMailable="false" MemberStatusCode="" DirectMailOptInDate="" EmailOptInDate="" SMSOptInDate="" EnrollDate="" Gender="Male" MemberSource="" LanguagePreference="" SecurityQuestion="" SecurityAnswer="" />
+</Member> Error:Found existing member with same username = jd1001.   at Brierley.FrameWork.Data.LoyaltyDataService.VerifyMember(Member m) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 6148
+   at Brierley.FrameWork.Data.LoyaltyDataService.SaveMember(Member member, List`1 results, RuleExecutionMode mode, Boolean skipRules, ContextObject context) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 804
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+2018-11-16 09:00:20,503 [17] INFO  [LoyaltyWareFramework] - LWIntegrationUtilities:HandleInitialMemberSatusTransientProperty: A non-member is being created with the transient property set to true.
+2018-11-16 09:00:20,503 [17] INFO  [LWDataAcquisitionService] - LWDAPMemberAttributeSetsProcessor:ProcessMember: Encountered non-member with ipcode -1 encountered.  Skipping it.
+2018-11-16 09:00:20,520 [17] INFO  [LoyaltyWareFramework] - LoyaltyDataService:VerifyMember: Verifying member before updating it.
+2018-11-16 09:00:20,534 [17] ERROR [LoyaltyWareFramework] - LoyaltyDataService:VerifyMember: Found existing member with same username = jd1002.
+2018-11-16 09:00:20,541 [17] ERROR [LWDataAcquisitionService] - AttributeSetProcessingBase:ProcessRequest: Error during processing.
+Exception Message: Found existing member with same username = jd1002.
+Exception Type: LWDataServiceException
+Stack Trace: 
+   at Brierley.FrameWork.Data.LoyaltyDataService.VerifyMember(Member m) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 6148
+   at Brierley.FrameWork.Data.LoyaltyDataService.SaveMember(Member member, List`1 results, RuleExecutionMode mode, Boolean skipRules, ContextObject context) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 804
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+
+2018-11-16 09:00:20,542 [15] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:BTADEV_QA LogSource:  Message:<Member NonMember="true" FirstName="John1002" MiddleName="" LastName="Doe1002" BirthDate="" NamePrefix="" NameSuffix="" AlternateId="10021" Username="jd1002" Password="Password1***" PrimaryEmailAddress="johndoe10021@test.com" PrimaryPhoneNumber="123456789" PrimaryPostalCode="75093">
+  <VirtualCard LoyaltyIdNumber="10021" />
+  <MemberDetails AddressLineOne="5809 Dove Creek Lane" AddressLineTwo="" AddressLineThree="" City="Plano" StateOrProvince="TX" ZipOrPostalCode="75093" County="" Country="USA" AddressMailable="" HomePhone="" MobilePhone="" WorkPhone="2143653626" SecondaryEmailAddress="" EmailAddressMailable="false" MemberStatusCode="" DirectMailOptInDate="" EmailOptInDate="" SMSOptInDate="" EnrollDate="" Gender="Male" MemberSource="" LanguagePreference="" SecurityQuestion="" SecurityAnswer="" />
+</Member> Error:Found existing member with same username = jd1002.   at Brierley.FrameWork.Data.LoyaltyDataService.VerifyMember(Member m) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 6148
+   at Brierley.FrameWork.Data.LoyaltyDataService.SaveMember(Member member, List`1 results, RuleExecutionMode mode, Boolean skipRules, ContextObject context) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 804
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+2018-11-16 09:00:20,576 [17] INFO  [LoyaltyWareFramework] - LWIntegrationUtilities:HandleInitialMemberSatusTransientProperty: A non-member is being created with the transient property set to true.
+2018-11-16 09:00:20,577 [17] INFO  [LWDataAcquisitionService] - LWDAPMemberAttributeSetsProcessor:ProcessMember: Encountered non-member with ipcode -1 encountered.  Skipping it.
+2018-11-16 09:00:20,594 [17] INFO  [LoyaltyWareFramework] - LoyaltyDataService:VerifyMember: Verifying member before updating it.
+2018-11-16 09:00:20,611 [17] ERROR [LoyaltyWareFramework] - LoyaltyDataService:VerifyMember: Found existing member with same username = jd1003.
+2018-11-16 09:00:20,621 [17] ERROR [LWDataAcquisitionService] - AttributeSetProcessingBase:ProcessRequest: Error during processing.
+Exception Message: Found existing member with same username = jd1003.
+Exception Type: LWDataServiceException
+Stack Trace: 
+   at Brierley.FrameWork.Data.LoyaltyDataService.VerifyMember(Member m) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 6148
+   at Brierley.FrameWork.Data.LoyaltyDataService.SaveMember(Member member, List`1 results, RuleExecutionMode mode, Boolean skipRules, ContextObject context) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 804
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+
+2018-11-16 09:00:20,622 [15] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:BTADEV_QA LogSource:  Message:<Member NonMember="true" FirstName="John1003" MiddleName="Smiley" LastName="Doe1003" BirthDate="" NamePrefix="" NameSuffix="" AlternateId="10031" Username="jd1003" Password="Password1***" PrimaryEmailAddress="johndoe10031@test.com" PrimaryPhoneNumber="123456789" PrimaryPostalCode="75093">
+  <VirtualCard LoyaltyIdNumber="10031" />
+  <MemberDetails AddressLineOne="5809 Dove Creek Lane" AddressLineTwo="" AddressLineThree="" City="Plano" StateOrProvince="TX" ZipOrPostalCode="75093" County="Collin" Country="USA" AddressMailable="" HomePhone="" MobilePhone="" WorkPhone="2143653626" SecondaryEmailAddress="" EmailAddressMailable="false" MemberStatusCode="" DirectMailOptInDate="" EmailOptInDate="" SMSOptInDate="" EnrollDate="" Gender="Male" MemberSource="" LanguagePreference="" SecurityQuestion="" SecurityAnswer="" />
+</Member> Error:Found existing member with same username = jd1003.   at Brierley.FrameWork.Data.LoyaltyDataService.VerifyMember(Member m) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 6148
+   at Brierley.FrameWork.Data.LoyaltyDataService.SaveMember(Member member, List`1 results, RuleExecutionMode mode, Boolean skipRules, ContextObject context) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 804
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+2018-11-16 09:00:20,631 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-11-16 09:00:20,636 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWAsyncJobLogger is being shutdown.
+2018-11-16 09:00:23,499 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 2001 finished.  Summarizing it.
+2018-11-16 09:00:23,533 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 2001 has finished.  3 messages received - 3 messages failed.
+2018-11-16 09:00:23,550 [1] INFO  [AsyncJobLogger] - JobId:1477 JobNumber:2001 JobName:
+2018-11-16 09:01:37,435 [1] INFO  [LWDataAcquisitionService] - DAPConsoleProcessor:Main: Initialized log4net using config file 'C:\Users\kconners\Desktop\DapStuff\Brierley.DataAcquisition\DAPConsole\log4net.xml'
+2018-11-16 09:01:37,453 [1] INFO  [LWDataAcquisitionService] - DAPMain:InitializeConfiguration: Initialization configuration file C:\Users\kconners\Desktop\DapStuff\DAPEnrollmentFileConfig.xml
+2018-11-16 09:01:37,480 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: Initializing DAP job.
+2018-11-16 09:01:37,861 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: New job 2051 created to process file C:\Users\kconners\Desktop\DapStuff\Enrollment.txt
+2018-11-16 09:01:37,863 [14] INFO  [AsyncJobLogger] - JobId:1481 JobNumber:2051 JobName:
+2018-11-16 09:01:37,866 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetOutboundDAPProvider: Creating a framework output provider.
+2018-11-16 09:01:37,879 [1] INFO  [LWDataAcquisitionService] - DAPMessageDispatcherImpl:Initialize: Initializing thread pool manager for job 2051 with 1 threads.
+2018-11-16 09:01:37,886 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetInboundDAPProvider: Creating a file provider.
+2018-11-16 09:01:37,888 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: Initializing...
+2018-11-16 09:01:37,888 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: File to process: C:\Users\kconners\Desktop\DapStuff\Enrollment.txt
+2018-11-16 09:01:37,900 [1] INFO  [LoyaltyWareFramework] - DynamicCodeUtil:CompileDynamicCode: Compiling dynamic scripts.
+2018-11-16 09:01:37,901 [1] INFO  [LoyaltyWareFramework] - DynamicCodeUtil:CompileDynamicCode: generating code for dynamic script SetNonMemberProperty
+2018-11-16 09:01:38,420 [1] INFO  [LoyaltyWareFramework] - MessagingBus:Initialize: Initializing message bus...
+2018-11-16 09:01:38,449 [1] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: MemberByLoyaltyId
+2018-11-16 09:01:38,545 [17] INFO  [LoyaltyWareFramework] - LWIntegrationUtilities:HandleInitialMemberSatusTransientProperty: A non-member is being created with the transient property set to true.
+2018-11-16 09:01:38,546 [17] INFO  [LWDataAcquisitionService] - LWDAPMemberAttributeSetsProcessor:ProcessMember: Encountered non-member with ipcode -1 encountered.  Skipping it.
+2018-11-16 09:01:38,568 [17] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: AttributeSetMetaDataByName
+2018-11-16 09:01:38,595 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-11-16 09:01:38,641 [17] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: AttributeSetMetaDataById
+2018-11-16 09:01:38,651 [17] INFO  [LoyaltyWareFramework] - ClassLoaderUtil:ResolveAssemblyFromPath: Brierley.Clients.BTADEV.DataModel has been resolved from C:\Users\kconners\Desktop\DapStuff.  Version number not considered.
+2018-11-16 09:01:38,653 [17] INFO  [LoyaltyWareFramework] - ClassLoaderUtil:ResolveAssemblyFromPath: Assembly file C:\Users\kconners\Desktop\DapStuff\Brierley.Clients.BTADEV.DataModel.dll has been successfully loaded
+2018-11-16 09:01:38,707 [17] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: ValidatorTriggerByAttribute
+2018-11-16 09:01:38,956 [17] INFO  [LoyaltyWareFramework] - LoyaltyDataService:VerifyMember: Verifying member before updating it.
+2018-11-16 09:01:38,994 [17] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: RuleTriggerByObjectName
+2018-11-16 09:01:39,336 [17] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: RuleTriggerByName
+2018-11-16 09:01:39,487 [17] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region named 'bScriptByExpression' created using defaults - Max items: 1000. Items to scavenge: 10
+2018-11-16 09:01:40,195 [17] INFO  [LoyaltyWareFramework] - AwardPoints:Invoke: Invoking AwardPoints for member 64
+2018-11-16 09:01:40,826 [17] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: PointTypeByName
+2018-11-16 09:01:41,072 [17] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: PointEventByName
+2018-11-16 09:01:41,106 [17] INFO  [LoyaltyWareFramework] - LoyaltyDataService:Credit: Crediting 100 points to virtual card 19.
+2018-11-16 09:01:41,163 [17] WARN  [LoyaltyWareFramework] - AwardPoints:Invoke: No rule specified for tier evaluation.
+2018-11-16 09:01:41,197 [17] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: RuleTriggerByAttSet
+2018-11-16 09:01:41,311 [17] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: MemberByIpCode
+2018-11-16 09:01:41,344 [17] INFO  [LoyaltyWareFramework] - LWIntegrationUtilities:HandleInitialMemberSatusTransientProperty: A non-member is being created with the transient property set to true.
+2018-11-16 09:01:41,345 [17] INFO  [LWDataAcquisitionService] - LWDAPMemberAttributeSetsProcessor:ProcessMember: Encountered non-member with ipcode -1 encountered.  Skipping it.
+2018-11-16 09:01:41,365 [17] INFO  [LoyaltyWareFramework] - LoyaltyDataService:VerifyMember: Verifying member before updating it.
+2018-11-16 09:01:41,391 [17] INFO  [LoyaltyWareFramework] - AwardPoints:Invoke: Invoking AwardPoints for member 65
+2018-11-16 09:01:41,392 [17] INFO  [LoyaltyWareFramework] - LoyaltyDataService:Credit: Crediting 100 points to virtual card 20.
+2018-11-16 09:01:41,399 [17] WARN  [LoyaltyWareFramework] - AwardPoints:Invoke: No rule specified for tier evaluation.
+2018-11-16 09:01:41,459 [17] INFO  [LoyaltyWareFramework] - LWIntegrationUtilities:HandleInitialMemberSatusTransientProperty: A non-member is being created with the transient property set to true.
+2018-11-16 09:01:41,460 [17] INFO  [LWDataAcquisitionService] - LWDAPMemberAttributeSetsProcessor:ProcessMember: Encountered non-member with ipcode -1 encountered.  Skipping it.
+2018-11-16 09:01:41,478 [17] INFO  [LoyaltyWareFramework] - LoyaltyDataService:VerifyMember: Verifying member before updating it.
+2018-11-16 09:01:41,505 [17] INFO  [LoyaltyWareFramework] - AwardPoints:Invoke: Invoking AwardPoints for member 66
+2018-11-16 09:01:41,506 [17] INFO  [LoyaltyWareFramework] - LoyaltyDataService:Credit: Crediting 100 points to virtual card 21.
+2018-11-16 09:01:41,513 [17] WARN  [LoyaltyWareFramework] - AwardPoints:Invoke: No rule specified for tier evaluation.
+2018-11-16 09:01:41,559 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-11-16 09:01:41,565 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWAsyncJobLogger is being shutdown.
+2018-11-16 09:01:45,870 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 2051 finished.  Summarizing it.
+2018-11-16 09:01:45,901 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 2051 has finished.  3 messages received - 0 messages failed.
+2018-11-16 09:01:45,917 [1] INFO  [AsyncJobLogger] - JobId:1481 JobNumber:2051 JobName:
+2018-11-16 09:24:10,610 [1] INFO  [LWDataAcquisitionService] - DAPConsoleProcessor:Main: Initialized log4net using config file 'C:\Users\kconners\Desktop\DapStuff\Brierley.DataAcquisition\DAPConsole\log4net.xml'
+2018-11-16 09:24:10,631 [1] INFO  [LWDataAcquisitionService] - DAPMain:InitializeConfiguration: Initialization configuration file C:\Users\kconners\Desktop\DapStuff\DAPTlogFileConfig.xml
+2018-11-16 09:24:10,659 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: Initializing DAP job.
+2018-11-16 09:24:11,283 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: New job 2101 created to process file C:\Users\kconners\Desktop\DapStuff\Tlog.txt
+2018-11-16 09:24:11,286 [12] INFO  [AsyncJobLogger] - JobId:1495 JobNumber:2101 JobName:
+2018-11-16 09:24:11,290 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetOutboundDAPProvider: Creating a framework output provider.
+2018-11-16 09:24:11,304 [1] INFO  [LWDataAcquisitionService] - DAPMessageDispatcherImpl:Initialize: Initializing thread pool manager for job 2101 with 1 threads.
+2018-11-16 09:24:11,312 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetInboundDAPProvider: Creating a file provider.
+2018-11-16 09:24:11,313 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: Initializing...
+2018-11-16 09:24:11,314 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: File to process: C:\Users\kconners\Desktop\DapStuff\Tlog.txt
+2018-11-16 09:24:11,325 [1] INFO  [LoyaltyWareFramework] - DynamicCodeUtil:CompileDynamicCode: Compiling dynamic scripts.
+2018-11-16 09:24:12,475 [1] INFO  [LoyaltyWareFramework] - MessagingBus:Initialize: Initializing message bus...
+2018-11-16 09:24:12,503 [1] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: MemberByLoyaltyId
+2018-11-16 09:24:12,585 [1] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: MemberByIpCode
+2018-11-16 09:24:12,604 [1] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: RuleTriggerByObjectName
+2018-11-16 09:24:12,657 [1] ERROR [LoyaltyWareFramework] - LWIntegrationUtilities:GetMember: Empty Member/VirtualCard/LoyaltyIdNumber in input Xml for Member lookup.
+2018-11-16 09:24:12,701 [16] INFO  [LWDataAcquisitionService] - LWDAPMemberAttributeSetsProcessor:ProcessMember: Encountered non-member with ipcode 65 encountered.  Skipping it.
+2018-11-16 09:24:12,725 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: AttributeSetMetaDataByName
+2018-11-16 09:24:12,997 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: AttributeSetMetaDataById
+2018-11-16 09:24:13,005 [16] INFO  [LoyaltyWareFramework] - ClassLoaderUtil:ResolveAssemblyFromPath: Brierley.Clients.BTADEV.DataModel has been resolved from C:\Users\kconners\Desktop\DapStuff.  Version number not considered.
+2018-11-16 09:24:13,007 [16] INFO  [LoyaltyWareFramework] - ClassLoaderUtil:ResolveAssemblyFromPath: Assembly file C:\Users\kconners\Desktop\DapStuff\Brierley.Clients.BTADEV.DataModel.dll has been successfully loaded
+2018-11-16 09:24:13,031 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: ValidatorTriggerByAttribute
+2018-11-16 09:24:13,286 [16] INFO  [LoyaltyWareFramework] - LoyaltyDataService:VerifyMember: Verifying member before updating it.
+2018-11-16 09:24:13,325 [1] ERROR [LWDataAcquisitionService] - DAPMessageDispatcherImpl:DispatchMemberMessage: Error processing member.
+Exception Message: Empty Member/VirtualCard/LoyaltyIdNumber in input Xml for Member lookup.
+Exception Type: LWIntegrationException
+Stack Trace: 
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadExistingMember(LWIntegrationConfig config, XElement memberNode, MemberLoadMethod loadMethod, String valuePath, IInboundInterceptor interceptor, String& errorStr) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 128
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetMember(LWIntegrationConfig config, XElement memberNode, MemberLoadDirectives memberLoadDirectives, IInboundInterceptor interceptor) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 149
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.QueueMemberMessageToThread(XElement memberNode, DAPPerformanceTimer msgTimer) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 136
+
+2018-11-16 09:24:13,329 [1] ERROR [LoyaltyWareFramework] - LWIntegrationUtilities:GetMember: Empty Member/VirtualCard/LoyaltyIdNumber in input Xml for Member lookup.
+2018-11-16 09:24:13,329 [14] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:BTADEV_QA LogSource:  Message:<Member>
+  <VirtualCard>
+    <TxnHeader>
+      <TxnDetailItem DtlProductId="99898761" DtlRetailAmount="20.2" DtlQuantity="1" DtlSaleAmount="20.2" />
+    </TxnHeader>
+  </VirtualCard>
+</Member> Error:Empty Member/VirtualCard/LoyaltyIdNumber in input Xml for Member lookup.   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadExistingMember(LWIntegrationConfig config, XElement memberNode, MemberLoadMethod loadMethod, String valuePath, IInboundInterceptor interceptor, String& errorStr) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 128
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetMember(LWIntegrationConfig config, XElement memberNode, MemberLoadDirectives memberLoadDirectives, IInboundInterceptor interceptor) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 149
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.QueueMemberMessageToThread(XElement memberNode, DAPPerformanceTimer msgTimer) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 136
+2018-11-16 09:24:13,329 [1] ERROR [LWDataAcquisitionService] - DAPMessageDispatcherImpl:DispatchMemberMessage: Error processing member.
+Exception Message: Empty Member/VirtualCard/LoyaltyIdNumber in input Xml for Member lookup.
+Exception Type: LWIntegrationException
+Stack Trace: 
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadExistingMember(LWIntegrationConfig config, XElement memberNode, MemberLoadMethod loadMethod, String valuePath, IInboundInterceptor interceptor, String& errorStr) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 128
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetMember(LWIntegrationConfig config, XElement memberNode, MemberLoadDirectives memberLoadDirectives, IInboundInterceptor interceptor) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 149
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.QueueMemberMessageToThread(XElement memberNode, DAPPerformanceTimer msgTimer) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 136
+
+2018-11-16 09:24:13,330 [14] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:BTADEV_QA LogSource:  Message:<Member>
+  <VirtualCard>
+    <TxnHeader>
+      <TxnDetailItem DtlProductId="99898771" DtlRetailAmount="15.99" DtlQuantity="1" DtlSaleAmount="15.99" />
+    </TxnHeader>
+  </VirtualCard>
+</Member> Error:Empty Member/VirtualCard/LoyaltyIdNumber in input Xml for Member lookup.   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadExistingMember(LWIntegrationConfig config, XElement memberNode, MemberLoadMethod loadMethod, String valuePath, IInboundInterceptor interceptor, String& errorStr) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 128
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetMember(LWIntegrationConfig config, XElement memberNode, MemberLoadDirectives memberLoadDirectives, IInboundInterceptor interceptor) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 149
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.QueueMemberMessageToThread(XElement memberNode, DAPPerformanceTimer msgTimer) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 136
+2018-11-16 09:24:13,568 [1] ERROR [LWDataAcquisitionService] - DAPMessageDispatcherImpl:DispatchMemberMessage: Error processing member.
+Exception Message: Unable to find node VirtualCard in <Member />.  Cannot use path Member/VirtualCard/LoyaltyIdNumber to search.
+Exception Type: LWException
+Stack Trace: 
+   at Brierley.FrameWork.Common.Extensions.XmlExtensions.GetNodeValueByPath(XElement node, String path) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\Extensions\XmlExtensions.cs:line 135
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetNodeValueByPath(XElement memberNode, String path) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 1320
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetValueByPath(XElement memberNode, String path) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 1281
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadExistingMember(LWIntegrationConfig config, XElement memberNode, MemberLoadMethod loadMethod, String valuePath, IInboundInterceptor interceptor, String& errorStr) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 79
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetMember(LWIntegrationConfig config, XElement memberNode, MemberLoadDirectives memberLoadDirectives, IInboundInterceptor interceptor) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 149
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.QueueMemberMessageToThread(XElement memberNode, DAPPerformanceTimer msgTimer) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 106
+
+2018-11-16 09:24:13,570 [14] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:BTADEV_QA LogSource:  Message:<Member /> Error:Unable to find node VirtualCard in <Member />.  Cannot use path Member/VirtualCard/LoyaltyIdNumber to search.   at Brierley.FrameWork.Common.Extensions.XmlExtensions.GetNodeValueByPath(XElement node, String path) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\Extensions\XmlExtensions.cs:line 135
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetNodeValueByPath(XElement memberNode, String path) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 1320
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetValueByPath(XElement memberNode, String path) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 1281
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadExistingMember(LWIntegrationConfig config, XElement memberNode, MemberLoadMethod loadMethod, String valuePath, IInboundInterceptor interceptor, String& errorStr) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 79
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetMember(LWIntegrationConfig config, XElement memberNode, MemberLoadDirectives memberLoadDirectives, IInboundInterceptor interceptor) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 149
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.QueueMemberMessageToThread(XElement memberNode, DAPPerformanceTimer msgTimer) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 106
+2018-11-16 09:24:13,597 [1] ERROR [LoyaltyWareFramework] - LWIntegrationUtilities:GetMember: Empty Member/VirtualCard/LoyaltyIdNumber in input Xml for Member lookup.
+2018-11-16 09:24:13,598 [1] ERROR [LWDataAcquisitionService] - DAPMessageDispatcherImpl:DispatchMemberMessage: Error processing member.
+Exception Message: Empty Member/VirtualCard/LoyaltyIdNumber in input Xml for Member lookup.
+Exception Type: LWIntegrationException
+Stack Trace: 
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadExistingMember(LWIntegrationConfig config, XElement memberNode, MemberLoadMethod loadMethod, String valuePath, IInboundInterceptor interceptor, String& errorStr) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 128
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetMember(LWIntegrationConfig config, XElement memberNode, MemberLoadDirectives memberLoadDirectives, IInboundInterceptor interceptor) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 149
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.QueueMemberMessageToThread(XElement memberNode, DAPPerformanceTimer msgTimer) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 136
+
+2018-11-16 09:24:13,599 [14] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:BTADEV_QA LogSource:  Message:<Member>
+  <VirtualCard>
+    <TxnHeader>
+      <TxnDetailItem DtlProductId="99898781" DtlRetailAmount="20.2" DtlQuantity="1" DtlSaleAmount="20.2" />
+    </TxnHeader>
+  </VirtualCard>
+</Member> Error:Empty Member/VirtualCard/LoyaltyIdNumber in input Xml for Member lookup.   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadExistingMember(LWIntegrationConfig config, XElement memberNode, MemberLoadMethod loadMethod, String valuePath, IInboundInterceptor interceptor, String& errorStr) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 128
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetMember(LWIntegrationConfig config, XElement memberNode, MemberLoadDirectives memberLoadDirectives, IInboundInterceptor interceptor) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 149
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.QueueMemberMessageToThread(XElement memberNode, DAPPerformanceTimer msgTimer) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 136
+2018-11-16 09:24:13,601 [1] ERROR [LoyaltyWareFramework] - LWIntegrationUtilities:GetMember: Empty Member/VirtualCard/LoyaltyIdNumber in input Xml for Member lookup.
+2018-11-16 09:24:13,602 [1] ERROR [LWDataAcquisitionService] - DAPMessageDispatcherImpl:DispatchMemberMessage: Error processing member.
+Exception Message: Empty Member/VirtualCard/LoyaltyIdNumber in input Xml for Member lookup.
+Exception Type: LWIntegrationException
+Stack Trace: 
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadExistingMember(LWIntegrationConfig config, XElement memberNode, MemberLoadMethod loadMethod, String valuePath, IInboundInterceptor interceptor, String& errorStr) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 128
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetMember(LWIntegrationConfig config, XElement memberNode, MemberLoadDirectives memberLoadDirectives, IInboundInterceptor interceptor) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 149
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.QueueMemberMessageToThread(XElement memberNode, DAPPerformanceTimer msgTimer) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 136
+
+2018-11-16 09:24:13,603 [14] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:BTADEV_QA LogSource:  Message:<Member>
+  <VirtualCard>
+    <TxnHeader>
+      <TxnDetailItem DtlProductId="99898791" DtlRetailAmount="15.99" DtlQuantity="1" DtlSaleAmount="15.99" />
+    </TxnHeader>
+  </VirtualCard>
+</Member> Error:Empty Member/VirtualCard/LoyaltyIdNumber in input Xml for Member lookup.   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadExistingMember(LWIntegrationConfig config, XElement memberNode, MemberLoadMethod loadMethod, String valuePath, IInboundInterceptor interceptor, String& errorStr) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 128
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetMember(LWIntegrationConfig config, XElement memberNode, MemberLoadDirectives memberLoadDirectives, IInboundInterceptor interceptor) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 149
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.QueueMemberMessageToThread(XElement memberNode, DAPPerformanceTimer msgTimer) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 136
+2018-11-16 09:24:13,605 [1] ERROR [LWDataAcquisitionService] - DAPMessageDispatcherImpl:DispatchMemberMessage: Error processing member.
+Exception Message: Unable to find node VirtualCard in <Member />.  Cannot use path Member/VirtualCard/LoyaltyIdNumber to search.
+Exception Type: LWException
+Stack Trace: 
+   at Brierley.FrameWork.Common.Extensions.XmlExtensions.GetNodeValueByPath(XElement node, String path) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\Extensions\XmlExtensions.cs:line 135
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetNodeValueByPath(XElement memberNode, String path) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 1320
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetValueByPath(XElement memberNode, String path) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 1281
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadExistingMember(LWIntegrationConfig config, XElement memberNode, MemberLoadMethod loadMethod, String valuePath, IInboundInterceptor interceptor, String& errorStr) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 79
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetMember(LWIntegrationConfig config, XElement memberNode, MemberLoadDirectives memberLoadDirectives, IInboundInterceptor interceptor) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 149
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.QueueMemberMessageToThread(XElement memberNode, DAPPerformanceTimer msgTimer) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 106
+
+2018-11-16 09:24:13,609 [14] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:BTADEV_QA LogSource:  Message:<Member /> Error:Unable to find node VirtualCard in <Member />.  Cannot use path Member/VirtualCard/LoyaltyIdNumber to search.   at Brierley.FrameWork.Common.Extensions.XmlExtensions.GetNodeValueByPath(XElement node, String path) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\Extensions\XmlExtensions.cs:line 135
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetNodeValueByPath(XElement memberNode, String path) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 1320
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetValueByPath(XElement memberNode, String path) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 1281
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadExistingMember(LWIntegrationConfig config, XElement memberNode, MemberLoadMethod loadMethod, String valuePath, IInboundInterceptor interceptor, String& errorStr) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 79
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetMember(LWIntegrationConfig config, XElement memberNode, MemberLoadDirectives memberLoadDirectives, IInboundInterceptor interceptor) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 149
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.QueueMemberMessageToThread(XElement memberNode, DAPPerformanceTimer msgTimer) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 106
+2018-11-16 09:24:13,620 [1] ERROR [LoyaltyWareFramework] - LWIntegrationUtilities:GetMember: Empty Member/VirtualCard/LoyaltyIdNumber in input Xml for Member lookup.
+2018-11-16 09:24:13,621 [1] ERROR [LWDataAcquisitionService] - DAPMessageDispatcherImpl:DispatchMemberMessage: Error processing member.
+Exception Message: Empty Member/VirtualCard/LoyaltyIdNumber in input Xml for Member lookup.
+Exception Type: LWIntegrationException
+Stack Trace: 
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadExistingMember(LWIntegrationConfig config, XElement memberNode, MemberLoadMethod loadMethod, String valuePath, IInboundInterceptor interceptor, String& errorStr) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 128
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetMember(LWIntegrationConfig config, XElement memberNode, MemberLoadDirectives memberLoadDirectives, IInboundInterceptor interceptor) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 149
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.QueueMemberMessageToThread(XElement memberNode, DAPPerformanceTimer msgTimer) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 136
+
+2018-11-16 09:24:13,621 [14] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:BTADEV_QA LogSource:  Message:<Member>
+  <VirtualCard>
+    <TxnHeader>
+      <TxnDetailItem DtlProductId="99898781" DtlRetailAmount="20.2" DtlQuantity="1" DtlSaleAmount="20.2" />
+    </TxnHeader>
+  </VirtualCard>
+</Member> Error:Empty Member/VirtualCard/LoyaltyIdNumber in input Xml for Member lookup.   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadExistingMember(LWIntegrationConfig config, XElement memberNode, MemberLoadMethod loadMethod, String valuePath, IInboundInterceptor interceptor, String& errorStr) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 128
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetMember(LWIntegrationConfig config, XElement memberNode, MemberLoadDirectives memberLoadDirectives, IInboundInterceptor interceptor) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 149
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.QueueMemberMessageToThread(XElement memberNode, DAPPerformanceTimer msgTimer) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 136
+2018-11-16 09:24:13,622 [1] ERROR [LoyaltyWareFramework] - LWIntegrationUtilities:GetMember: Empty Member/VirtualCard/LoyaltyIdNumber in input Xml for Member lookup.
+2018-11-16 09:24:13,622 [1] ERROR [LWDataAcquisitionService] - DAPMessageDispatcherImpl:DispatchMemberMessage: Error processing member.
+Exception Message: Empty Member/VirtualCard/LoyaltyIdNumber in input Xml for Member lookup.
+Exception Type: LWIntegrationException
+Stack Trace: 
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadExistingMember(LWIntegrationConfig config, XElement memberNode, MemberLoadMethod loadMethod, String valuePath, IInboundInterceptor interceptor, String& errorStr) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 128
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetMember(LWIntegrationConfig config, XElement memberNode, MemberLoadDirectives memberLoadDirectives, IInboundInterceptor interceptor) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 149
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.QueueMemberMessageToThread(XElement memberNode, DAPPerformanceTimer msgTimer) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 136
+
+2018-11-16 09:24:13,622 [14] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:BTADEV_QA LogSource:  Message:<Member>
+  <VirtualCard>
+    <TxnHeader>
+      <TxnDetailItem DtlProductId="99898791" DtlRetailAmount="15.99" DtlQuantity="1" DtlSaleAmount="15.99" />
+    </TxnHeader>
+  </VirtualCard>
+</Member> Error:Empty Member/VirtualCard/LoyaltyIdNumber in input Xml for Member lookup.   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadExistingMember(LWIntegrationConfig config, XElement memberNode, MemberLoadMethod loadMethod, String valuePath, IInboundInterceptor interceptor, String& errorStr) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 128
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetMember(LWIntegrationConfig config, XElement memberNode, MemberLoadDirectives memberLoadDirectives, IInboundInterceptor interceptor) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 149
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.QueueMemberMessageToThread(XElement memberNode, DAPPerformanceTimer msgTimer) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 136
+2018-11-16 09:24:13,623 [1] ERROR [LWDataAcquisitionService] - DAPMessageDispatcherImpl:DispatchMemberMessage: Error processing member.
+Exception Message: Unable to find node VirtualCard in <Member />.  Cannot use path Member/VirtualCard/LoyaltyIdNumber to search.
+Exception Type: LWException
+Stack Trace: 
+   at Brierley.FrameWork.Common.Extensions.XmlExtensions.GetNodeValueByPath(XElement node, String path) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\Extensions\XmlExtensions.cs:line 135
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetNodeValueByPath(XElement memberNode, String path) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 1320
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetValueByPath(XElement memberNode, String path) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 1281
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadExistingMember(LWIntegrationConfig config, XElement memberNode, MemberLoadMethod loadMethod, String valuePath, IInboundInterceptor interceptor, String& errorStr) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 79
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetMember(LWIntegrationConfig config, XElement memberNode, MemberLoadDirectives memberLoadDirectives, IInboundInterceptor interceptor) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 149
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.QueueMemberMessageToThread(XElement memberNode, DAPPerformanceTimer msgTimer) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 106
+
+2018-11-16 09:24:13,623 [14] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:BTADEV_QA LogSource:  Message:<Member /> Error:Unable to find node VirtualCard in <Member />.  Cannot use path Member/VirtualCard/LoyaltyIdNumber to search.   at Brierley.FrameWork.Common.Extensions.XmlExtensions.GetNodeValueByPath(XElement node, String path) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\Extensions\XmlExtensions.cs:line 135
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetNodeValueByPath(XElement memberNode, String path) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 1320
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetValueByPath(XElement memberNode, String path) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 1281
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadExistingMember(LWIntegrationConfig config, XElement memberNode, MemberLoadMethod loadMethod, String valuePath, IInboundInterceptor interceptor, String& errorStr) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 79
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetMember(LWIntegrationConfig config, XElement memberNode, MemberLoadDirectives memberLoadDirectives, IInboundInterceptor interceptor) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 149
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.QueueMemberMessageToThread(XElement memberNode, DAPPerformanceTimer msgTimer) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 106
+2018-11-16 09:24:13,625 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-11-16 09:24:13,683 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: RuleTriggerByAttSet
+2018-11-16 09:24:13,990 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: RuleTriggerByName
+2018-11-16 09:24:14,101 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region named 'bScriptByExpression' created using defaults - Max items: 1000. Items to scavenge: 10
+2018-11-16 09:24:14,120 [16] INFO  [LoyaltyWareFramework] - AwardPoints:Invoke: Invoking AwardPoints for member 65
+2018-11-16 09:24:14,163 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: PointTypeByName
+2018-11-16 09:24:14,283 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: PointEventByName
+2018-11-16 09:24:14,371 [16] INFO  [LoyaltyWareFramework] - LoyaltyDataService:Credit: Crediting 361.90 points to virtual card 20.
+2018-11-16 09:24:14,414 [16] WARN  [LoyaltyWareFramework] - AwardPoints:Invoke: No rule specified for tier evaluation.
+2018-11-16 09:24:14,442 [16] INFO  [LoyaltyWareFramework] - IssueReward:Invoke: Invoking issue reward rule for member with Ipcode = 65.
+2018-11-16 09:24:14,442 [16] INFO  [LoyaltyWareFramework] - IssueReward:Invoke: Cannot issue reward to non-member with ipcode 65. Skipping the rule.
+2018-11-16 09:24:14,485 [16] INFO  [LWDataAcquisitionService] - LWDAPMemberAttributeSetsProcessor:ProcessMember: Encountered non-member with ipcode 65 encountered.  Skipping it.
+2018-11-16 09:24:14,488 [16] INFO  [LoyaltyWareFramework] - LoyaltyDataService:VerifyMember: Verifying member before updating it.
+2018-11-16 09:24:14,608 [16] INFO  [LoyaltyWareFramework] - AwardPoints:Invoke: Invoking AwardPoints for member 65
+2018-11-16 09:24:14,618 [16] INFO  [LoyaltyWareFramework] - LoyaltyDataService:Credit: Crediting 451.90 points to virtual card 20.
+2018-11-16 09:24:14,671 [16] WARN  [LoyaltyWareFramework] - AwardPoints:Invoke: No rule specified for tier evaluation.
+2018-11-16 09:24:14,676 [16] INFO  [LoyaltyWareFramework] - IssueReward:Invoke: Invoking issue reward rule for member with Ipcode = 65.
+2018-11-16 09:24:14,676 [16] INFO  [LoyaltyWareFramework] - IssueReward:Invoke: Cannot issue reward to non-member with ipcode 65. Skipping the rule.
+2018-11-16 09:24:14,690 [16] INFO  [LWDataAcquisitionService] - LWDAPMemberAttributeSetsProcessor:ProcessMember: Encountered non-member with ipcode 65 encountered.  Skipping it.
+2018-11-16 09:24:14,696 [16] INFO  [LoyaltyWareFramework] - LoyaltyDataService:VerifyMember: Verifying member before updating it.
+2018-11-16 09:24:14,889 [16] INFO  [LoyaltyWareFramework] - AwardPoints:Invoke: Invoking AwardPoints for member 65
+2018-11-16 09:24:14,894 [16] INFO  [LoyaltyWareFramework] - LoyaltyDataService:Credit: Crediting 1.90 points to virtual card 20.
+2018-11-16 09:24:14,920 [16] WARN  [LoyaltyWareFramework] - AwardPoints:Invoke: No rule specified for tier evaluation.
+2018-11-16 09:24:14,924 [16] INFO  [LoyaltyWareFramework] - IssueReward:Invoke: Invoking issue reward rule for member with Ipcode = 65.
+2018-11-16 09:24:14,924 [16] INFO  [LoyaltyWareFramework] - IssueReward:Invoke: Cannot issue reward to non-member with ipcode 65. Skipping the rule.
+2018-11-16 09:24:15,637 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-11-16 09:24:15,642 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWAsyncJobLogger is being shutdown.
+2018-11-16 09:24:19,299 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 2101 finished.  Summarizing it.
+2018-11-16 09:24:19,414 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 2101 has finished.  3 messages received - 9 messages failed.
+2018-11-16 09:24:19,431 [1] INFO  [AsyncJobLogger] - JobId:1495 JobNumber:2101 JobName:
+2018-11-16 10:51:50,722 [1] INFO  [LWDataAcquisitionService] - DAPConsoleProcessor:Main: Initialized log4net using config file 'C:\Users\kconners\Desktop\DapStuff\Brierley.DataAcquisition\DAPConsole\log4net.xml'
+2018-11-16 10:51:50,742 [1] INFO  [LWDataAcquisitionService] - DAPMain:InitializeConfiguration: Initialization configuration file C:\Users\kconners\Desktop\DapStuff\DAPEnrollmentFileConfig.xml
+2018-11-16 10:51:50,770 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: Initializing DAP job.
+2018-11-16 10:51:51,328 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: New job 2151 created to process file C:\Users\kconners\Desktop\DapStuff\Enrol.txt
+2018-11-16 10:51:51,329 [14] INFO  [AsyncJobLogger] - JobId:1509 JobNumber:2151 JobName:
+2018-11-16 10:51:51,333 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetOutboundDAPProvider: Creating a framework output provider.
+2018-11-16 10:51:51,361 [1] INFO  [LWDataAcquisitionService] - DAPMessageDispatcherImpl:Initialize: Initializing thread pool manager for job 2151 with 1 threads.
+2018-11-16 10:51:51,381 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetInboundDAPProvider: Creating a file provider.
+2018-11-16 10:51:51,384 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: Initializing...
+2018-11-16 10:51:51,385 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: File to process: C:\Users\kconners\Desktop\DapStuff\Enrol.txt
+2018-11-16 10:51:51,396 [1] INFO  [LoyaltyWareFramework] - DynamicCodeUtil:CompileDynamicCode: Compiling dynamic scripts.
+2018-11-16 10:51:51,397 [1] INFO  [LoyaltyWareFramework] - DynamicCodeUtil:CompileDynamicCode: generating code for dynamic script SetNonMemberProperty
+2018-11-16 10:51:51,945 [1] INFO  [LoyaltyWareFramework] - MessagingBus:Initialize: Initializing message bus...
+2018-11-16 10:51:51,974 [1] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: MemberByLoyaltyId
+2018-11-16 10:51:52,052 [1] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: MemberByIpCode
+2018-11-16 10:51:52,074 [1] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: RuleTriggerByObjectName
+2018-11-16 10:51:52,100 [1] ERROR [LoyaltyWareFramework] - LWIntegrationUtilities:GetMember: A member already exists.
+2018-11-16 10:51:52,133 [1] ERROR [LWDataAcquisitionService] - DAPMessageDispatcherImpl:DispatchMemberMessage: Error processing member.
+Exception Message: A member already exists.
+Exception Type: LWIntegrationException
+Stack Trace: 
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetMember(LWIntegrationConfig config, XElement memberNode, MemberLoadDirectives memberLoadDirectives, IInboundInterceptor interceptor) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 192
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.QueueMemberMessageToThread(XElement memberNode, DAPPerformanceTimer msgTimer) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 166
+
+2018-11-16 10:51:52,137 [15] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:BTADEV_QA LogSource:  Message:<Member NonMember="false" FirstName="John1001" MiddleName="Henry" LastName="Doe1001" BirthDate="" NamePrefix="" NameSuffix="" AlternateId="10011" Username="jd10011" Password="Password1***" PrimaryEmailAddress="johndoe10011@test.com" PrimaryPhoneNumber="123456789" PrimaryPostalCode="75093">
+  <VirtualCard LoyaltyIdNumber="10011" />
+  <MemberDetails AddressLineOne="5809 Dove Creek Lane" AddressLineTwo="" AddressLineThree="" City="Plano" StateOrProvince="TX" ZipOrPostalCode="75093" County="Collin" Country="USA" AddressMailable="" HomePhone="" MobilePhone="" WorkPhone="2143653626" SecondaryEmailAddress="" EmailAddressMailable="false" MemberStatusCode="" DirectMailOptInDate="" EmailOptInDate="" SMSOptInDate="" EnrollDate="" Gender="Male" MemberSource="" LanguagePreference="" SecurityQuestion="" SecurityAnswer="" />
+</Member> Error:A member already exists.   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.GetMember(LWIntegrationConfig config, XElement memberNode, MemberLoadDirectives memberLoadDirectives, IInboundInterceptor interceptor) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 192
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.QueueMemberMessageToThread(XElement memberNode, DAPPerformanceTimer msgTimer) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 166
+2018-11-16 10:51:52,139 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-11-16 10:51:53,378 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-11-16 10:51:53,384 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWAsyncJobLogger is being shutdown.
+2018-11-16 10:51:57,338 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 2151 finished.  Summarizing it.
+2018-11-16 10:51:57,447 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 2151 has finished.  2 messages received - 1 messages failed.
+2018-11-16 10:51:57,470 [1] INFO  [AsyncJobLogger] - JobId:1509 JobNumber:2151 JobName:
+2018-11-16 10:52:35,658 [1] INFO  [LWDataAcquisitionService] - DAPConsoleProcessor:Main: Initialized log4net using config file 'C:\Users\kconners\Desktop\DapStuff\Brierley.DataAcquisition\DAPConsole\log4net.xml'
+2018-11-16 10:52:35,680 [1] INFO  [LWDataAcquisitionService] - DAPMain:InitializeConfiguration: Initialization configuration file C:\Users\kconners\Desktop\DapStuff\DAPEnrollmentFileConfig.xml
+2018-11-16 10:52:35,709 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: Initializing DAP job.
+2018-11-16 10:52:36,958 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: New job 2201 created to process file C:\Users\kconners\Desktop\DapStuff\Enrol.txt
+2018-11-16 10:52:36,960 [13] INFO  [AsyncJobLogger] - JobId:1511 JobNumber:2201 JobName:
+2018-11-16 10:52:36,964 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetOutboundDAPProvider: Creating a framework output provider.
+2018-11-16 10:52:36,986 [1] INFO  [LWDataAcquisitionService] - DAPMessageDispatcherImpl:Initialize: Initializing thread pool manager for job 2201 with 1 threads.
+2018-11-16 10:52:36,993 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetInboundDAPProvider: Creating a file provider.
+2018-11-16 10:52:36,995 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: Initializing...
+2018-11-16 10:52:36,995 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: File to process: C:\Users\kconners\Desktop\DapStuff\Enrol.txt
+2018-11-16 10:52:37,006 [1] INFO  [LoyaltyWareFramework] - DynamicCodeUtil:CompileDynamicCode: Compiling dynamic scripts.
+2018-11-16 10:52:37,007 [1] INFO  [LoyaltyWareFramework] - DynamicCodeUtil:CompileDynamicCode: generating code for dynamic script SetNonMemberProperty
+2018-11-16 10:52:37,226 [1] INFO  [LoyaltyWareFramework] - MessagingBus:Initialize: Initializing message bus...
+2018-11-16 10:52:37,259 [1] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: MemberByLoyaltyId
+2018-11-16 10:52:37,310 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-11-16 10:52:37,359 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: AttributeSetMetaDataByName
+2018-11-16 10:52:37,497 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: AttributeSetMetaDataById
+2018-11-16 10:52:37,507 [16] INFO  [LoyaltyWareFramework] - ClassLoaderUtil:ResolveAssemblyFromPath: Brierley.Clients.BTADEV.DataModel has been resolved from C:\Users\kconners\Desktop\DapStuff.  Version number not considered.
+2018-11-16 10:52:37,508 [16] INFO  [LoyaltyWareFramework] - ClassLoaderUtil:ResolveAssemblyFromPath: Assembly file C:\Users\kconners\Desktop\DapStuff\Brierley.Clients.BTADEV.DataModel.dll has been successfully loaded
+2018-11-16 10:52:37,573 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: ValidatorTriggerByAttribute
+2018-11-16 10:52:37,905 [16] INFO  [LoyaltyWareFramework] - LoyaltyDataService:VerifyMember: Verifying member before updating it.
+2018-11-16 10:52:37,953 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: RuleTriggerByObjectName
+2018-11-16 10:52:38,079 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: RuleTriggerByName
+2018-11-16 10:52:38,186 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region named 'bScriptByExpression' created using defaults - Max items: 1000. Items to scavenge: 10
+2018-11-16 10:52:38,208 [16] INFO  [LoyaltyWareFramework] - AwardPoints:Invoke: Invoking AwardPoints for member 67
+2018-11-16 10:52:38,257 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: PointTypeByName
+2018-11-16 10:52:38,398 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: PointEventByName
+2018-11-16 10:52:38,442 [16] INFO  [LoyaltyWareFramework] - LoyaltyDataService:Credit: Crediting 100 points to virtual card 22.
+2018-11-16 10:52:38,531 [16] WARN  [LoyaltyWareFramework] - AwardPoints:Invoke: No rule specified for tier evaluation.
+2018-11-16 10:52:38,557 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: RuleTriggerByAttSet
+2018-11-16 10:52:38,729 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: MemberByIpCode
+2018-11-16 10:52:38,770 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-11-16 10:52:38,776 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWAsyncJobLogger is being shutdown.
+2018-11-16 10:52:42,969 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 2201 finished.  Summarizing it.
+2018-11-16 10:52:42,999 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 2201 has finished.  1 messages received - 0 messages failed.
+2018-11-16 10:52:43,021 [1] INFO  [AsyncJobLogger] - JobId:1511 JobNumber:2201 JobName:

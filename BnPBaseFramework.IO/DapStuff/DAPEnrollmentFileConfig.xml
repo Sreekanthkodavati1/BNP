@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DAPDirectives xmlns="http://www.brierley.com/DAPFileProcessing">
+
+
+  <!-- General Configuration Parameters -->
+  <DAPConfiguration>
+    <DAPDataType>MemberAttributeSets</DAPDataType>
+    <DateConversionFormat></DateConversionFormat>
+    <TrimStrings>true</TrimStrings>
+    <EmailInformation>
+      <SMTPServer>cypwebmail.brierleyweb.com</SMTPServer>
+      <SenderEmail>dap_admin@brierley.com</SenderEmail>
+      <SenderDisplayName>Brierley DAP Administrator</SenderDisplayName>
+      <RecepientEmail>pkholia@brierley.com</RecepientEmail>
+    </EmailInformation>
+    <!--<DoNotProcess>true</DoNotProcess>-->
+  </DAPConfiguration>
+
+  <!-- Configuration parameters for message acquisition -->
+  <InputProvider MessageProcessingScheme="Single" DebugOutputPath="C:\Users\kconners\Desktop\DapStuff\Data\Enrollment\Stage1Out">
+    <FlatFileInput>
+      <CollectionRoot Name="Members" Structure="Delimited" Delimiter="NL" TagName="">
+        <Record Name="Member" Structure="Delimited" Delimiter="|" TagName="">
+          <Fields>
+		    
+            <RecordField Name="LoyaltyId" Type="String"/>
+            <RecordField Name="FirstName" Type="String"/>
+            <RecordField Name="MiddleName" Type="String"/>
+            <RecordField Name="LastName" Type="String"/>
+            <RecordField Name="BirthDate" Type="Date"/>
+            <RecordField Name="NamePrefix" Type="String"/>
+            <RecordField Name="NameSuffix" Type="String"/>
+            <RecordField Name="AlternateId" Type="String"/>
+            <RecordField Name="UserName" Type="String"/>
+            <RecordField Name="Password" Type="String"/>
+            <RecordField Name="PrimaryEmailAddress" Type="String"/>
+            <RecordField Name="PrimaryPhoneNumber" Type="String"/>
+            <!--<RecordField Name="PrimaryPostalCode" Type="String"/>-->
+            <RecordField Name="AddressLineOne" Type="String"/>
+            <RecordField Name="AddressLineTwo" Type="String"/>
+            <RecordField Name="AddressLineThree" Type="String"/>
+            <RecordField Name="AddressLineFour" Type="String"/>
+            <RecordField Name="City" Type="String"/>
+            <RecordField Name="StateOrProvince" Type="String"/>
+            <RecordField Name="ZipOrPostalCode" Type="String"/>
+            <RecordField Name="County" Type="String"/>
+            <RecordField Name="Country" Type="String"/>
+            <RecordField Name="AddressMailable" Type="Integer"/>
+            <RecordField Name="HomePhone" Type="String"/>
+            <RecordField Name="MobilePhone" Type="String"/>
+            <RecordField Name="WorkPhone" Type="String"/>
+            <RecordField Name="SecondaryEmailAddress" Type="String"/>
+            <RecordField Name="EmailAddressMailable" Type="Integer"/>
+            <RecordField Name="MemberStatusCode" Type="String"/>
+            <RecordField Name="DirectMailOptInDate" Type="Date"/>
+            <RecordField Name="EmailOptInDate" Type="Date"/>
+            <RecordField Name="SMSOptInDate" Type="Date"/>
+            <RecordField Name="EnrollDate" Type="Date"/>
+            <RecordField Name="Gender" Type="String"/>
+            <RecordField Name="MemberSource" Type="String"/>
+            <RecordField Name="LanguagePreference" Type="String"/>
+            <RecordField Name="SecurityQuestion" Type="String"/>
+            <RecordField Name="SecurityAnswer" Type="String"/>
+          </Fields>
+        </Record>
+      </CollectionRoot>
+    </FlatFileInput>
+  </InputProvider>
+
+  <!-- Configuration for message transformation -->
+  <MessageTransformationMap SourceCollectionName="Members" TargetAttributeSetType="Member" DebugOutputPath="C:\Users\kconners\Desktop\DapStuff\Data\Enrollment\Stage2Out">
+    <Scripts>
+      <Script Name="SetNonMemberProperty" InParmName="nonmemberFlag">
+        <Code>
+          <![CDATA[
+     	              if ( nonmemberFlag == "0" )
+                    {
+                      return "false";
+                    }
+                    else
+                    {
+                      return "true";
+                    }
+     	              ]]>
+        </Code>
+      </Script>
+    </Scripts>
+    <FieldMap SourceField="Member/NonMember">
+      <Populate TargetNode="Member/NonMember" UseScript="SetNonMemberProperty"/>
+    </FieldMap>
+    <FieldMap SourceField="Member/LoyaltyId">
+      <Populate TargetNode="Member/VirtualCard/LoyaltyIdNumber" />
+    </FieldMap>
+    <FieldMap SourceField="Member/FirstName">
+      <Populate TargetNode="Member/FirstName" />
+    </FieldMap>
+    <FieldMap SourceField="Member/MiddleName">
+      <Populate TargetNode="Member/MiddleName" />
+    </FieldMap>
+    <FieldMap SourceField="Member/LastName">
+      <Populate TargetNode="Member/LastName" />
+    </FieldMap>
+    <FieldMap SourceField="Member/BirthDate">
+      <Populate TargetNode="Member/BirthDate" />
+    </FieldMap>
+    <FieldMap SourceField="Member/NamePrefix">
+      <Populate TargetNode="Member/NamePrefix" />
+    </FieldMap>
+    <FieldMap SourceField="Member/NameSuffix">
+      <Populate TargetNode="Member/NameSuffix" />
+    </FieldMap>
+    <FieldMap SourceField="Member/AlternateId">
+      <Populate TargetNode="Member/AlternateId" />
+    </FieldMap>
+    <FieldMap SourceField="Member/UserName">
+      <Populate TargetNode="Member/Username" />
+    </FieldMap>
+    <FieldMap SourceField="Member/Password">
+      <Populate TargetNode="Member/Password" />
+    </FieldMap>
+    <FieldMap SourceField="Member/PrimaryEmailAddress">
+      <Populate TargetNode="Member/PrimaryEmailAddress" />
+    </FieldMap>
+    <FieldMap SourceField="Member/PrimaryPhoneNumber">
+      <Populate TargetNode="Member/PrimaryPhoneNumber" />
+    </FieldMap>
+    <!--<FieldMap SourceField="Member/PrimaryPostalCode">
+      <Populate TargetNode="Member/PrimaryPostalCode" />
+    </FieldMap>-->
+    <FieldMap SourceField="Member/AddressLineOne">
+      <Populate TargetNode="Member/MemberDetails/AddressLineOne" />
+    </FieldMap>
+    <FieldMap SourceField="Member/AddressLineTwo">
+      <Populate TargetNode="Member/MemberDetails/AddressLineTwo" />
+    </FieldMap>
+    <FieldMap SourceField="Member/AddressLineThree">
+      <Populate TargetNode="Member/MemberDetails/AddressLineThree" />
+    </FieldMap>
+    <FieldMap SourceField="Member/City">
+      <Populate TargetNode="Member/MemberDetails/City" />
+    </FieldMap>
+    <FieldMap SourceField="Member/StateOrProvince">
+      <Populate TargetNode="Member/MemberDetails/StateOrProvince" />
+    </FieldMap>
+    <FieldMap SourceField="Member/ZipOrPostalCode">
+      <Populate TargetNode="Member/PrimaryPostalCode" />
+      <Populate TargetNode="Member/MemberDetails/ZipOrPostalCode" />
+    </FieldMap>
+    <FieldMap SourceField="Member/County">
+      <Populate TargetNode="Member/MemberDetails/County" />
+    </FieldMap>
+    <FieldMap SourceField="Member/Country">
+      <Populate TargetNode="Member/MemberDetails/Country" />
+    </FieldMap>
+    <FieldMap SourceField="Member/AddressMailable">
+      <Populate TargetNode="Member/MemberDetails/AddressMailable" />
+    </FieldMap>
+    <FieldMap SourceField="Member/HomePhone">
+      <Populate TargetNode="Member/MemberDetails/HomePhone" />
+    </FieldMap>
+    <FieldMap SourceField="Member/MobilePhone">
+      <Populate TargetNode="Member/MemberDetails/MobilePhone" />
+    </FieldMap>
+    <FieldMap SourceField="Member/WorkPhone">
+      <Populate TargetNode="Member/MemberDetails/WorkPhone" />
+    </FieldMap>
+    <FieldMap SourceField="Member/SecondaryEmailAddress">
+      <Populate TargetNode="Member/MemberDetails/SecondaryEmailAddress" />
+    </FieldMap>
+    <FieldMap SourceField="Member/EmailAddressMailable">
+      <Populate TargetNode="Member/MemberDetails/EmailAddressMailable" />
+    </FieldMap>
+    <FieldMap SourceField="Member/MemberStatusCode">
+      <Populate TargetNode="Member/MemberDetails/MemberStatusCode" />
+    </FieldMap>
+    <FieldMap SourceField="Member/DirectMailOptInDate">
+      <Populate TargetNode="Member/MemberDetails/DirectMailOptInDate" />
+    </FieldMap>
+    <FieldMap SourceField="Member/EmailOptInDate">
+      <Populate TargetNode="Member/MemberDetails/EmailOptInDate" />
+    </FieldMap>
+    <FieldMap SourceField="Member/SMSOptInDate">
+      <Populate TargetNode="Member/MemberDetails/SMSOptInDate" />
+    </FieldMap>
+    <FieldMap SourceField="Member/EnrollDate">
+      <Populate TargetNode="Member/MemberDetails/EnrollDate" />
+    </FieldMap>
+    <FieldMap SourceField="Member/Gender">
+      <Populate TargetNode="Member/MemberDetails/Gender" />
+    </FieldMap>
+    <FieldMap SourceField="Member/MemberSource">
+      <Populate TargetNode="Member/MemberDetails/MemberSource" />
+    </FieldMap>
+    <FieldMap SourceField="Member/LanguagePreference">
+      <Populate TargetNode="Member/MemberDetails/LanguagePreference" />
+    </FieldMap>
+    <FieldMap SourceField="Member/SecurityQuestion">
+      <Populate TargetNode="Member/MemberDetails/SecurityQuestion" />
+    </FieldMap>
+    <FieldMap SourceField="Member/SecurityAnswer">
+      <Populate TargetNode="Member/MemberDetails/SecurityAnswer" />
+    </FieldMap>
+  </MessageTransformationMap>
+
+  <!-- Output Provider -->
+  <OutputProvider>
+    <FrameworkOutput>
+      <!-- Configuration for Dispatcher messages over threads -->
+      <DispatcherConfiguration>
+        <ThreadPoolSize>1</ThreadPoolSize>
+        <RequestsPerThread></RequestsPerThread>
+        <SerializeMembers>false</SerializeMembers>
+      </DispatcherConfiguration>
+      <!-- Final processing directives -->
+      <FrameworkBoundMessageProcessingDirectives>
+       
+        <ClientDataModel>
+          <MemberLoadDirectives ExceptionIfFound="true">
+            <LoadDirective Method="LoyaltyIdNumber" ValuePath="Member/VirtualCard/LoyaltyIdNumber" />
+            <LoadDirective Method="AlternateId" ValuePath="Member/AlternateId"/>            
+          </MemberLoadDirectives>
+          <AttributeSetCreateDirectives>
+            <AttributeSetUpdate Name="MemberDetails" FindMethod="First" CreateIfNotFound="true"/>
+          </AttributeSetCreateDirectives>
+        </ClientDataModel>
+      </FrameworkBoundMessageProcessingDirectives>
+    </FrameworkOutput>
+  </OutputProvider>
+</DAPDirectives>

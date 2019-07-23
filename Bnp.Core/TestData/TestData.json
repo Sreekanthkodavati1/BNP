@@ -1,0 +1,326 @@
+[
+  {
+    "//": "Below Fields Are Mandatory",
+    "Browser": "Chrome",
+    "DBDateRange": "29-Nov-18 12.00",
+    "IsDBReportingRequired": "false",
+    "Application_URLS": [
+      {
+        "NavigatorURL": "http://tyqawbs08.brierley.com:9900/login.aspx"
+      },
+      {
+        "CSPortalURL": "http://tyqawbs08.brierley.com:9911/Login.aspx"
+      },
+      {
+        "MPPortalURL": "http://tyqawbs08.brierley.com:9912/Login.aspx"
+      }
+    ],
+
+    "Navigator": [
+      {
+
+        "Organization": "BTA",
+        "TestOrganization": "BTADEV0YS",
+        "Environment": "Development",
+        "Order ID": "1",
+
+        "ConfigFileUploadPath": "\\\\Tyqawbs08\\wwwroot\\loyaltywareBTA\\Config",
+        "GenerateClientAssembly": "\\\\Tyqawbs08\\wwwroot\\loyaltywareBTA\\BTA_Dev_API\\CustomerDataServiceConfig.xml",
+        "Website": [
+          {
+            "CSPortalName": "BTA_Dev_CS",
+            "CSPortal_EndPoint": "tyqawbs08.brierley.com:9911"
+          },
+          {
+            "MemberPortalName": "BTA_Dev_MP",
+            "MPPortal_EndPoint": "tyqawbs08.brierley.com:9912"
+          }
+        ],
+        "FrameworkConfig": [
+          {
+            "DmcUrl": "https://ssla.teradatadmc.com/brierley_chevron/api/rest/v5",
+            "DmcUsername": "dmc-cvxapiuser@brierley.com",
+            "DmcPassword": "Loyaltycvx#1",
+            "LWEmailProvider": "DMC",
+            "LoyaltyCurrencyAsPayment DefaultCurrency": "USD"
+          }
+        ],
+        "DBSettings": [
+          {
+            "DBName": "FrameWorkDB",
+            "DataBasesType": "Oracle",
+            "DBUserID": "OE_6",
+            "DBPassword": "QaR0ck$",
+            "DBDefaultSchema": "",
+            "Server": "",
+            "Database": "BPQA01",
+            "Version": "5.3.0.32",
+            "ConnectionProps": ""
+          }
+        ],
+        "//": "End of  Mandatory Fields",
+
+        "AllAdminusers": [
+          {
+            "User Role": "bpadmin",
+            "username": "bpadmin",
+            "password": "bpadmin"
+          },
+          {
+            "User Role": "LWAdminUser",
+            "username": "BTAADMIN",
+            "password": "Password1*"
+          },
+          {
+            "User Role": "KeyAdminUser",
+            "username": "BTADEV_KEYUSER",
+            "password": "Password1*"
+          },
+          {
+            "User Role": "DBAAdminUser",
+            "username": "BTADEV_DBAUSER",
+            "password": "Password1*"
+          },
+          {
+            "User Role": "WebAdminUser",
+            "username": "BTADEV_WEBUSER",
+            "password": "Password1*"
+          },
+          {
+            "User Role": "UserWithAllRoles",
+            "username": "BTAUSER_DEV",
+            "password": "Password1*"
+          },
+          {
+            "User Role": "RegressionUser",
+            "username": "Regression_TestUser",
+            "password": "Password1*"
+          }
+        ],
+        "Migration": [
+          {
+            "MigrationEnvironment": "QA",
+            "MigrationOrderID": "2"
+          }
+        ],
+        "MigrationCategory": [
+          {
+            "Category Type": "Migration_Product_Category",
+            "Product": "Migration_Web_Product",
+            "Reward": "Migration_Web_Reward",
+            "Product_Variant": "Web_Product_Variant"
+          },
+          {
+            "Category Type": "Migration_Coupon_Category",
+            "CreateCoupon": "Migration_Web_Coupon"
+          }
+
+        ],
+
+        "Category": [
+          {
+            "Category Type": "Product_Category",
+            "NumberOfProducts": "5",
+            "NumberOfRewards": "10",
+            "Product": "Web_Product",
+            "Reward": "Web_Reward",
+            "Product_Variant": "Web_Product_Variant",
+            "PartNumber": "1",
+            "Quantity": "1",
+            "QuantityThreshold": "1",
+            "VariantOrder": "0",
+            "BalanceNeeded": "10",
+            "Description": "CategoryDetails"
+
+          },
+          {
+            "Category Type": "Product",
+            "Quantity": "3",
+            "BasePrice": "45",
+            "QuantityThreshold": "1"
+          },
+          {
+            "Category Type": "ExchangeRates",
+            "ExchangeRateValue": "MXN",
+            "DefaultCurrencyValue": "USD",
+            "ToCurrencyName": "Mexican peso",
+            "FromCurrencyName": "US Dollar"
+          },
+          {
+            "Category Type": "ScheduleJob",
+            "Job": "Web_Job",
+            "Hour": "1"
+          },
+          {
+            "Category Type": "Bonus_Category",
+            "NumberofBonuses": "1",
+            "CreateBonus": "Web_Bonus"
+          },
+          {
+            "Category Type": "Coupon_Category",
+            "NumberofCoupons": "1",
+            "CreateCoupon": "Web_Coupon",
+            "CouponCode": "COU",
+            "CertNumberFormat": "##########-####",
+            "GlobalValueSet": "1"
+          },
+          {
+            "Category Type": "CouponMaxUses",
+            "UsesAllowed": "10",
+            "PerMonth": "3",
+            "PerYear": "3",
+            "PerWeek": "3",
+            "PerDay": "3"
+          },
+          {
+            "Category Type": "CouponMaxUsesWithAllIntervalCombination",
+            "PerMonth": "4",
+            "PerYear": "4",
+            "PerWeek": "4",
+            "PerDay": "4"
+          },
+          {
+            "Category Type": "ProductImage",
+            "Category": "",
+            "ProductName": "",
+            "ImageFileName": "Web_ProductImage_",
+            "ImageOrder": "1"
+          }
+        ],
+
+        "CreateAttributSet": [
+          {
+            "AttributeSets": "BTADEVWebAttributeSet",
+            "Attribute": "BTADEVWebChildAttribute"
+          }
+        ],
+        "GlobalCreateAttributSet": [
+          {
+            "AttributeSets": "WebAttributeSet",
+            "Attribute": "WebChildAttribute",
+            "MigrationAttributeSets": "WebMigrationAttributeSet"
+          }
+        ],
+        "notification": [
+          {
+            "default_notification": "TestNotification",
+            "migration_notification": "Migration_TestNotification"
+          }
+        ],
+        "email": [
+          {
+            "MailingName": "WebEMAIL",
+            "Email_DMCCode": "3000182200"
+          }
+        ],
+        "email_aws": [
+          {
+            "Email": "WebEMAIL_AWS_",
+            "Template": "Web_EmailTemplate",
+            "Subject": "Web_Subject",
+            "FromEmail": "somemail@example.com"
+          }
+        ],
+        "global_value": [
+          {
+            "Key": "Test_GlobalValue_Key_",
+            "Value": "Test_GlobalValue_Value_"
+          }
+        ],
+        "sms": [
+          {
+            "SMSMessageName": "WebSMS",
+            "SMS_DMCCode": "3000164018"
+          }
+        ],
+        "Message": [
+          {
+            "MessageName": "WebMessage",
+            "Migration_MessageNameWithPushNotification": "_WebMessageWithPushNotification"
+          }
+        ],
+
+        "Promotion": [
+          {
+            "PromotionName": "WebPromo_",
+            "MigrationPromotionName": "MigrationWebPromo_"
+          }
+        ],
+        "LocationGroup": [
+          {
+            "LocationGroupName": "WebLocationGroup"
+          }
+        ],
+        "Channels": [
+          {
+            "ChannelName": "Channel"
+          }
+        ],
+        "Store": [
+          {
+            "StoreName": "WebStore_"
+          }
+        ],
+        "TextBlock": [
+          {
+            "Default_TextBlock": "WebTextBlock",
+            "Migration_ConvertedTextBlock": "MigrationConveretedTB",
+            "Migration_NonConvertedTextBlock": "MigrationNonConvertedTB",
+            "Converted_Text": "Salut",
+            "NonConverted_Text": "Hi"
+          }
+        ],
+        "GooglePay": [
+          {
+            "default_googlePay": "WebGooglePay_",
+            "migration_googlePay": "Migration_WebGooglePay_"
+          }
+        ]
+      }
+    ],
+    "CsPortal": [
+      {
+
+        "CsAdminuser": [
+          {
+            "csadmin": "csadmin",
+            "csadmin_password": "csadmin",
+            "BTA_DEV_CS_LogPath": "\\\\Tyqawbs08\\wwwroot\\loyaltywareBTA\\Logs\\BTA_Dev_CS.log"
+          }
+
+        ],
+
+        "Roles": [
+          {
+            "AdminRole": "Admin",
+            "SrAdminRole": "SrAdmin",
+            "JrAdminRole": "JrAdmin",
+            "AdminRole_PointAwardLimit": "200",
+            "SrAdminRole_PointAwardLimit": "100",
+            "JrAdminRole_PointAwardLimit": "50"
+          }
+        ],
+        "Agents": [
+          {
+            "AdminAgent": "Admin_Agent",
+            "SrAdminAgent": "SrAdmin_Agent",
+            "JrAdminAgent": "JrAdmin_Agent",
+            "Agent_password": "Password1*",
+            "ChangePasswordTestAgent": "ChangePasswordTestAgent",
+            "ForgotPasswordTestAgent": "ForgotPasswordTestAgent"
+          }
+        ]
+      }
+
+    ],
+    "MemberPortal": [
+      {
+        "MP_username": "CDIS_LGLLEF_LYNN",
+        "MP_password": "Password1*",
+        "RewardName": "EarnRewardIfPointsIs100",
+        "ForgotPasswordTestMember": "ForgotPasswordTestMember1",
+        "BTA_DEV_MP_LogPath": "\\\\Tyqawbs08\\wwwroot\\loyaltywareBTA\\Logs\\BTA_Dev_MP.log"
+      }
+    ]
+  }
+]

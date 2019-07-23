@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BnPBaseFramework.Web.BaseConfiguration" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAABQCIIQoEAIAUABQABAAIAACAAiCEAAAoISQYA=</HashCode>
+      <FileName>DriverUtils\BaseConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.CapabilitiesSetEventArgs" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DriverUtils\CapabilitiesSetEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.DriverContext" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAgAABGgKIAABAUAAARIAOFQQSIgAEAIBCAQBCDEAA=</HashCode>
+      <FileName>DriverUtils\DriverContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.DriverOptionsSetEventArgs">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>DriverUtils\DriverOptionsSetEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.DriversCustomSettings">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAQAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>DriverUtils\DriversCustomSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.TestBase" Collapsed="true">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>DriverUtils\TestBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.Verify" Collapsed="true">
+    <Position X="8.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DriverUtils\Verify.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.Exceptions.DataDrivenReadException" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\DataDrivenReadException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.Exceptions.WaitTimeoutException" Collapsed="true">
+    <Position X="12.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\WaitTimeoutException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.Extensions.LocatorExtensions" Collapsed="true">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Extensions\LocatorExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.Extensions.SearchContextExtensions" Collapsed="true">
+    <Position X="8.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAABQAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Extensions\SearchContextExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.Extensions.WebDriverExtensions" Collapsed="true">
+    <Position X="14" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAACAIJJAAIAAAACAABAAAAAAAAAAAEgMAEACAAA=</HashCode>
+      <FileName>Extensions\WebDriverExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.Extensions.WebElementExtensions" Collapsed="true">
+    <Position X="5.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAgAAACIAAAAAAAAAABAAgAAAAEAAAAAAAAEAAAA=</HashCode>
+      <FileName>Extensions\WebElementExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.Helpers.DateHelper" Collapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAQAAAAAAAAAAAAAEAAQAAAA=</HashCode>
+      <FileName>Helpers\DateHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.Helpers.FilesHelper" Collapsed="true">
+    <Position X="14" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAEAAAAAoBAAAAAECAAAEAAEAIABAACAEECAAACEA=</HashCode>
+      <FileName>Helpers\FilesHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.Helpers.NameHelper" Collapsed="true">
+    <Position X="14" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAJAAAAAAAAAAAAAAgAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Helpers\NameHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.Helpers.PerformanceHelper" Collapsed="true">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAgAAAgIAAAEAAAAAAACAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Helpers\PerformanceHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.Helpers.TakeScreenShot">
+    <Position X="14" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Helpers\TakeScreenshot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.Helpers.WaitHelper" Collapsed="true">
+    <Position X="10.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helpers\WaitHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.Logger.MyEventFiringWebDriver" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAChAAAAAIBAAAAAAAAAAAAAAAQAAgAAAAAABIAAAA=</HashCode>
+      <FileName>Logger\MyEventFiringWebDriver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.Logger.TestLogger" Collapsed="true">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAQAAAgAgCAAAIAAAAAEAAAAAAEAAAAA=</HashCode>
+      <FileName>Logger\TestLogger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.Types.AverageGroupedTimes" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAEAAAAAAAAAAAABAAAEAAA=</HashCode>
+      <FileName>Types\AverageGroupedTimes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.Types.ElementLocator">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAgAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Types\ElementLocator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.Types.ErrorDetail">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABgAAAAAAA=</HashCode>
+      <FileName>Types\ErrorDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.Types.SavedTimes" Collapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAIAAAACAAAAAAAAAAAAAAIAAAAAAAAAAkAAAAI=</HashCode>
+      <FileName>Types\SavedTimes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.WebElements.Checkbox" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAACAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>WebElements\Checkbox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.WebElements.JavaScriptAlert" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAIAAACAI=</HashCode>
+      <FileName>WebElements\JavaScriptAlert.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.WebElements.Select" Collapsed="true">
+    <Position X="10.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAACIAABAAAgAAQAAAAAAAAAAIAAAAAAAAAAE=</HashCode>
+      <FileName>WebElements\Select.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.WebElements.Table" Collapsed="true">
+    <Position X="12.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAIAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>WebElements\Table.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.WebElements.Kendo.KendoComboBox" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAECAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>WebElements\Kendo\KendoComboBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.WebElements.Kendo.KendoDropDownList" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>WebElements\Kendo\KendoDropDownList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.WebElements.Kendo.KendoGrid" Collapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAIAAAQAAAAAAAAAAAAAAAAgAAJAAAAAAAEAAA=</HashCode>
+      <FileName>WebElements\Kendo\KendoGrid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.WebElements.Kendo.KendoSelect" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAABAAAAAAAIAAAAAIAQAAAAAAAgAAYAAAAAADAAIA=</HashCode>
+      <FileName>WebElements\Kendo\KendoSelect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Web.WebElements.Kendo.KendoTreeView" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAhAABAEAAAAAAAAAAQAAAAAAAgAAIAAAAAAAAAAA=</HashCode>
+      <FileName>WebElements\Kendo\KendoTreeView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="BnPBaseFramework.Web.BrowserType">
+    <Position X="5.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAgQEAEAAAAAAAAAAAAAAABAABAAAAAAEAAAg=</HashCode>
+      <FileName>DriverUtils\BrowserType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BnPBaseFramework.Web.Locator">
+    <Position X="8.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAADAAIAAAAAAAAQEAAABAAAAAAAAAAAACAA=</HashCode>
+      <FileName>DriverUtils\Locator.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BnPBaseFramework.Web.Helpers.FileType">
+    <Position X="7" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAADAQIAgAAAABAAAAAAAAACAAAFEAAAEAAAAEAUEE=</HashCode>
+      <FileName>Helpers\FileType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

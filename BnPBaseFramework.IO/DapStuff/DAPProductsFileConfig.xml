@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DAPDirectives xmlns="http://www.brierley.com/DAPFileProcessing">
+  <!-- General Configuration Parameters -->
+    <DAPConfiguration>
+        <DAPDataType>Products</DAPDataType>
+        <DateConversionFormat></DateConversionFormat>
+        <TrimStrings>true</TrimStrings>
+        <EmailInformation>
+          <SMTPServer>cypwebmail.brierleyweb.com</SMTPServer>
+          <SenderEmail>dap_admin@brierley.com</SenderEmail>
+          <SenderDisplayName>Brierley DAP Administrator</SenderDisplayName>
+          <RecepientEmail>cchavva@brierley.com</RecepientEmail>
+        </EmailInformation>
+        <!--<DoNotProcess>true</DoNotProcess>-->
+  </DAPConfiguration>
+  
+  <!-- Configuration parameters for message acquisition -->
+    <InputProvider MessageProcessingScheme="Single" DebugOutputPath="##DEVROOT####Organization##\Data\Products\Stage1Out">
+      <XmlFileInput RecordName="Product" RootName="Products" EncapsulatingTargetRoot="Products"/>
+  </InputProvider>
+  
+  <!-- Output Provider -->
+  <OutputProvider>
+    <FrameworkOutput>
+      <!-- Configuration for Dispatcher messages over threads -->
+      <DispatcherConfiguration>
+        <ThreadPoolSize>10</ThreadPoolSize>
+        <RequestsPerThread></RequestsPerThread>
+        <SerializeMembers>false</SerializeMembers>
+      </DispatcherConfiguration>
+      <FrameworkBoundMessageProcessingDirectives>
+        <FrameworkReferenceData>
+          <ProductLoadDirective CreateCategoryIfNotFound="true"/>
+        </FrameworkReferenceData>
+      </FrameworkBoundMessageProcessingDirectives>
+    </FrameworkOutput>
+  </OutputProvider>
+  
+</DAPDirectives>

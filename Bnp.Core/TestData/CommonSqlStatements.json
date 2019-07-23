@@ -1,0 +1,12 @@
+[
+    {
+        "Get_CertNumber_From_LWMemberCouponTable_With_EmptyDateRedeemed": "Select * from LW_MEMBERCOUPON where CERTIFICATENMBR is not null and DATEREDEEMED is null  order by Expirydate desc",
+        "Get_Id_From_LWMemberCouponTable_With_EmptyDateRedeemed": "Select * from LW_MEMBERCOUPON where DATEREDEEMED is null order by DATEISSUED ASC",
+        "Get_Id_From_LWCouponDefTable_Where_UsesAllowedIsZero": "Select * from Lw_CouponDef Where UsesAllowed = '0'",
+        "Get_Id_From_LWCouponDefTable_Where_CouponIsExpired": "Select * from Lw_CouponDef Where ExpiryDate <= CURRENT_TIMESTAMP",
+        "Get_Count_Future_Coupons": "Select COUNT(*) from Lw_CouponDef Where StartDate >= CURRENT_TIMESTAMP",
+        "Get_Reward_With_PartNumber": "SELECT LW_REWARDSDEF.ID FROM LW_REWARDSDEF INNER JOIN LW_PRODUCT ON LW_REWARDSDEF.PRODUCTID = LW_PRODUCT.ID where LW_PRODUCT.NAME like 'API_Reward%' and LW_PRODUCT.PARTNUMBER is not null"
+    }
+]
+
+

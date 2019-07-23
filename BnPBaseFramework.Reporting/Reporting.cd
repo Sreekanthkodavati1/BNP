@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BnPBaseFramework.Reporting.Base.TestCase" Collapsed="true">
+    <Position X="6.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAIMAAAAAMAAAAUAgACcQUAAAABAIAERABBMAEwA=</HashCode>
+      <FileName>Base\TestCase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Reporting.Base.TestStep" Collapsed="true">
+    <Position X="2.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CYYAIANAAABAAAAAAAEIEAWQWAkAABAAAEAABBCQAAA=</HashCode>
+      <FileName>Base\TestStep.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Reporting.Base.TestSuite" Collapsed="true">
+    <Position X="6.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgQIECBAAIwEABAAgAQADYAAwkAAAgAAMARIAYgA=</HashCode>
+      <FileName>Base\TestSuite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Reporting.Extent.ExtentLogs" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAEAAAAABAAAAAIAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Extent\ExtentLogs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Reporting.Extent.CustomException" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Extent\ExtentLogs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Reporting.Extent.ExtentManager" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEABAAAAAIAAgBAAAACAAAABAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Extent\ExtentManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Reporting.Reports.HtmlReportGenerator" Collapsed="true">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reports\HtmlReportGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Reporting.Reports.TemplatesForHtmlReport" Collapsed="true">
+    <Position X="4.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAEAAAAAAAAAAAgAAAAAAAAAAAAAgAUAA=</HashCode>
+      <FileName>Reports\TemplatesForHtmlReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Reporting.Utils.StringHelper" Collapsed="true">
+    <Position X="2.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\StringHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Reporting.Utils.TestCaseUtils" Collapsed="true">
+    <Position X="8" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\TestCaseUtils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnPBaseFramework.Reporting.Utils.TestStepHelper" Collapsed="true">
+    <Position X="4.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Utils\TestStepHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

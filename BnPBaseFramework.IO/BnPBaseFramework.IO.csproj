@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{77A4CC86-8CFB-4F9E-ACF7-7E5534339E22}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BnPBaseFramework.IO</RootNamespace>
+    <AssemblyName>BnPBaseFramework.IO</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ASPNetSpell, Version=4.0.3.24577, Culture=neutral, PublicKeyToken=ed4c1e6166f7ca72, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spell.Check.4.0.3.2\lib\net40\ASPNetSpell.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=4.0.4.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.4.0.4\lib\net451\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.18.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="RandomValue, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RandomValue.1.0.0\lib\net45\RandomValue.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BatFiles\BatFile_Common.cs" />
+    <Compile Include="FileFunctions_Common\DataReader.cs" />
+    <Compile Include="Jsonsparser\JsonParser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RulesEngine\RulesEngine.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ASPNetSpellInclude\core\Default.aspx" />
+    <Content Include="ASPNetSpellInclude\core\dialog.js" />
+    <Content Include="ASPNetSpellInclude\debugging-test-scripts\Hello-World.aspx" />
+    <Content Include="ASPNetSpellInclude\debugging-test-scripts\support.txt" />
+    <Content Include="ASPNetSpellInclude\debugging-test-scripts\Test-Server-Ajax.aspx" />
+    <Content Include="ASPNetSpellInclude\dialog.html" />
+    <Content Include="ASPNetSpellInclude\dictionaries\custom.txt" />
+    <Content Include="ASPNetSpellInclude\dictionaries\language-rules\banned-words.txt" />
+    <Content Include="ASPNetSpellInclude\dictionaries\language-rules\common-mistakes.txt" />
+    <Content Include="ASPNetSpellInclude\dictionaries\language-rules\enforced-corrections.txt" />
+    <Content Include="ASPNetSpellInclude\dictionaries\README.txt" />
+    <Content Include="ASPNetSpellInclude\include.js" />
+    <Content Include="ASPNetSpellInclude\license.txt" />
+    <Content Include="ASPNetSpellInclude\support.txt" />
+    <Content Include="ASPNetSpellInclude\themes\bright\ajax-loader.gif" />
+    <Content Include="ASPNetSpellInclude\themes\bright\context-menu.css" />
+    <Content Include="ASPNetSpellInclude\themes\bright\dialog-window.css" />
+    <Content Include="ASPNetSpellInclude\themes\bright\ieonly.css" />
+    <Content Include="ASPNetSpellInclude\themes\buttons\spellicon.gif" />
+    <Content Include="ASPNetSpellInclude\themes\buttons\spelliconover.gif" />
+    <Content Include="ASPNetSpellInclude\themes\classic\ajax-loader.gif" />
+    <Content Include="ASPNetSpellInclude\themes\classic\context-menu.css" />
+    <Content Include="ASPNetSpellInclude\themes\classic\dialog-window.css" />
+    <Content Include="ASPNetSpellInclude\themes\classic\gwiggle.png" />
+    <Content Include="ASPNetSpellInclude\themes\classic\ieonly.css" />
+    <Content Include="ASPNetSpellInclude\themes\classic\wiggle.png" />
+    <Content Include="ASPNetSpellInclude\themes\clean\ajax-loader.gif" />
+    <Content Include="ASPNetSpellInclude\themes\clean\context-menu.css" />
+    <Content Include="ASPNetSpellInclude\themes\clean\dialog-window.css" />
+    <Content Include="ASPNetSpellInclude\themes\clean\gwiggle.png" />
+    <Content Include="ASPNetSpellInclude\themes\clean\ieonly.css" />
+    <Content Include="ASPNetSpellInclude\themes\clean\wiggle.png" />
+    <Content Include="ASPNetSpellInclude\themes\modern\ajax-loader.gif" />
+    <Content Include="ASPNetSpellInclude\themes\modern\context-menu.css" />
+    <Content Include="ASPNetSpellInclude\themes\modern\dialog-window.css" />
+    <Content Include="ASPNetSpellInclude\themes\modern\gwiggle.png" />
+    <Content Include="ASPNetSpellInclude\themes\modern\ieonly.css" />
+    <Content Include="ASPNetSpellInclude\themes\modern\wiggle.png" />
+    <Content Include="ASPNetSpellInclude\themes\modern\xp.gif" />
+    <Content Include="ASPNetSpellInclude\translations\af.js" />
+    <Content Include="ASPNetSpellInclude\translations\ar.js" />
+    <Content Include="ASPNetSpellInclude\translations\be.js" />
+    <Content Include="ASPNetSpellInclude\translations\bg.js" />
+    <Content Include="ASPNetSpellInclude\translations\ca.js" />
+    <Content Include="ASPNetSpellInclude\translations\cn.js" />
+    <Content Include="ASPNetSpellInclude\translations\cs.js" />
+    <Content Include="ASPNetSpellInclude\translations\cy.js" />
+    <Content Include="ASPNetSpellInclude\translations\da.js" />
+    <Content Include="ASPNetSpellInclude\translations\de.js" />
+    <Content Include="ASPNetSpellInclude\translations\el.js" />
+    <Content Include="ASPNetSpellInclude\translations\en.js" />
+    <Content Include="ASPNetSpellInclude\translations\es.js" />
+    <Content Include="ASPNetSpellInclude\translations\et.js" />
+    <Content Include="ASPNetSpellInclude\translations\fa.js" />
+    <Content Include="ASPNetSpellInclude\translations\fi.js" />
+    <Content Include="ASPNetSpellInclude\translations\fr.js" />
+    <Content Include="ASPNetSpellInclude\translations\ga.js" />
+    <Content Include="ASPNetSpellInclude\translations\gl.js" />
+    <Content Include="ASPNetSpellInclude\translations\hi.js" />
+    <Content Include="ASPNetSpellInclude\translations\hr.js" />
+    <Content Include="ASPNetSpellInclude\translations\hu.js" />
+    <Content Include="ASPNetSpellInclude\translations\id.js" />
+    <Content Include="ASPNetSpellInclude\translations\is.js" />
+    <Content Include="ASPNetSpellInclude\translations\it.js" />
+    <Content Include="ASPNetSpellInclude\translations\iw.js" />
+    <Content Include="ASPNetSpellInclude\translations\ja.js" />
+    <Content Include="ASPNetSpellInclude\translations\ko.js" />
+    <Content Include="ASPNetSpellInclude\translations\lt.js" />
+    <Content Include="ASPNetSpellInclude\translations\lv.js" />
+    <Content Include="ASPNetSpellInclude\translations\mk.js" />
+    <Content Include="ASPNetSpellInclude\translations\ms.js" />
+    <Content Include="ASPNetSpellInclude\translations\mt.js" />
+    <Content Include="ASPNetSpellInclude\translations\nl.js" />
+    <Content Include="ASPNetSpellInclude\translations\no.js" />
+    <Content Include="ASPNetSpellInclude\translations\pl.js" />
+    <Content Include="ASPNetSpellInclude\translations\pt.js" />
+    <Content Include="ASPNetSpellInclude\translations\ro.js" />
+    <Content Include="ASPNetSpellInclude\translations\ru.js" />
+    <Content Include="ASPNetSpellInclude\translations\simple.js" />
+    <Content Include="ASPNetSpellInclude\translations\sk.js" />
+    <Content Include="ASPNetSpellInclude\translations\sl.js" />
+    <Content Include="ASPNetSpellInclude\translations\sq.js" />
+    <Content Include="ASPNetSpellInclude\translations\sr.js" />
+    <Content Include="ASPNetSpellInclude\translations\sw.js" />
+    <Content Include="ASPNetSpellInclude\translations\template.js" />
+    <Content Include="ASPNetSpellInclude\translations\th.js" />
+    <Content Include="ASPNetSpellInclude\translations\tl.js" />
+    <Content Include="ASPNetSpellInclude\translations\tr.js" />
+    <Content Include="ASPNetSpellInclude\translations\tw.js" />
+    <Content Include="ASPNetSpellInclude\translations\uk.js" />
+    <Content Include="ASPNetSpellInclude\translations\vi.js" />
+    <Content Include="ASPNetSpellInclude\translations\yi.js" />
+    <Content Include="DAPStuff\Brierley.Clients.BTADEV.DataModel.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\AWSSDK.Core.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\AWSSDK.Core.xml" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\AWSSDK.S3.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\AWSSDK.S3.xml" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\AWSSDK.SimpleEmail.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\AWSSDK.SimpleEmail.xml" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\AWSSDK.SQS.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\BouncyCastle.Crypto.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Brierley.FrameWork.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Brierley.FrameWork.pdb" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Brierley.FrameWork.xml" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Brierley.LoyaltyWare.DataAcquisition.Core.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Brierley.LoyaltyWare.DataAcquisition.Core.pdb" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Brierley.LoyaltyWare.DataAcquisition.Core.xml" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\ChilkatDotNet4.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Common.Logging.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\DAPConsoleProcessor.exe" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\DAPConsoleProcessor.pdb" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Facebook.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Google.Apis.Auth.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Google.Apis.Auth.PlatformServices.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Google.Apis.Core.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Google.Apis.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Google.Apis.PlatformServices.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\itextsharp.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\LinqToTwitter.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Log4Net.Async.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\log4net.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\log4net.xml" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Microsoft.ApplicationServer.Caching.Client.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Microsoft.ApplicationServer.Caching.Core.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Microsoft.Practices.EnterpriseLibrary.Caching.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Microsoft.Practices.ServiceLocation.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Microsoft.Practices.Unity.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Microsoft.Practices.Unity.Interception.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Microsoft.WindowsFabric.Common.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Microsoft.WindowsFabric.Data.Common.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Newtonsoft.Json.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Newtonsoft.Json.pdb" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Newtonsoft.Json.xml" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Npgsql.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\NVelocity.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\Oracle.ManagedDataAccess.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\PushSharp.Apple.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\PushSharp.Apple.pdb" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\PushSharp.Core.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\PushSharp.Core.pdb" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\PushSharp.Google.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\PushSharp.Google.pdb" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\System.Net.Http.Formatting.dll" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\System.Net.Http.Formatting.xml" />
+    <Content Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="DAPStuff\DAPStoresFileConfig.xml" />
+    <Content Include="DAPStuff\DAPTlogFileConfig.xml" />
+    <Content Include="DAPStuff\Stores.txt" />
+    <Content Include="DAPStuff\Tlog.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ASPNetSpellInclude\core\default.ashx" />
+    <None Include="ASPNetSpellInclude\debugging-test-scripts\Test-Instalation.ashx" />
+    <None Include="ASPNetSpellInclude\dictionaries\English %28International%29.dic" />
+    <None Include="DAPStuff\Brierley.DataAcquisition\DAPConfiguration.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\DAPConfiguration.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\DAPConsoleProcessor.exe.config" />
+    <None Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\DAPConsoleProcessor.log" />
+    <None Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\log4net.xml.postgres.example" />
+    <None Include="DAPStuff\Brierley.DataAcquisition\DAPConsole\StoreFile.bat" />
+    <None Include="DAPStuff\Brierley.DataAcquisition\StoreFile.bat" />
+    <None Include="DAPStuff\Brierley.DataAcquisition\TLOGFile.bat" />
+    <None Include="DAPStuff\DAPConsoleProcessor.log" />
+    <None Include="DAPStuff\loyaltywareBTA\Config\BTADEV_Development\DBConfig.dat" />
+    <None Include="DAPStuff\loyaltywareBTA\Config\BTADEV_Development\Framework.cfg" />
+    <None Include="DAPStuff\loyaltywareBTA\Config\BTADEV_Development\Keystore.dat" />
+    <None Include="DAPStuff\loyaltywareBTA\Config\BTADEV_Development\SymmetricKeystore.dat" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAPStuff\loyaltywareBTA\Config\BTADEV_QA\" />
+    <Folder Include="DAPStuff\Store\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

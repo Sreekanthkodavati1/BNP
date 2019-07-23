@@ -1,0 +1,50 @@
+<Products xmlns="http://Brierley.BizTalkAdapter.CommonArtifacts.Schemas.LWProducts">
+	<Product>
+		<Directive>C</Directive>
+		<CategoryName>ProductSet</CategoryName>
+		<PartNumber></PartNumber>
+		<ProductName>Le Petitiechanged</ProductName>
+		<ShortDesciption>A dumb french and english movie</ShortDesciption>
+		<LongDesdcription></LongDesdcription>
+		<BasePrice>60</BasePrice>
+		<PointTypeName>USD</PointTypeName>
+		<Quantity>11</Quantity>
+		<Variants>
+			<Variant>
+				<Description>PaperBackChanged</Description>
+				<PartNumber>2345678</PartNumber>
+				<Quantity>21</Quantity>
+			</Variant>
+			<Variant>
+				<Description>HardcoverChanged</Description>
+				<PartNumber>2345689</PartNumber>
+				<Quantity>151</Quantity>
+			</Variant>
+		</Variants>		
+	</Product>
+	<Product>
+		<Directive>C</Directive>
+		<CategoryName>Product11_11</CategoryName>
+		<PartNumber></PartNumber>
+		<ProductName>3 Idiots Changed</ProductName>
+		<ShortDesciption>A funny indian movie Changed</ShortDesciption>
+		<LongDesdcription></LongDesdcription>
+		<BasePrice>51</BasePrice>
+		<PointTypeName>USD</PointTypeName>
+		<Quantity>11</Quantity>
+		<Variants>
+			<Variant>
+				<Directive>C</Directive>
+				<Description>DVD</Description>
+				<PartNumber>2345671</PartNumber>
+				<Quantity>21</Quantity>
+			</Variant>
+			<Variant>
+				<Directive>C</Directive>
+				<Description>BlueRay changed</Description>
+				<PartNumber>2345681</PartNumber>
+				<Quantity>151</Quantity>
+			</Variant>
+		</Variants>		
+	</Product>
+</Products>

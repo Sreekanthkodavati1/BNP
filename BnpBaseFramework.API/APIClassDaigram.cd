@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BnpBaseFramework.API.Loggers.Logger" Collapsed="true">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYAAAAAAABAAAAwAAAAAAAAAAEAEAAA=</HashCode>
+      <FileName>Loggers\Logger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnpBaseFramework.API.Utils.BaseClass" Collapsed="true">
+    <Position X="2.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAIAAAAAQAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Utils\BaseClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BnpBaseFramework.API.Utils.BaseLibrary">
+    <Position X="4.5" Y="0.5" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAACAAAAAIgAAAAAEQACAAAAA=</HashCode>
+      <FileName>Utils\BaseLibrary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="BnpBaseFramework.API.Enums.StatusCodes" Collapsed="true">
+    <Position X="2.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ICACQAAIAAAAAAAAIAEAAAAAAAEQAAAAACABAAAAAAA=</HashCode>
+      <FileName>Enums\StatusCodes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BnpBaseFramework.API.Enums.Verbs" Collapsed="true">
+    <Position X="2.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAACAEAQAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Enums\Verbs.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,571 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Bnp.Core.Tests.API.REST_Services.REST_Test_Cases.BTA144_REST_PostTransactions" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIgCgAAAAAAAAAAAAAAAAAAAAABAAAACAAAA=</HashCode>
+      <FileName>Tests\API\REST Services\REST_Test_Cases\BTA144_REST_PostTransactions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.API.REST_Services.REST_Test_Cases.BTA87_AuthToken" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAABAABACAAAA=</HashCode>
+      <FileName>Tests\API\REST Services\REST_Test_Cases\BTA87_AuthToken.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.API.REST_Services.REST_Test_Cases.BTA88_AddMember" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAgAAAAAAAAAAAAAABAAAAAAAABAAAACAAIA=</HashCode>
+      <FileName>Tests\API\REST Services\REST_Test_Cases\BTA88_AddMember.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.API.REST_Services.REST_Test_Cases.REST_E2ETestCases" Collapsed="true">
+    <Position X="2.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgCAAAAAAAAAAAAAAAEAAAAIABAAAAiAAAA=</HashCode>
+      <FileName>Tests\API\REST Services\REST_Test_Cases\REST_E2ETestCases.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.API.CDIS_Services.CDIS_E2ETestCases" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAggIAAAAAAAAAAAAAAACBAAAAABAAAACAAAI=</HashCode>
+      <FileName>Tests\API\CDIS Services\CDIS_TestCases\CDIS_E2ETestCases.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.API.CDIS_Services.CDIS_Methods.CDIS_Service_Methods" Collapsed="true">
+    <Position X="4.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIAAgCAAgBAAAAACgAACAAgAgAAACAEAMApAAAAMAAA=</HashCode>
+      <FileName>Tests\API\CDIS Services\CDIS_Methods\CDIS_Service_Methods.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.API.CDIS_Services.CDIS_TestCases.BTA147_CDIS_DeActivatecard" Collapsed="true">
+    <Position X="1" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAIAAAAAAAAAAAAAAAAABAAAACAAAA=</HashCode>
+      <FileName>Tests\API\CDIS Services\CDIS_TestCases\BTA147_CDIS_DeActivatecard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.API.CDIS_Services.CDIS_TestCases.BTA148_CDIS_Activatecard" Collapsed="true">
+    <Position X="2.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAABAAAAAAAAAAABAAAACAAAA=</HashCode>
+      <FileName>Tests\API\CDIS Services\CDIS_TestCases\BTA148_CDIS_Activatecard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.API.CDIS_Services.CDIS_TestCases.BTA89_AddMember" Collapsed="true">
+    <Position X="4.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAABAAgAAAAAAAAAAABAEAAAAAAAAABAAAECAAAA=</HashCode>
+      <FileName>Tests\API\CDIS Services\CDIS_TestCases\BTA89_AddMember.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.API.CDIS_Services.CDIS_TestCases.BTA90_GetMemberById" Collapsed="true">
+    <Position X="1" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAgAAAAAAAAAAAAAAAAAAAAAAABAAAACAAAA=</HashCode>
+      <FileName>Tests\API\CDIS Services\CDIS_TestCases\BTA90_GetMemberById.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.API.REST_Services.REST_Methods.REST_DataGenerator" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAQAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Tests\API\REST Services\REST_Methods\REST_DataGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.API.REST_Services.REST_Models.Authtoken_Model" Collapsed="true">
+    <Position X="4.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Tests\API\REST Services\REST_Models\Authtoken_Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.API.REST_Services.REST_Models.Member_Model" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tests\API\REST Services\REST_Models\Member_Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.API.REST_Services.REST_Models.Transaction_Model" Collapsed="true">
+    <Position X="4.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tests\API\REST Services\REST_Models\Transaction_Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.API.Validators.Common" Collapsed="true">
+    <Position X="5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAQAQCAAAAAAQAFAAAAEAhwAQEQ=</HashCode>
+      <FileName>Tests\API\Validators\Common.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.API.Validators.DatabaseUtility" Collapsed="true">
+    <Position X="6.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAACAAAAAAAAAACAAEAAAEAAEAAAAAAAAAQIAQQQ=</HashCode>
+      <FileName>Tests\API\Validators\DatabaseUtility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.Web.CSPortal.BTA121_CSP_LoginAsCsAdmin" Collapsed="true">
+    <Position X="2" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIgAAAAAAAgAAQAAAAAAAAAAAABAAAACAEAA=</HashCode>
+      <FileName>Tests\Web\CSPortal\BTA121_CSP_LoginAsCsAdmin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.Web.CSPortal.BTA139_CSP_MemberSearch" Collapsed="true">
+    <Position X="3.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAIAAABAAAACAEAA=</HashCode>
+      <FileName>Tests\Web\CSPortal\BTA139_CSP_MemberSearch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.Web.Navigator.BTA114_Navigator_Create_Product_Category_And_Create_Product_ProductVariants_ProductRewards" Collapsed="true">
+    <Position X="1.5" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAABAAAACAEAI=</HashCode>
+      <FileName>Tests\Web\Navigator\BTA114_Navigator_Create_Product_Category_And_Create_Product_ProductVariants_ProductRewards.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.Web.Navigator.BTA115_Navigator_Create_Bonus_Category_And_Create_Bonus" Collapsed="true">
+    <Position X="1.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAIAAAAAAAAAAAAAAAAAAABAAAACAEAA=</HashCode>
+      <FileName>Tests\Web\Navigator\BTA115_Navigator_Create_Bonus_Category_And_Create_Bonus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.Web.Navigator.BTA116_Navigator_Create_Coupon_Category_And_Create_Coupons" Collapsed="true">
+    <Position X="3.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAIAAAAAAAAAAAAAAAAAABAAAACAEAA=</HashCode>
+      <FileName>Tests\Web\Navigator\BTA116_Navigator_Create_Coupon_Category_And_Create_Coupons.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.Web.Navigator.BTA117_Navigator_CreatMailingName" Collapsed="true">
+    <Position X="3.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAgAAAAAAAAAAAAAAAAAAABAAAACAEAA=</HashCode>
+      <FileName>Tests\Web\Navigator\BTA117_Navigator_CreatMailingName.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.Web.Navigator.BTA118_Navigator_CreateSMSMessage" Collapsed="true">
+    <Position X="1.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAgAAAAAAAAAAAAAAAABAAAACAEAA=</HashCode>
+      <FileName>Tests\Web\Navigator\BTA118_Navigator_CreateSMSMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.Web.Navigator.BTA119_Navigator_Create_Attribute_For_EachContentType_And_AllContentTypes" Collapsed="true">
+    <Position X="3.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAABABAAAAAAAAAABAAAACAEAA=</HashCode>
+      <FileName>Tests\Web\Navigator\BTA119_Navigator_Create_Attribute_For_EachContentType_And_AllContentTypes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.Web.Navigator.BTA120_Navigator_Create_Promotion" Collapsed="true">
+    <Position X="5.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgCAAAAAAAAAAAAAAAAAAAAAABAAAACAEAA=</HashCode>
+      <FileName>Tests\Web\Navigator\BTA120_Navigator_Create_Promotion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.Web.Navigator.BTA79_Navigator_Create_Admin_Users" Collapsed="true">
+    <Position X="7" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAABgAAgAAAEgAAAAACAAAAwAGACBAAAgHAEAA=</HashCode>
+      <FileName>Tests\Web\Navigator\BTA79_Navigator_Create_Admin_Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.Web.Navigator.BTA80_Navigator_Create_Organizations_And_Environments" Collapsed="true">
+    <Position X="1.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAgAAAAAAAAAAAAAAAAAAAACAABAAAACAEAA=</HashCode>
+      <FileName>Tests\Web\Navigator\BTA80_Navigator_Create_Organizations_And_Environments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.Web.Navigator.BTA81_Navigator_GenerateKeys_AddinConfigfolder" Collapsed="true">
+    <Position X="3.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAABAAAACAEAA=</HashCode>
+      <FileName>Tests\Web\Navigator\BTA81_Navigator_GenerateKeys_AddinConfigfolder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.Web.Navigator.BTA82_Navigator_GenerateDBconfig_AddinConfigfolder" Collapsed="true">
+    <Position X="5.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAQAAAAAAAAQAAAAAAAgAAAABAAAACAEAA=</HashCode>
+      <FileName>Tests\Web\Navigator\BTA82_Navigator_GenerateDBconfig_AddinConfigfolder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.Web.Navigator.BTA83_Navigator_Generate_FrameworkConfigFiles" Collapsed="true">
+    <Position X="7" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAgAAAAAAAAAAAAAAAAAABAAAABAAAACAEAA=</HashCode>
+      <FileName>Tests\Web\Navigator\BTA83_Navigator_Generate_FrameworkConfigFiles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.Web.Navigator.BTA84_Navigator_UserWithAllPermission_And_AssigningOrganization" Collapsed="true">
+    <Position X="1.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAIAAAABAABAAAACAEAA=</HashCode>
+      <FileName>Tests\Web\Navigator\BTA84_Navigator_UserWithAllPermission_And_AssigningOrganization.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.Web.Navigator.BTA85_Navigator_Users_CreateAttributSet" Collapsed="true">
+    <Position X="3.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAgAAQAAAAAAAAAAAABAAAACAEEA=</HashCode>
+      <FileName>Tests\Web\Navigator\BTA85_Navigator_Users_CreateAttributSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.Tests.Web.Navigator.BTA86_Navigator_Create_CSPortal_MPPortals" Collapsed="true">
+    <Position X="5.25" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAACAAAAAAABAAAgGAEAA=</HashCode>
+      <FileName>Tests\Web\Navigator\BTA86_Navigator_Create_CSPortal_MPPortals.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.CSPortal.CSPortal_HomePage" Collapsed="true">
+    <Position X="1.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAIBAAAAAAAAQQAAAAAAAgQAAAAAAACAAAAAA=</HashCode>
+      <FileName>WebPages\CSPortal\CSPortal_HomePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.CSPortal.CSPortal_LoginPage" Collapsed="true">
+    <Position X="3.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAgAAAAAAAAAAAAEAAAAAAAIAAAAAIAABAAAAA=</HashCode>
+      <FileName>WebPages\CSPortal\CSPortal_LoginPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.CSPortal.CSPortal_MemberAccountSummaryPage" Collapsed="true">
+    <Position X="5.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IABAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WebPages\CSPortal\CSPortal_MemberAccountSummaryPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.CSPortal.CSPortal_MemberRegistration" Collapsed="true">
+    <Position X="1.75" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>WebPages\CSPortal\CSPortal_MemberRegistration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.CSPortal.CSPortal_SearchPage" Collapsed="true">
+    <Position X="3.5" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAUAAAAAAAAQAABAAAAAAAAAAAAAgQAAAAAA=</HashCode>
+      <FileName>WebPages\CSPortal\CSPortal_SearchPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Models.AttributeSet" Collapsed="true">
+    <Position X="0.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAEAAAQgAAAAAEA=</HashCode>
+      <FileName>WebPages\Models\AttributeSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Models.DB" Collapsed="true">
+    <Position X="2.25" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAEAAAAAIABAAEAwAAAAAAAACAAAAAgAAAAA=</HashCode>
+      <FileName>WebPages\Models\DB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Models.EnterData" Collapsed="true">
+    <Position X="4" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAIAAAAQgAGACACAQAAQAAEAAAAA=</HashCode>
+      <FileName>WebPages\Models\EnterData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Models.Login" Collapsed="true">
+    <Position X="0.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAIAAACAQAAAAAAAAA=</HashCode>
+      <FileName>WebPages\Models\Login.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Models.NavigatorEnums" Collapsed="true">
+    <Position X="2.25" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WebPages\Models\NavigatorEnums.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Models.Organizations" Collapsed="true">
+    <Position X="4" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>WebPages\Models\Organizations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Models.Portal" Collapsed="true">
+    <Position X="0.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAIAAAIAAAAAAA=</HashCode>
+      <FileName>WebPages\Models\Portal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Models.Promotions" Collapsed="true">
+    <Position X="2.25" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQgAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>WebPages\Models\Promotions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Models.Users" Collapsed="true">
+    <Position X="4" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAAAAAAAAAAAAAAAAAAAAACAQQAIAAAIEg=</HashCode>
+      <FileName>WebPages\Models\Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.Application_Nav_Util_Page" Collapsed="true">
+    <Position X="0.5" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BACACAAAAAEAAAAAKACBACAADQAAAAAAAAAQAAABEIA=</HashCode>
+      <FileName>WebPages\Navigator\Application_Nav_Util_Page.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.Navigator_LoginPage" Collapsed="true">
+    <Position X="4" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAICAAAcAAAAAACAAAQAKAAAAAAABAAEAQAiAAAAE=</HashCode>
+      <FileName>WebPages\Navigator\Navigator_LoginPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.Admin.Navigator_AdminPage" Collapsed="true">
+    <Position X="4" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>E4AAKAAAQQ1AINIyAEEAUgAQICAABABAAAABQBAgAEA=</HashCode>
+      <FileName>WebPages\Navigator\Admin\Navigator_AdminPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.Database.Navigator_DBFramework_Page" Collapsed="true">
+    <Position X="7.5" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CgBAAAAAEAAAQCAAAAAIRMBAAEAQAAABEAACYiAAACA=</HashCode>
+      <FileName>WebPages\Navigator\DataBase\Navigator_DBFramework_Page.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.Database.Navigator_DBHomePage" Collapsed="true">
+    <Position X="9.25" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAACAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>WebPages\Navigator\DataBase\Navigator_DBHomePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.FrameworkConfig.Navigator_AdminHomePage" Collapsed="true">
+    <Position X="2.25" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAACAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>WebPages\Navigator\FrameworkConfig\Navigator_AdminHomePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.FrameworkConfig.Navigator_ManageOrgnizationPage" Collapsed="true">
+    <Position X="7.5" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAkCACABAAAAAAAAABQAQAAAAIQABAEgAAgAAAABA=</HashCode>
+      <FileName>WebPages\Navigator\FrameworkConfig\Navigator_ManageOrgnizationPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.Keys.Navigator_KeysHomePage" Collapsed="true">
+    <Position X="2.25" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAIAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WebPages\Navigator\Keys\Navigator_KeysHomePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.Keys.Navigator_ManageKeysPage" Collapsed="true">
+    <Position X="5.75" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CEABAABAAAgAAAAACggCQAQAAAAIAQgAAEAAAAQSAAA=</HashCode>
+      <FileName>WebPages\Navigator\Keys\Navigator_ManageKeysPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.UsersPage.Email.Navigator_EmailMessagePage" Collapsed="true">
+    <Position X="0.5" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAIAAAQAAAAAAAAABgAQgAAAIAIAAA=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\Email\Navigator_EmailMessagePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.UsersPage.Models.Navigator_AttributeSetPage" Collapsed="true">
+    <Position X="5.75" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CACAIIAkAABNCIIAIAEAQBQAEAAMJAAAIIAAAEiAAhA=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\Models\Navigator_AttributeSetPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.UsersPage.Models.Navigator_ModelHomePage" Collapsed="true">
+    <Position X="9.25" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAEAgAAAAIggAAgQAAAEEAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\Models\Navigator_ModelHomePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.UsersPage.Navigator_UsersHomePage" Collapsed="true">
+    <Position X="5.75" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAgAAAAQAAAAAABAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\Navigator_UsersHomePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.UsersPage.Program.Components.Navigator_Users_Program_Components_AttributesPage" Collapsed="true">
+    <Position X="4" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAACIAAAABAAIAAAgAEgAAAAIAQAIAAIQAAIA=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\Program\Components\Navigator_Users_Program_Components_AttributesPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.UsersPage.Program.Components.Navigator_Users_Program_Components_CategoriesPage" Collapsed="true">
+    <Position X="5.75" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AMAAAEAAAQQAAAAAAAAAAAAAEAAAAAAAAAAAAIAAAAg=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\Program\Components\Navigator_Users_Program_Components_CategoriesPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.UsersPage.Program.Components.Navigator_Users_Program_Components_LoyaltyCurrencyPage" Collapsed="true">
+    <Position X="7.5" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgEAAAAAACAAAAAEAAIAAAAAAAAAAEAAAAAAAIQACAA=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\Program\Components\Navigator_Users_Program_Components_LoyaltyCurrencyPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.UsersPage.Program.Components.Navigator_Users_Program_Components_LoyaltyEventsPage" Collapsed="true">
+    <Position X="9.25" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAkAAAABAIAAAAAAAAAAEAAAAAAAIQACAA=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\Program\Components\Navigator_Users_Program_Components_LoyaltyEventsPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.UsersPage.Program.Components.Navigator_Users_Program_Components_StoresPage" Collapsed="true">
+    <Position X="0.5" Y="21.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAIAAAAAAAEAQEAAAAAAAIQACAA=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\Program\Components\Navigator_Users_Program_Components_StoresPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.UsersPage.Program.Components.Navigator_Users_Program_Components_TiersPage" Collapsed="true">
+    <Position X="2.25" Y="21.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAIAAIAAgAAAAEAAAAAAAIQACAA=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\Program\Components\Navigator_Users_Program_Components_TiersPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.UsersPage.Program.Components.Navigator_Users_Program_ComponentsPage" Collapsed="true">
+    <Position X="4" Y="21.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAABAAAAgIAAAJECAAAQQBAAAAAAAAA=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\Program\Components\Navigator_Users_Program_ComponentsPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.UsersPage.Program.eCollateral.Navigator_Users_Program_eCollateral_BonusesPage" Collapsed="true">
+    <Position X="5.75" Y="21.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAgFACAgAAAAAELCBAAAAAggAEgEAAAAAJQAmgA=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\Program\eCollateral\Navigator_Users_Program_eCollateral_BonusesPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.UsersPage.Program.eCollateral.Navigator_Users_Program_eCollateral_CouponsPage" Collapsed="true">
+    <Position X="7.5" Y="21.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgECGAAACAAAAJCAQAAAAwAAEAEAAAAAJYAmAQ=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\Program\eCollateral\Navigator_Users_Program_eCollateral_CouponsPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.UsersPage.Program.eCollateral.Navigator_Users_Program_eCollateral_MessagesPage" Collapsed="true">
+    <Position X="9.25" Y="21.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIQACAAAAAAAAoAAAAAAAAAAEAAAAAAAIQACAA=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\Program\eCollateral\Navigator_Users_Program_eCollateral_MessagesPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.UsersPage.Program.eCollateral.Navigator_Users_Program_eCollateralPage" Collapsed="true">
+    <Position X="0.5" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAABAAAAAAAAAAAAQAAAAgAAgAAAAAEAQAAAAA=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\Program\eCollateral\Navigator_Users_Program_ECollateralPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.UsersPage.Program.Navigator_Users_ProgramPage" Collapsed="true">
+    <Position X="9.25" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAEAAABAAAQAAAAAAAAAAABAAABAAAAAAAAA=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\Program\Navigator_Users_ProgramPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.UsersPage.Program.RewardCatalog.Navigator_Users_Program_RewardCatalog_ProductsPage" Collapsed="true">
+    <Position X="2.25" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEACCAAUAAAAIEABAAgAAAAEAAAAAAAIQACAA=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\Program\RewardCatalog\Navigator_Users_Program_RewardCatalog_ProductsPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.UsersPage.Program.RewardCatalog.Navigator_Users_Program_RewardCatalog_ProductVariantsPage" Collapsed="true">
+    <Position X="4" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEACCAAAAAAAIAABAAAACAAAAAABAAAIQAAgA=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\Program\RewardCatalog\Navigator_Users_Program_RewardCatalog_ProductVariantsPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.UsersPage.Program.RewardCatalog.Navigator_Users_Program_RewardCatalog_RewardsPage" Collapsed="true">
+    <Position X="5.75" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAEACAgAQAAAAIAAAAQAAAAAEAAAIIAAIQACAA=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\Program\RewardCatalog\Navigator_Users_Program_RewardCatalog_RewardsPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.UsersPage.Program.RewardCatalog.Navigator_Users_Program_RewardCatalogPage" Collapsed="true">
+    <Position X="7.5" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAQAAAAQAAAAQAAAAAAAgAAACEAAAA=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\Program\RewardCatalog\Navigator_Users_Program_RewardCatalogPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.Promotion.Navigator_PromotionsPage" Collapsed="true">
+    <Position X="0.5" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAALAAAAIAAAIAAAAgEAQAAEQAAAgAjISBCAA=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\Promotion\Navigator_PromotionsPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.SMS.Navigator_SMSMessagePage" Collapsed="true">
+    <Position X="2.25" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAQAAIAAIAAAAAEAAAAAAAQgAAAICAAAA=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\SMS\Navigator_SMSMessagePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.UsersPage.Website.Navigator_Users_Website_ModulesPage" Collapsed="true">
+    <Position X="0.5" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAJAAAEhAAAABAAAAAAAEbgAAgKAAAAACAAAAA=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\Website\Navigator_Users_Website_ModulesPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.UsersPage.Website.Navigator_Users_WebsiteManagementPage" Collapsed="true">
+    <Position X="2.25" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAMAABAAAAAQAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\Website\Navigator_Users_WebsiteManagementPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bnp.Core.WebPages.Navigator.UsersPage.Website.Navigator_Users_WebsitePage" Collapsed="true">
+    <Position X="4" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAASAAAAAAABAAAIQAAAEAAAIJCgAAAAAAYaAAAA=</HashCode>
+      <FileName>WebPages\Navigator\UsersPage\Website\Navigator_Users_WebsitePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

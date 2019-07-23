@@ -1,0 +1,19 @@
+C||DemoStore1238|TXS Store|AIZ|||df|df|plano|TX|75034|Collin|USA|1|0|||1234|5678|SouthWest|Southwest|
+C||DemoStore1238|TXS Store|AIZ||223||df|plano|TX|75034|Collin|USA|1|0|||1234|5678|SouthWest|Southwest|
+C||DemoStore1238|TXS Store|AIZ||432|stu|||TX|75034|Collin|USA|1|0|||1234|5678|SouthWest|Southwest|
+C||DemoStore1238|TXS Store|AIZ|ret|223|rt|rt|plano|TX|75034|Collin||1|0|||1234|5678|SouthWest|Southwest|
+C||DemoStore1238|TXS Store|AIZ||432|stu|ggh|kj||75034|Collin|USA|1|0|||1234|5678|SouthWest|Southwest|
+
+
+
+
+
+
+
+
+
+
+
+
+
+

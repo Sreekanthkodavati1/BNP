@@ -1,0 +1,224 @@
+[
+  {
+    "//": "Below Fields Are Mandatory",
+    "Browser": "Chrome",
+    "DBDateRange": "29-Nov-18 12.00",
+    "IsDBReportingRequired": "false",
+    "Application_URLS": [
+      {
+        "NavigatorURL": "http://tyqawbs08.brierley.com:9900/login.aspx"
+      },
+      {
+        "CSPortalURL": "http://tyqawbs08.brierley.com:9811/Login.aspx"
+      },
+      {
+        "MPPortalURL": "http://tyqawbs08.brierley.com:9812/Login.aspx"
+      }
+    ],
+    "Navigator": [
+      {
+        "Organization": "BTADEV",
+        "Environment": "QA",
+        "Order ID": "2",
+        "ConfigFileUploadPath": "\\\\Tyqawbs08\\wwwroot\\loyaltywareBTA\\Config",
+        "GenerateClientAssembly": "\\\\Tyqawbs08\\wwwroot\\loyaltywareBTA\\BTA_Dev_API\\CustomerDataServiceConfig.xml",
+        "DBSettings": [
+          {
+            "DBName": "FrameWorkDB",
+            "DataBasesType": "Oracle",
+            "DBUserID": "OE_3",
+            "DBPassword": "QaR0ck$",
+            "DBDefaultSchema": "",
+            "Server": "",
+            "Database": "BPQA01",
+            "Version": "5.3.0.14",
+            "ConnectionProps": ""
+          }
+        ],
+        "FrameworkConfig": [
+          {
+            "DmcUrl": "https://ssla.teradatadmc.com/brierley_chevron/api/rest/v5",
+            "DmcUsername": "dmc-cvxapiuser@brierley.com",
+            "DmcPassword": "Loyaltycvx#1",
+            "LWEmailProvider": "DMC",
+            "LoyaltyCurrencyAsPayment DefaultCurrency": "USD"
+          }
+        ],
+        "Website": [
+          {
+            "CSPortalName": "BTA_QA_CS",
+            "CSPortal_EndPoint": "tyqawbs08.brierley.com:9811"
+          },
+          {
+            "MemberPortalName": "BTA_QA_MP",
+            "MPPortal_EndPoint": "tyqawbs08.brierley.com:9812"
+          }
+        ],
+     "//": "End of  Mandatory Fields",
+
+        "AllAdminusers": [
+          {
+            "User Role": "bpadmin",
+            "username": "bpadmin",
+            "password": "bpadmin"
+          },
+          {
+            "User Role": "LWAdminUser",
+            "username": "BTAADMIN",
+            "password": "Password1*"
+          },
+          {
+            "User Role": "KeyAdminUser",
+            "username": "BTADEV_KEYUSER",
+            "password": "Password1*"
+          },
+          {
+            "User Role": "DBAAdminUser",
+            "username": "BTADEV_DBAUSER",
+            "password": "Password1*"
+          },
+          {
+            "User Role": "WebAdminUser",
+            "username": "BTADEV_WEBUSER",
+            "password": "Password1*"
+          },
+          {
+            "User Role": "UserWithAllRoles",
+            "username": "BTAUSER_DEV",
+            "password": "Password1*"
+          },
+          {
+            "User Role": "RegressionUser",
+            "username": "Regression_TestUser",
+            "password": "Password1*"
+          }
+        ],
+
+        "Category": [
+          {
+            "Category Type": "Product_Category",
+            "NumberOfProducts": "5",
+            "NumberOfRewards": "10",
+            "Product": "Auto_Product",
+            "Reward": "Auto_Reward",
+            "Product_Variant": "Auto_Product_Variant"
+          },
+          {
+            "Category Type": "Product",
+            "Quantity": "100"
+          },
+          {
+            "Category Type": "Bonus_Category",
+            "NumberofBonuses": "1",
+            "CreateBonus": "Auto_Bonus"
+          },
+          {
+            "Category Type": "Coupon_Category",
+            "NumberofCoupons": "1",
+            "CreateCoupon": "Auto_Coupon",
+            "CouponCode": "COU",
+            "CertNumberFormat": "##########-####",
+            "GlobalValueSet": "1"
+          },
+          {
+            "Category Type": "CouponMaxUses",
+            "UsesAllowed": "10",
+            "PerMonth": "3",
+            "PerYear": "3",
+            "PerWeek": "3",
+            "PerDay": "3"
+          },
+          {
+            "Category Type": "CouponMaxUsesWithAllIntervalCombination",
+            "PerMonth": "4",
+            "PerYear": "4",
+            "PerWeek": "4",
+            "PerDay": "4"
+          },
+          {
+            "Category Type": "ProductImage",
+            "Category": "",
+            "ProductName": "",
+            "ImageFileName": "Auto_ProductImage_",
+            "ImageOrder": "1"
+          }
+        ],
+       "CreateAttributSet": [
+          {
+            "AttributeSets": "BTADEVAutoAttributeSet",
+            "Attribute": "BTADEVAutoChildAttribute"
+          }
+        ],
+        "GlobalCreateAttributSet": [
+          {
+            "AttributeSets": "AutoAttributeSet",
+            "Attribute": "AutoChildAttribute"
+          }
+        ],
+        "email": [
+          {
+            "MailingName": "AutoEMAIL",
+            "Email_DMCCode": "3000182200"
+          }
+        ],
+        "sms": [
+          {
+            "SMSMessageName": "AutoSMS",
+            "SMS_DMCCode": "3000164018"
+          }
+        ],
+        "Message": [
+          {
+            "MessageName": "AutoMessage"
+          }
+        ],
+        "Promotion": [
+          {
+            "PromotionName": "AutoPromo_"
+          }
+        ]
+      }
+    ],
+    "CsPortal": [
+      {
+        "CsAdminuser": [
+          {
+            "csadmin": "csadmin",
+            "csadmin_password": "csadmin",
+            "BTA_DEV_CS_LogPath": "\\\\Tyqawbs08\\wwwroot\\loyaltywareBTA\\Logs\\BTA_Dev_CS.log"
+          }
+        ],
+        "Roles": [
+          {
+            "AdminRole": "Admin",
+            "SrAdminRole": "SrAdmin",
+            "JrAdminRole": "JrAdmin",
+            "AdminRole_PointAwardLimit": "200",
+            "SrAdminRole_PointAwardLimit": "100",
+            "JrAdminRole_PointAwardLimit": "50"
+          }
+        ],
+        "Agents": [
+          {
+            "AdminAgent": "Admin_Agent",
+            "SrAdminAgent": "SrAdmin_Agent",
+            "JrAdminAgent": "JrAdmin_Agent",
+            "Agent_password": "Password1*",
+            "ChangePasswordTestAgent": "ChangePasswordTestAgent",
+            "ForgotPasswordTestAgent": "ForgotPasswordTestAgent"
+          }
+        ]
+      }
+
+    ],
+    "MemberPortal": [
+      {
+        "MP_username": "CDIS_LGLLEF_LYNN",
+        "MP_password": "Password1*",
+        "RewardName": "EarnRewardIfPointsIs100",
+        "ForgotPasswordTestMember": "ForgotPasswordTestMember1",
+        "BTA_DEV_MP_LogPath": "\\\\Tyqawbs08\\wwwroot\\loyaltywareBTA\\Logs\\BTA_Dev_MP.log"
+      }
+    ]
+  }
+]

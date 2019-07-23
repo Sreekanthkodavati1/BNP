@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DAPDirectives xmlns="http://www.brierley.com/DAPFileProcessing">
+
+  <!-- General Configuration Parameters -->
+  <DAPConfiguration>
+      <DAPDataType>MemberAttributeSets</DAPDataType>
+      <DateConversionFormat></DateConversionFormat>
+      <TrimStrings>true</TrimStrings>
+      <!--EmailInformation>
+        <SMTPServer>cypwebmail.brierleyweb.com</SMTPServer>
+        <SenderEmail>dap_admin@brierley.com</SenderEmail>
+        <SenderDisplayName>Brierley DAP Administrator</SenderDisplayName>
+        <RecepientEmail>cchavva@brierley.com</RecepientEmail>
+      </EmailInformation-->
+      <!--<DoNotProcess>true</DoNotProcess>-->
+  </DAPConfiguration>
+  
+  <!-- Configuration parameters for message acquisition -->
+  
+  <InputProvider MessageProcessingScheme="Single" DebugOutputPath="##DEVROOT####Organization##\Data\TLog\Stage1Out">
+    <FlatFileInput>
+      <CollectionRoot Name="Transactions" Structure="Delimited" Delimiter="NL" TagName="">
+        <Record Name="Record" Structure="Delimited" Delimiter="|" TagName="R">
+          <Fields>
+            <RecordField Name="LoyaltyId" Type="String"/>
+            <RecordField Name="TxnId" Type="String"/>
+            <RecordField Name="TxnDate" Type="String"/>
+            <RecordField Name="StoreNumber" Type="String"/>
+            <RecordField Name="RegisterId" Type="String"/>
+            <RecordField Name="NmbrOfItems" Type="String"/>
+            <RecordField Name="Barcode" Type="String"/>
+            <RecordField Name="TenderType" Type="String"/>
+            <RecordField Name="TotalTxnAmount" Type="String"/>
+			<RecordField Name="TxnDetailId" Type="String"/>
+            <RecordField Name="DtlProductId" Type="String"/>
+            <RecordField Name="UnitPrice" Type="String"/>
+            <RecordField Name="Quantity" Type="String"/>
+            <RecordField Name="LineItemAmount" Type="String"/>			
+          </Fields>
+        </Record>
+      </CollectionRoot>
+    </FlatFileInput>
+  </InputProvider>
+  
+  <!-- Configuration for message transformation -->
+  <MessageTransformationMap SourceCollectionName="Transactions" TargetAttributeSetType="Member" DebugOutputPath="##DEVROOT####Organization##\Data\TLog\Stage2Out">
+      <FieldMap SourceField="Record/LoyaltyId">
+        <Populate TargetNode="Member/VirtualCard/LoyaltyIdNumber" />
+      </FieldMap>
+      <FieldMap SourceField="Record/TxnId">
+        <Populate TargetNode="Member/VirtualCard/TxnHeader/TxnHeaderId" />
+      </FieldMap>
+      <FieldMap SourceField="Record/TxnDate">
+        <Populate TargetNode="Member/VirtualCard/TxnHeader/TxnDate" />
+      </FieldMap>
+      <FieldMap SourceField="Record/StoreNumber">
+        <Populate TargetNode="Member/VirtualCard/TxnHeader/TxnStoreId" />
+      </FieldMap>
+      <FieldMap SourceField="Record/RegisterId">
+        <Populate TargetNode="Member/VirtualCard/TxnHeader/TxnRegisterNumber" />
+      </FieldMap>
+      <FieldMap SourceField="Record/Barcode">
+        <Populate TargetNode="Member/VirtualCard/TxnHeader/TxnNumber" />
+      </FieldMap>
+      <FieldMap SourceField="Record/TotalTxnAmount">
+        <Populate TargetNode="Member/VirtualCard/TxnHeader/TxnAmount" />
+      </FieldMap>
+	  <FieldMap SourceField="Record/TxnDetailId">
+        <Populate TargetNode="Member/VirtualCard/TxnHeader/TxnDetailItem/TxnDetailId" />
+      </FieldMap>
+      <FieldMap SourceField="Record/DtlProductId">
+        <Populate TargetNode="Member/VirtualCard/TxnHeader/TxnDetailItem/DtlProductId"  />
+      </FieldMap>
+	  <FieldMap SourceField="Record/TxnDate">
+        <Populate TargetNode="Member/VirtualCard/TxnHeader/TxnDetailItem/TxnDate" />
+      </FieldMap>
+      <FieldMap SourceField="Record/UnitPrice">
+        <Populate TargetNode="Member/VirtualCard/TxnHeader/TxnDetailItem/DtlRetailAmount" />
+      </FieldMap>
+      <FieldMap SourceField="Record/Quantity">
+        <Populate TargetNode="Member/VirtualCard/TxnHeader/TxnDetailItem/DtlQuantity" />
+      </FieldMap>
+      <FieldMap SourceField="Record/LineItemAmount">
+        <Populate TargetNode="Member/VirtualCard/TxnHeader/TxnDetailItem/DtlSaleAmount" />
+      </FieldMap>
+	  
+  </MessageTransformationMap>
+  
+  <!-- Output Provider -->
+  <OutputProvider>
+    <FrameworkOutput>
+      <!-- Configuration for Dispatcher messages over threads -->
+      <DispatcherConfiguration>
+        <ThreadPoolSize>1</ThreadPoolSize>
+        <RequestsPerThread></RequestsPerThread>
+        <SerializeMembers>true</SerializeMembers>
+        <SerializationPolicy>MemberKey</SerializationPolicy>
+      </DispatcherConfiguration>
+      <!-- Final processing directives -->
+      <FrameworkBoundMessageProcessingDirectives>
+        <ClientDataModel>
+          <MemberLoadDirectives ExceptionIfNotFound="true"  ExceptionIfFound="false">
+            <LoadDirective Method="LoyaltyIdNumber" ValuePath="Member/VirtualCard/LoyaltyIdNumber"/>
+          </MemberLoadDirectives>
+          <AttributeSetCreateDirectives>
+            <AttributeSetUpdate Name="VirtualCard" FindMethod="Attribute" FindValue="LoyaltyIdNumber" CreateIfNotFound="false"/>
+          </AttributeSetCreateDirectives>
+        </ClientDataModel>
+      </FrameworkBoundMessageProcessingDirectives>
+    </FrameworkOutput>    
+  </OutputProvider>
+</DAPDirectives>

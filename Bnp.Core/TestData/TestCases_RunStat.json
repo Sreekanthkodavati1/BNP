@@ -1,0 +1,102 @@
+[
+  {
+    "TestCase": "BTA79_Navigator_CreateAdminUser_And_Login_With_AdminUser",
+    "Status": "Passed"
+  },
+  {
+    "TestCase": "BTA79_Navigator_CreateDBAAdminUser_And_Login_With_DBAAdminUser",
+    "Status": "Passed"
+  },
+  {
+    "TestCase": "BTA79_Navigator_CreateKEYAdminUser_And_Login_With_KEYAdminUser",
+    "Status": "Passed"
+  },
+  {
+    "TestCase": "BTA79_Navigator_CreateWEBAdminUser_And_Login_With_WEBAdminUser",
+    "Status": "Passed"
+  },
+  {
+    "TestCase": "BTA81_Navigator_GenerateKeys",
+    "Status": "Failed"
+  },
+  {
+    "TestCase": "BTA82_Navigator_GenerateDBConfig",
+    "Status": "Passed"
+  },
+  {
+    "TestCase": "BTA83_Navigator_GenerateFrameworkCfgFile",
+    "Status": "Passed"
+  },
+  {
+    "TestCase": "BTA84_Navigator_CreateUserWithAllPermissions",
+    "Status": "Passed"
+  },
+  {
+    "TestCase": "BTA86_Navigator_Create_CSPortal_MemberPortal",
+    "Status": "Passed"
+  },
+  {
+    "TestCase": "BTA_114_Navigator_CreateProductCategory_Product_ProductVariant_Reward",
+    "Status": "Passed"
+  },
+  {
+    "TestCase": "BTA_114_Navigator_CreateProductCategory_With_ExtendedAttributes",
+    "Status": "Passed"
+  },
+  {
+    "TestCase": "BTA115_Navigator_Create_BonusCategory_And_BonusWithExtendedAttributeSet",
+    "Status": "Passed"
+  },
+  {
+    "TestCase": "BTA115_Navigator_Create_BonusCategory_And_Bonus",
+    "Status": "Passed"
+  },
+  {
+    "TestCase": "BTA_116_Navigator_CreateCouponCategoryWithExtendedAttributeSet",
+    "Status": "Passed"
+  },
+  {
+    "TestCase": "BTA_116_Navigator_CreateCouponCategory_Coupon",
+    "Status": "Passed"
+  },
+  {
+    "TestCase": "BTA117_Navigator_CreatMailingNames",
+    "Status": "Passed"
+  },
+  {
+    "TestCase": "BTA118_Navigator_CreateSMSMessage",
+    "Status": ""
+  },
+  {
+    "TestCase": "BTA119_Navigator_VerifyAttributes_On_ExtendedAttributesPage",
+    "Status": "Passed"
+  },
+  {
+    "TestCase": "BTA119_Navigator_Create_Attribute_For_EachContentType_AllContentType_And_VerifyPage",
+    "Status": "Passed"
+  },
+  {
+    "TestCase": "BTA119_Navigator_VerifyAttributes_On_ExtendedAttributesPage",
+    "Status": ""
+  },
+  {
+    "TestCase": "BTA119_Navigator_Create_Attribute_For_EachContentType_AllContentType_And_VerifyPage",
+    "Status": ""
+  },
+  {
+    "TestCase": "BTA120_Navigator_Create_Targeted_Promotion",
+    "Status": "Passed"
+  },
+  {
+    "TestCase": "BTA573_Navigator_GenerateAssembly",
+    "Status": "Passed"
+  },
+  {
+    "TestCase": "BTA281_Navigator_Create_New_Message",
+    "Status": "Passed"
+  },
+  {
+    "TestCase": "BTA85_Navigator_Users_CreateAttributSets",
+    "Status": "Passed"
+  }
+]

@@ -1,0 +1,377 @@
+2018-10-24 15:28:52,522 [1] INFO  [LWDataAcquisitionService] - DAPConsoleProcessor:Main: Initialized log4net using config file 'C:\Users\kconners\Desktop\DapStuff\Brierley.DataAcquisition\DAPConsole\log4net.xml'
+2018-10-24 15:28:52,551 [1] INFO  [LWDataAcquisitionService] - DAPMain:InitializeConfiguration: Initialization configuration file C:\Users\kconners\Desktop\DapStuff\DAPEnrollmentFileConfig.xml
+2018-10-24 15:28:52,589 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: Initializing DAP job.
+2018-10-24 15:28:52,930 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: New job 26251 created to process file C:\Users\kconners\Desktop\DapStuff\Enrollment.txt
+2018-10-24 15:28:52,933 [14] INFO  [AsyncJobLogger] - JobId:2610 JobNumber:26251 JobName:
+2018-10-24 15:28:52,936 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetOutboundDAPProvider: Creating a framework output provider.
+2018-10-24 15:28:52,948 [1] INFO  [LWDataAcquisitionService] - DAPMessageDispatcherImpl:Initialize: Initializing thread pool manager for job 26251 with 1 threads.
+2018-10-24 15:28:52,953 [1] INFO  [LWDataAcquisitionService] - DAPMain:Process: debugging flag is on.
+2018-10-24 15:28:52,956 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetInboundDAPProvider: Creating a file provider.
+2018-10-24 15:28:52,958 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: Initializing...
+2018-10-24 15:28:52,959 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: File to process: C:\Users\kconners\Desktop\DapStuff\Enrollment.txt
+2018-10-24 15:28:52,971 [1] INFO  [LoyaltyWareFramework] - DynamicCodeUtil:CompileDynamicCode: Compiling dynamic scripts.
+2018-10-24 15:28:52,971 [1] INFO  [LoyaltyWareFramework] - DynamicCodeUtil:CompileDynamicCode: generating code for dynamic script SetNonMemberProperty
+2018-10-24 15:28:53,107 [1] ERROR [LoyaltyWareFramework] - ClassLoaderUtil:MyAssemblyResolver: Unable to resolve assembly: ##Organization##Interceptors
+2018-10-24 15:28:53,121 [1] ERROR [LoyaltyWareFramework] - InterceptorUtil:GetInterceptor: Error loading interceptor,
+Exception Message: Could not load file or assembly '##Organization##Interceptors' or one of its dependencies. The system cannot find the file specified.
+Exception Type: FileNotFoundException
+Stack Trace: 
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Brierley.FrameWork.Common.ClassLoaderUtil.CreateInstance(String assemblyName, String typeName) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\ClassLoaderUtil.cs:line 550
+   at Brierley.FrameWork.LWIntegration.Util.InterceptorUtil.GetInterceptor(InterceptorDirective directive) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\InterceptorUtil.cs:line 87
+
+2018-10-24 15:28:53,143 [1] ERROR [LWDataAcquisitionService] - DAPMessageDispatcherImpl:ProcessMessageBatch: Error while setting interceptor.
+Exception Message: Error inbound interceptor
+Exception Type: LWIntegrationException
+Stack Trace: 
+   at Brierley.FrameWork.LWIntegration.Util.InterceptorUtil.GetInterceptor(InterceptorDirective directive) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\InterceptorUtil.cs:line 111
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.ProcessMessageBatch(List`1 messageBatch) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 437
+Inner Exception Message: Could not load file or assembly '##Organization##Interceptors' or one of its dependencies. The system cannot find the file specified.
+Inner Exception Type: FileNotFoundException
+Inner Exception Stack Trace: 
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Brierley.FrameWork.Common.ClassLoaderUtil.CreateInstance(String assemblyName, String typeName) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\ClassLoaderUtil.cs:line 550
+   at Brierley.FrameWork.LWIntegration.Util.InterceptorUtil.GetInterceptor(InterceptorDirective directive) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\InterceptorUtil.cs:line 87
+
+2018-10-24 15:28:53,149 [15] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:LW52011_Development LogSource:  Message:Batch. Error:Error while setting interceptor.   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.ProcessMessageBatch(List`1 messageBatch) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 446
+   at Brierley.LoyaltyWare.DataAcquisition.Core.DAPMain.ProcessMessage(String msg) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\DAPMain.cs:line 307
+   at Brierley.LoyaltyWare.DataAcquisition.Core.DAPMain.SingleMessageProcessing(IDAPInputProvider provider) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\DAPMain.cs:line 369
+2018-10-24 15:28:53,160 [1] ERROR [LoyaltyWareFramework] - ClassLoaderUtil:MyAssemblyResolver: Unable to resolve assembly: ##Organization##Interceptors
+2018-10-24 15:28:53,161 [1] ERROR [LoyaltyWareFramework] - InterceptorUtil:GetInterceptor: Error loading interceptor,
+Exception Message: Could not load file or assembly '##Organization##Interceptors' or one of its dependencies. The system cannot find the file specified.
+Exception Type: FileNotFoundException
+Stack Trace: 
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Brierley.FrameWork.Common.ClassLoaderUtil.CreateInstance(String assemblyName, String typeName) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\ClassLoaderUtil.cs:line 550
+   at Brierley.FrameWork.LWIntegration.Util.InterceptorUtil.GetInterceptor(InterceptorDirective directive) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\InterceptorUtil.cs:line 87
+
+2018-10-24 15:28:53,165 [1] ERROR [LWDataAcquisitionService] - DAPMessageDispatcherImpl:ProcessMessageBatch: Error while setting interceptor.
+Exception Message: Error inbound interceptor
+Exception Type: LWIntegrationException
+Stack Trace: 
+   at Brierley.FrameWork.LWIntegration.Util.InterceptorUtil.GetInterceptor(InterceptorDirective directive) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\InterceptorUtil.cs:line 111
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.ProcessMessageBatch(List`1 messageBatch) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 437
+Inner Exception Message: Could not load file or assembly '##Organization##Interceptors' or one of its dependencies. The system cannot find the file specified.
+Inner Exception Type: FileNotFoundException
+Inner Exception Stack Trace: 
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Brierley.FrameWork.Common.ClassLoaderUtil.CreateInstance(String assemblyName, String typeName) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\ClassLoaderUtil.cs:line 550
+   at Brierley.FrameWork.LWIntegration.Util.InterceptorUtil.GetInterceptor(InterceptorDirective directive) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\InterceptorUtil.cs:line 87
+
+2018-10-24 15:28:53,166 [15] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:LW52011_Development LogSource:  Message:Batch. Error:Error while setting interceptor.   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.ProcessMessageBatch(List`1 messageBatch) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 446
+   at Brierley.LoyaltyWare.DataAcquisition.Core.DAPMain.ProcessMessage(String msg) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\DAPMain.cs:line 307
+   at Brierley.LoyaltyWare.DataAcquisition.Core.DAPMain.SingleMessageProcessing(IDAPInputProvider provider) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\DAPMain.cs:line 369
+2018-10-24 15:28:53,185 [1] ERROR [LoyaltyWareFramework] - ClassLoaderUtil:MyAssemblyResolver: Unable to resolve assembly: ##Organization##Interceptors
+2018-10-24 15:28:53,186 [1] ERROR [LoyaltyWareFramework] - InterceptorUtil:GetInterceptor: Error loading interceptor,
+Exception Message: Could not load file or assembly '##Organization##Interceptors' or one of its dependencies. The system cannot find the file specified.
+Exception Type: FileNotFoundException
+Stack Trace: 
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Brierley.FrameWork.Common.ClassLoaderUtil.CreateInstance(String assemblyName, String typeName) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\ClassLoaderUtil.cs:line 550
+   at Brierley.FrameWork.LWIntegration.Util.InterceptorUtil.GetInterceptor(InterceptorDirective directive) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\InterceptorUtil.cs:line 87
+
+2018-10-24 15:28:53,188 [1] ERROR [LWDataAcquisitionService] - DAPMessageDispatcherImpl:ProcessMessageBatch: Error while setting interceptor.
+Exception Message: Error inbound interceptor
+Exception Type: LWIntegrationException
+Stack Trace: 
+   at Brierley.FrameWork.LWIntegration.Util.InterceptorUtil.GetInterceptor(InterceptorDirective directive) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\InterceptorUtil.cs:line 111
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.ProcessMessageBatch(List`1 messageBatch) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 437
+Inner Exception Message: Could not load file or assembly '##Organization##Interceptors' or one of its dependencies. The system cannot find the file specified.
+Inner Exception Type: FileNotFoundException
+Inner Exception Stack Trace: 
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Brierley.FrameWork.Common.ClassLoaderUtil.CreateInstance(String assemblyName, String typeName) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\ClassLoaderUtil.cs:line 550
+   at Brierley.FrameWork.LWIntegration.Util.InterceptorUtil.GetInterceptor(InterceptorDirective directive) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\InterceptorUtil.cs:line 87
+
+2018-10-24 15:28:53,189 [15] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:LW52011_Development LogSource:  Message:Batch. Error:Error while setting interceptor.   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.DAPMessageDispatcherImpl.ProcessMessageBatch(List`1 messageBatch) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\DAPMessageDispatcherImpl.cs:line 446
+   at Brierley.LoyaltyWare.DataAcquisition.Core.DAPMain.ProcessMessage(String msg) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\DAPMain.cs:line 307
+   at Brierley.LoyaltyWare.DataAcquisition.Core.DAPMain.SingleMessageProcessing(IDAPInputProvider provider) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\DAPMain.cs:line 369
+2018-10-24 15:28:53,193 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-10-24 15:28:54,962 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-10-24 15:28:54,967 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWAsyncJobLogger is being shutdown.
+2018-10-24 15:28:58,938 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 26251 finished.  Summarizing it.
+2018-10-24 15:28:58,957 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 26251 has finished.  3 messages received - 3 messages failed.
+2018-10-24 15:28:58,972 [1] INFO  [AsyncJobLogger] - JobId:2610 JobNumber:26251 JobName:
+2018-10-24 15:31:48,603 [1] INFO  [LWDataAcquisitionService] - DAPConsoleProcessor:Main: Initialized log4net using config file 'C:\Users\kconners\Desktop\DapStuff\Brierley.DataAcquisition\DAPConsole\log4net.xml'
+2018-10-24 15:31:48,629 [1] INFO  [LWDataAcquisitionService] - DAPMain:InitializeConfiguration: Initialization configuration file C:\Users\kconners\Desktop\DapStuff\DAPEnrollmentFileConfig.xml
+2018-10-24 15:31:48,661 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: Initializing DAP job.
+2018-10-24 15:31:48,999 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: New job 26301 created to process file C:\Users\kconners\Desktop\DapStuff\Enrollment.txt
+2018-10-24 15:31:49,001 [14] INFO  [AsyncJobLogger] - JobId:2614 JobNumber:26301 JobName:
+2018-10-24 15:31:49,004 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetOutboundDAPProvider: Creating a framework output provider.
+2018-10-24 15:31:49,016 [1] INFO  [LWDataAcquisitionService] - DAPMessageDispatcherImpl:Initialize: Initializing thread pool manager for job 26301 with 1 threads.
+2018-10-24 15:31:49,020 [1] INFO  [LWDataAcquisitionService] - DAPMain:Process: debugging flag is on.
+2018-10-24 15:31:49,024 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetInboundDAPProvider: Creating a file provider.
+2018-10-24 15:31:49,026 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: Initializing...
+2018-10-24 15:31:49,026 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: File to process: C:\Users\kconners\Desktop\DapStuff\Enrollment.txt
+2018-10-24 15:31:49,039 [1] INFO  [LoyaltyWareFramework] - DynamicCodeUtil:CompileDynamicCode: Compiling dynamic scripts.
+2018-10-24 15:31:49,040 [1] INFO  [LoyaltyWareFramework] - DynamicCodeUtil:CompileDynamicCode: generating code for dynamic script SetNonMemberProperty
+2018-10-24 15:31:49,181 [1] INFO  [LoyaltyWareFramework] - MessagingBus:Initialize: Initializing message bus...
+2018-10-24 15:31:49,285 [1] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: MemberByLoyaltyId
+2018-10-24 15:31:49,450 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-10-24 15:31:49,519 [19] ERROR [LWDataAcquisitionService] - AttributeSetProcessingBase:ProcessRequest: Error during processing.
+Exception Message: Password must be at least 7 characters.
+Exception Type: BadPasswordLengthException
+Stack Trace: 
+   at Brierley.FrameWork.Common.LWPasswordUtil.ValidatePassword(String identity, String password) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\LWPasswordUtil.cs:line 95
+   at Brierley.FrameWork.Data.LoyaltyDataService.ChangeMemberPassword(Member member, String newPassword, Boolean updateMember) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 1119
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadMemberAttributes(LWIntegrationConfig config, Member member, XElement memberNode, Boolean trimStrings, String dateConversionFormat, Boolean checkForChangedValues) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 432
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+
+2018-10-24 15:31:49,537 [17] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:LW52011_Development LogSource:  Message:<Member NonMember="true" FirstName="John1001" MiddleName="Henry" LastName="Doe1001" BirthDate="" NamePrefix="" NameSuffix="" AlternateId="1001" Username="jd1001" Password="jd1001" PrimaryEmailAddress="johndoe1001@test.com" PrimaryPhoneNumber="123456789" PrimaryPostalCode="75093">
+  <VirtualCard LoyaltyIdNumber="1001" />
+  <MemberDetails AddressLineOne="5809 Dove Creek Lane" AddressLineTwo="" AddressLineThree="" City="Plano" StateOrProvince="TX" ZipOrPostalCode="75093" County="Collin" Country="USA" AddressMailable="" HomePhone="" MobilePhone="" WorkPhone="2143653626" SecondaryEmailAddress="" EmailAddressMailable="false" MemberStatusCode="" DirectMailOptInDate="" EmailOptInDate="" SMSOptInDate="" EnrollDate="" Gender="Male" MemberSource="" LanguagePreference="" SecurityQuestion="" SecurityAnswer="" />
+</Member> Error:Password must be at least 7 characters.   at Brierley.FrameWork.Common.LWPasswordUtil.ValidatePassword(String identity, String password) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\LWPasswordUtil.cs:line 95
+   at Brierley.FrameWork.Data.LoyaltyDataService.ChangeMemberPassword(Member member, String newPassword, Boolean updateMember) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 1119
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadMemberAttributes(LWIntegrationConfig config, Member member, XElement memberNode, Boolean trimStrings, String dateConversionFormat, Boolean checkForChangedValues) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 432
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+2018-10-24 15:31:49,547 [19] ERROR [LWDataAcquisitionService] - AttributeSetProcessingBase:ProcessRequest: Error during processing.
+Exception Message: Password must be at least 7 characters.
+Exception Type: BadPasswordLengthException
+Stack Trace: 
+   at Brierley.FrameWork.Common.LWPasswordUtil.ValidatePassword(String identity, String password) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\LWPasswordUtil.cs:line 95
+   at Brierley.FrameWork.Data.LoyaltyDataService.ChangeMemberPassword(Member member, String newPassword, Boolean updateMember) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 1119
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadMemberAttributes(LWIntegrationConfig config, Member member, XElement memberNode, Boolean trimStrings, String dateConversionFormat, Boolean checkForChangedValues) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 432
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+
+2018-10-24 15:31:49,548 [17] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:LW52011_Development LogSource:  Message:<Member NonMember="true" FirstName="John1002" MiddleName="" LastName="Doe1002" BirthDate="" NamePrefix="" NameSuffix="" AlternateId="1002" Username="jd1002" Password="jd1002" PrimaryEmailAddress="johndoe1002@test.com" PrimaryPhoneNumber="123456789" PrimaryPostalCode="75093">
+  <VirtualCard LoyaltyIdNumber="1002" />
+  <MemberDetails AddressLineOne="5809 Dove Creek Lane" AddressLineTwo="" AddressLineThree="" City="Plano" StateOrProvince="TX" ZipOrPostalCode="75093" County="" Country="USA" AddressMailable="" HomePhone="" MobilePhone="" WorkPhone="2143653626" SecondaryEmailAddress="" EmailAddressMailable="false" MemberStatusCode="" DirectMailOptInDate="" EmailOptInDate="" SMSOptInDate="" EnrollDate="" Gender="Male" MemberSource="" LanguagePreference="" SecurityQuestion="" SecurityAnswer="" />
+</Member> Error:Password must be at least 7 characters.   at Brierley.FrameWork.Common.LWPasswordUtil.ValidatePassword(String identity, String password) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\LWPasswordUtil.cs:line 95
+   at Brierley.FrameWork.Data.LoyaltyDataService.ChangeMemberPassword(Member member, String newPassword, Boolean updateMember) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 1119
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadMemberAttributes(LWIntegrationConfig config, Member member, XElement memberNode, Boolean trimStrings, String dateConversionFormat, Boolean checkForChangedValues) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 432
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+2018-10-24 15:31:49,552 [19] ERROR [LWDataAcquisitionService] - AttributeSetProcessingBase:ProcessRequest: Error during processing.
+Exception Message: Password must be at least 7 characters.
+Exception Type: BadPasswordLengthException
+Stack Trace: 
+   at Brierley.FrameWork.Common.LWPasswordUtil.ValidatePassword(String identity, String password) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\LWPasswordUtil.cs:line 95
+   at Brierley.FrameWork.Data.LoyaltyDataService.ChangeMemberPassword(Member member, String newPassword, Boolean updateMember) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 1119
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadMemberAttributes(LWIntegrationConfig config, Member member, XElement memberNode, Boolean trimStrings, String dateConversionFormat, Boolean checkForChangedValues) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 432
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+
+2018-10-24 15:31:49,552 [17] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:LW52011_Development LogSource:  Message:<Member NonMember="true" FirstName="John1003" MiddleName="Smiley" LastName="Doe1003" BirthDate="" NamePrefix="" NameSuffix="" AlternateId="1003" Username="jd1003" Password="jd1003" PrimaryEmailAddress="johndoe1003@test.com" PrimaryPhoneNumber="123456789" PrimaryPostalCode="75093">
+  <VirtualCard LoyaltyIdNumber="1003" />
+  <MemberDetails AddressLineOne="5809 Dove Creek Lane" AddressLineTwo="" AddressLineThree="" City="Plano" StateOrProvince="TX" ZipOrPostalCode="75093" County="Collin" Country="USA" AddressMailable="" HomePhone="" MobilePhone="" WorkPhone="2143653626" SecondaryEmailAddress="" EmailAddressMailable="false" MemberStatusCode="" DirectMailOptInDate="" EmailOptInDate="" SMSOptInDate="" EnrollDate="" Gender="Male" MemberSource="" LanguagePreference="" SecurityQuestion="" SecurityAnswer="" />
+</Member> Error:Password must be at least 7 characters.   at Brierley.FrameWork.Common.LWPasswordUtil.ValidatePassword(String identity, String password) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\LWPasswordUtil.cs:line 95
+   at Brierley.FrameWork.Data.LoyaltyDataService.ChangeMemberPassword(Member member, String newPassword, Boolean updateMember) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 1119
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadMemberAttributes(LWIntegrationConfig config, Member member, XElement memberNode, Boolean trimStrings, String dateConversionFormat, Boolean checkForChangedValues) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 432
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+2018-10-24 15:31:49,555 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-10-24 15:31:49,556 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWAsyncJobLogger is being shutdown.
+2018-10-24 15:31:53,010 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 26301 finished.  Summarizing it.
+2018-10-24 15:31:53,037 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 26301 has finished.  3 messages received - 3 messages failed.
+2018-10-24 15:31:53,052 [1] INFO  [AsyncJobLogger] - JobId:2614 JobNumber:26301 JobName:
+2018-10-24 15:33:39,433 [1] INFO  [LWDataAcquisitionService] - DAPConsoleProcessor:Main: Initialized log4net using config file 'C:\Users\kconners\Desktop\DapStuff\Brierley.DataAcquisition\DAPConsole\log4net.xml'
+2018-10-24 15:33:39,456 [1] INFO  [LWDataAcquisitionService] - DAPMain:InitializeConfiguration: Initialization configuration file C:\Users\kconners\Desktop\DapStuff\DAPEnrollmentFileConfig.xml
+2018-10-24 15:33:39,492 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: Initializing DAP job.
+2018-10-24 15:33:39,886 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: New job 26351 created to process file C:\Users\kconners\Desktop\DapStuff\Enrollment.txt
+2018-10-24 15:33:39,888 [13] INFO  [AsyncJobLogger] - JobId:2618 JobNumber:26351 JobName:
+2018-10-24 15:33:39,892 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetOutboundDAPProvider: Creating a framework output provider.
+2018-10-24 15:33:39,905 [1] INFO  [LWDataAcquisitionService] - DAPMessageDispatcherImpl:Initialize: Initializing thread pool manager for job 26351 with 1 threads.
+2018-10-24 15:33:39,909 [1] INFO  [LWDataAcquisitionService] - DAPMain:Process: debugging flag is on.
+2018-10-24 15:33:39,912 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetInboundDAPProvider: Creating a file provider.
+2018-10-24 15:33:39,914 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: Initializing...
+2018-10-24 15:33:39,915 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: File to process: C:\Users\kconners\Desktop\DapStuff\Enrollment.txt
+2018-10-24 15:33:39,927 [1] INFO  [LoyaltyWareFramework] - DynamicCodeUtil:CompileDynamicCode: Compiling dynamic scripts.
+2018-10-24 15:33:39,928 [1] INFO  [LoyaltyWareFramework] - DynamicCodeUtil:CompileDynamicCode: generating code for dynamic script SetNonMemberProperty
+2018-10-24 15:33:40,145 [1] INFO  [LoyaltyWareFramework] - MessagingBus:Initialize: Initializing message bus...
+2018-10-24 15:33:40,176 [1] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: MemberByLoyaltyId
+2018-10-24 15:33:40,253 [16] ERROR [LWDataAcquisitionService] - AttributeSetProcessingBase:ProcessRequest: Error during processing.
+Exception Message: Password must be at least 7 characters.
+Exception Type: BadPasswordLengthException
+Stack Trace: 
+   at Brierley.FrameWork.Common.LWPasswordUtil.ValidatePassword(String identity, String password) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\LWPasswordUtil.cs:line 95
+   at Brierley.FrameWork.Data.LoyaltyDataService.ChangeMemberPassword(Member member, String newPassword, Boolean updateMember) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 1119
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadMemberAttributes(LWIntegrationConfig config, Member member, XElement memberNode, Boolean trimStrings, String dateConversionFormat, Boolean checkForChangedValues) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 432
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+
+2018-10-24 15:33:40,258 [16] ERROR [LWDataAcquisitionService] - AttributeSetProcessingBase:ProcessRequest: Error during processing.
+Exception Message: Password must be at least 7 characters.
+Exception Type: BadPasswordLengthException
+Stack Trace: 
+   at Brierley.FrameWork.Common.LWPasswordUtil.ValidatePassword(String identity, String password) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\LWPasswordUtil.cs:line 95
+   at Brierley.FrameWork.Data.LoyaltyDataService.ChangeMemberPassword(Member member, String newPassword, Boolean updateMember) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 1119
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadMemberAttributes(LWIntegrationConfig config, Member member, XElement memberNode, Boolean trimStrings, String dateConversionFormat, Boolean checkForChangedValues) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 432
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+
+2018-10-24 15:33:40,259 [14] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:LW52011_Development LogSource:  Message:<Member NonMember="true" FirstName="John1001" MiddleName="Henry" LastName="Doe1001" BirthDate="" NamePrefix="" NameSuffix="" AlternateId="1001" Username="jd1001" Password="jd1001" PrimaryEmailAddress="johndoe1001@test.com" PrimaryPhoneNumber="123456789" PrimaryPostalCode="75093">
+  <VirtualCard LoyaltyIdNumber="1001" />
+  <MemberDetails AddressLineOne="5809 Dove Creek Lane" AddressLineTwo="" AddressLineThree="" City="Plano" StateOrProvince="TX" ZipOrPostalCode="75093" County="Collin" Country="USA" AddressMailable="" HomePhone="" MobilePhone="" WorkPhone="2143653626" SecondaryEmailAddress="" EmailAddressMailable="false" MemberStatusCode="" DirectMailOptInDate="" EmailOptInDate="" SMSOptInDate="" EnrollDate="" Gender="Male" MemberSource="" LanguagePreference="" SecurityQuestion="" SecurityAnswer="" />
+</Member> Error:Password must be at least 7 characters.   at Brierley.FrameWork.Common.LWPasswordUtil.ValidatePassword(String identity, String password) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\LWPasswordUtil.cs:line 95
+   at Brierley.FrameWork.Data.LoyaltyDataService.ChangeMemberPassword(Member member, String newPassword, Boolean updateMember) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 1119
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadMemberAttributes(LWIntegrationConfig config, Member member, XElement memberNode, Boolean trimStrings, String dateConversionFormat, Boolean checkForChangedValues) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 432
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+2018-10-24 15:33:40,260 [14] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:LW52011_Development LogSource:  Message:<Member NonMember="true" FirstName="John1002" MiddleName="" LastName="Doe1002" BirthDate="" NamePrefix="" NameSuffix="" AlternateId="1002" Username="jd1002" Password="jd1002" PrimaryEmailAddress="johndoe1002@test.com" PrimaryPhoneNumber="123456789" PrimaryPostalCode="75093">
+  <VirtualCard LoyaltyIdNumber="1002" />
+  <MemberDetails AddressLineOne="5809 Dove Creek Lane" AddressLineTwo="" AddressLineThree="" City="Plano" StateOrProvince="TX" ZipOrPostalCode="75093" County="" Country="USA" AddressMailable="" HomePhone="" MobilePhone="" WorkPhone="2143653626" SecondaryEmailAddress="" EmailAddressMailable="false" MemberStatusCode="" DirectMailOptInDate="" EmailOptInDate="" SMSOptInDate="" EnrollDate="" Gender="Male" MemberSource="" LanguagePreference="" SecurityQuestion="" SecurityAnswer="" />
+</Member> Error:Password must be at least 7 characters.   at Brierley.FrameWork.Common.LWPasswordUtil.ValidatePassword(String identity, String password) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\LWPasswordUtil.cs:line 95
+   at Brierley.FrameWork.Data.LoyaltyDataService.ChangeMemberPassword(Member member, String newPassword, Boolean updateMember) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 1119
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadMemberAttributes(LWIntegrationConfig config, Member member, XElement memberNode, Boolean trimStrings, String dateConversionFormat, Boolean checkForChangedValues) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 432
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+2018-10-24 15:33:40,277 [16] ERROR [LWDataAcquisitionService] - AttributeSetProcessingBase:ProcessRequest: Error during processing.
+Exception Message: Password must be at least 7 characters.
+Exception Type: BadPasswordLengthException
+Stack Trace: 
+   at Brierley.FrameWork.Common.LWPasswordUtil.ValidatePassword(String identity, String password) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\LWPasswordUtil.cs:line 95
+   at Brierley.FrameWork.Data.LoyaltyDataService.ChangeMemberPassword(Member member, String newPassword, Boolean updateMember) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 1119
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadMemberAttributes(LWIntegrationConfig config, Member member, XElement memberNode, Boolean trimStrings, String dateConversionFormat, Boolean checkForChangedValues) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 432
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+
+2018-10-24 15:33:40,278 [14] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:LW52011_Development LogSource:  Message:<Member NonMember="true" FirstName="John1003" MiddleName="Smiley" LastName="Doe1003" BirthDate="" NamePrefix="" NameSuffix="" AlternateId="1003" Username="jd1003" Password="jd1003" PrimaryEmailAddress="johndoe1003@test.com" PrimaryPhoneNumber="123456789" PrimaryPostalCode="75093">
+  <VirtualCard LoyaltyIdNumber="1003" />
+  <MemberDetails AddressLineOne="5809 Dove Creek Lane" AddressLineTwo="" AddressLineThree="" City="Plano" StateOrProvince="TX" ZipOrPostalCode="75093" County="Collin" Country="USA" AddressMailable="" HomePhone="" MobilePhone="" WorkPhone="2143653626" SecondaryEmailAddress="" EmailAddressMailable="false" MemberStatusCode="" DirectMailOptInDate="" EmailOptInDate="" SMSOptInDate="" EnrollDate="" Gender="Male" MemberSource="" LanguagePreference="" SecurityQuestion="" SecurityAnswer="" />
+</Member> Error:Password must be at least 7 characters.   at Brierley.FrameWork.Common.LWPasswordUtil.ValidatePassword(String identity, String password) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\LWPasswordUtil.cs:line 95
+   at Brierley.FrameWork.Data.LoyaltyDataService.ChangeMemberPassword(Member member, String newPassword, Boolean updateMember) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 1119
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadMemberAttributes(LWIntegrationConfig config, Member member, XElement memberNode, Boolean trimStrings, String dateConversionFormat, Boolean checkForChangedValues) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 432
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+2018-10-24 15:33:40,278 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-10-24 15:33:42,288 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-10-24 15:33:42,294 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWAsyncJobLogger is being shutdown.
+2018-10-24 15:33:45,897 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 26351 finished.  Summarizing it.
+2018-10-24 15:33:45,925 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 26351 has finished.  3 messages received - 3 messages failed.
+2018-10-24 15:33:45,936 [1] INFO  [AsyncJobLogger] - JobId:2618 JobNumber:26351 JobName:
+2018-10-24 15:35:50,912 [1] INFO  [LWDataAcquisitionService] - DAPConsoleProcessor:Main: Initialized log4net using config file 'C:\Users\kconners\Desktop\DapStuff\Brierley.DataAcquisition\DAPConsole\log4net.xml'
+2018-10-24 15:35:50,934 [1] INFO  [LWDataAcquisitionService] - DAPMain:InitializeConfiguration: Initialization configuration file C:\Users\kconners\Desktop\DapStuff\DAPEnrollmentFileConfig.xml
+2018-10-24 15:35:50,964 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: Initializing DAP job.
+2018-10-24 15:35:51,286 [1] INFO  [LWDataAcquisitionService] - DAPMain:Initialize: New job 26401 created to process file C:\Users\kconners\Desktop\DapStuff\Enrollment.txt
+2018-10-24 15:35:51,287 [12] INFO  [AsyncJobLogger] - JobId:2622 JobNumber:26401 JobName:
+2018-10-24 15:35:51,300 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetOutboundDAPProvider: Creating a framework output provider.
+2018-10-24 15:35:51,311 [1] INFO  [LWDataAcquisitionService] - DAPMessageDispatcherImpl:Initialize: Initializing thread pool manager for job 26401 with 1 threads.
+2018-10-24 15:35:51,315 [1] INFO  [LWDataAcquisitionService] - DAPMain:Process: debugging flag is on.
+2018-10-24 15:35:51,318 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:GetInboundDAPProvider: Creating a file provider.
+2018-10-24 15:35:51,320 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: Initializing...
+2018-10-24 15:35:51,321 [1] INFO  [LWDataAcquisitionService] - DAPProviderUtil:Initialize: File to process: C:\Users\kconners\Desktop\DapStuff\Enrollment.txt
+2018-10-24 15:35:51,334 [1] INFO  [LoyaltyWareFramework] - DynamicCodeUtil:CompileDynamicCode: Compiling dynamic scripts.
+2018-10-24 15:35:51,334 [1] INFO  [LoyaltyWareFramework] - DynamicCodeUtil:CompileDynamicCode: generating code for dynamic script SetNonMemberProperty
+2018-10-24 15:35:51,475 [1] INFO  [LoyaltyWareFramework] - MessagingBus:Initialize: Initializing message bus...
+2018-10-24 15:35:51,504 [1] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: MemberByLoyaltyId
+2018-10-24 15:35:51,584 [16] INFO  [LoyaltyWareFramework] - LWIntegrationUtilities:HandleInitialMemberSatusTransientProperty: A non-member is being created with the transient property set to true.
+2018-10-24 15:35:51,586 [16] INFO  [LWDataAcquisitionService] - LWDAPMemberAttributeSetsProcessor:ProcessMember: Encountered non-member with ipcode -1 encountered.  Skipping it.
+2018-10-24 15:35:51,606 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: AttributeSetMetaDataByName
+2018-10-24 15:35:51,624 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-10-24 15:35:51,706 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: AttributeSetMetaDataById
+2018-10-24 15:35:51,781 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: ValidatorTriggerByAttribute
+2018-10-24 15:35:51,981 [16] INFO  [LoyaltyWareFramework] - LoyaltyDataService:VerifyMember: Verifying member before updating it.
+2018-10-24 15:35:52,042 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: RuleTriggerByObjectName
+2018-10-24 15:35:52,163 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: RuleTriggerByName
+2018-10-24 15:35:52,222 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region named 'bScriptByExpression' created using defaults - Max items: 1000. Items to scavenge: 10
+2018-10-24 15:35:52,851 [16] ERROR [LoyaltyWareFramework] - LoyaltyDataService:Execute: TESTLW7315 threw an error.  However, its ContuneOnError flag is true.  Continuing...
+Exception Message: One or more errors occurred.
+Exception Type: AggregateException
+Stack Trace: 
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at Brierley.FrameWork.Rules.TriggeredEmailRule.Invoke(ContextObject Context) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Rules\TriggeredEmailRule.cs:line 229
+   at Brierley.FrameWork.Data.LoyaltyDataService.Execute(RuleTrigger trigger, ContextObject contextobj, Boolean eventWasQueued) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 7488
+Inner Exception Message: Value cannot be null.
+Parameter name: emailAddress
+Inner Exception Type: ArgumentNullException
+Inner Exception Stack Trace: 
+   at Brierley.FrameWork.Email.DmcTriggeredEmail.<SendDmcAsync>d__15.MoveNext() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Email\DmcTriggeredEmail.cs:line 148
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Brierley.FrameWork.Email.DmcTriggeredEmail.<SendAsync>d__13.MoveNext() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Email\DmcTriggeredEmail.cs:line 110
+
+2018-10-24 15:35:52,876 [16] ERROR [RuleExecutionLogger] - ID:0 RuleName:TESTLW7315 MemberId:89
+2018-10-24 15:35:52,895 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: RuleTriggerByAttSet
+2018-10-24 15:35:52,960 [16] INFO  [LoyaltyWareFramework] - MSCacheRegion:MSCacheRegion: Cache region found using configuration by name: MemberByIpCode
+2018-10-24 15:35:52,993 [16] INFO  [LoyaltyWareFramework] - LWIntegrationUtilities:HandleInitialMemberSatusTransientProperty: A non-member is being created with the transient property set to true.
+2018-10-24 15:35:52,994 [16] INFO  [LWDataAcquisitionService] - LWDAPMemberAttributeSetsProcessor:ProcessMember: Encountered non-member with ipcode -1 encountered.  Skipping it.
+2018-10-24 15:35:53,008 [16] INFO  [LoyaltyWareFramework] - LoyaltyDataService:VerifyMember: Verifying member before updating it.
+2018-10-24 15:35:53,038 [16] ERROR [LoyaltyWareFramework] - LoyaltyDataService:Execute: TESTLW7315 threw an error.  However, its ContuneOnError flag is true.  Continuing...
+Exception Message: One or more errors occurred.
+Exception Type: AggregateException
+Stack Trace: 
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at Brierley.FrameWork.Rules.TriggeredEmailRule.Invoke(ContextObject Context) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Rules\TriggeredEmailRule.cs:line 229
+   at Brierley.FrameWork.Data.LoyaltyDataService.Execute(RuleTrigger trigger, ContextObject contextobj, Boolean eventWasQueued) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 7488
+Inner Exception Message: Value cannot be null.
+Parameter name: emailAddress
+Inner Exception Type: ArgumentNullException
+Inner Exception Stack Trace: 
+   at Brierley.FrameWork.Email.DmcTriggeredEmail.<SendDmcAsync>d__15.MoveNext() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Email\DmcTriggeredEmail.cs:line 148
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Brierley.FrameWork.Email.DmcTriggeredEmail.<SendAsync>d__13.MoveNext() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Email\DmcTriggeredEmail.cs:line 110
+
+2018-10-24 15:35:53,038 [16] ERROR [RuleExecutionLogger] - ID:0 RuleName:TESTLW7315 MemberId:90
+2018-10-24 15:35:53,065 [16] ERROR [LWDataAcquisitionService] - AttributeSetProcessingBase:ProcessRequest: Error during processing.
+Exception Message: Password must be at least 7 characters.
+Exception Type: BadPasswordLengthException
+Stack Trace: 
+   at Brierley.FrameWork.Common.LWPasswordUtil.ValidatePassword(String identity, String password) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\LWPasswordUtil.cs:line 95
+   at Brierley.FrameWork.Data.LoyaltyDataService.ChangeMemberPassword(Member member, String newPassword, Boolean updateMember) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 1119
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadMemberAttributes(LWIntegrationConfig config, Member member, XElement memberNode, Boolean trimStrings, String dateConversionFormat, Boolean checkForChangedValues) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 432
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+
+2018-10-24 15:35:53,070 [14] INFO  [FailedMessageLogger] - MessageId:0 EnvKey:LW52011_Development LogSource:  Message:<Member NonMember="true" FirstName="John1003" MiddleName="Smiley" LastName="Doe1003" BirthDate="" NamePrefix="" NameSuffix="" AlternateId="1003" Username="Password1***" Password="jd1003" PrimaryEmailAddress="johndoe1003@test.com" PrimaryPhoneNumber="123456789" PrimaryPostalCode="75093">
+  <VirtualCard LoyaltyIdNumber="1003" />
+  <MemberDetails AddressLineOne="5809 Dove Creek Lane" AddressLineTwo="" AddressLineThree="" City="Plano" StateOrProvince="TX" ZipOrPostalCode="75093" County="Collin" Country="USA" AddressMailable="" HomePhone="" MobilePhone="" WorkPhone="2143653626" SecondaryEmailAddress="" EmailAddressMailable="false" MemberStatusCode="" DirectMailOptInDate="" EmailOptInDate="" SMSOptInDate="" EnrollDate="" Gender="Male" MemberSource="" LanguagePreference="" SecurityQuestion="" SecurityAnswer="" />
+</Member> Error:Password must be at least 7 characters.   at Brierley.FrameWork.Common.LWPasswordUtil.ValidatePassword(String identity, String password) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Common\LWPasswordUtil.cs:line 95
+   at Brierley.FrameWork.Data.LoyaltyDataService.ChangeMemberPassword(Member member, String newPassword, Boolean updateMember) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\Data\LoyaltyDataService.cs:line 1119
+   at Brierley.FrameWork.LWIntegration.Util.LWIntegrationUtilities.LoadMemberAttributes(LWIntegrationConfig config, Member member, XElement memberNode, Boolean trimStrings, String dateConversionFormat, Boolean checkForChangedValues) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\Framework\Brierley.FrameWork\LWIntegration\Util\LWIntegrationUtilities.cs:line 432
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.ProcessMember(ClientDataModelInboundDirectives inDirectives, Member member) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 285
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.LWDAPMemberAttributeSetsProcessor.DoChildWork() in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\LWDAPMemberAttributeSetsProcessor.cs:line 675
+   at Brierley.LoyaltyWare.DataAcquisition.Core.Output.Framework.Threading.AttributeSetProcessingBase.ProcessRequest(Object workItem) in F:\ProductDevelopment\LoyaltyWare\LWSVN\LoyaltyWare 5.2\lw5.2.0\LWIntegrationSvc\Brierley.LoyaltyWare.DataAcquisition.Core\Output\Framework\Threading\AttributeSetProcessingBase.cs:line 547
+2018-10-24 15:35:53,071 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWThread - 0 is being shutdown.
+2018-10-24 15:35:53,073 [1] INFO  [LoyaltyWareFramework] - LWThread:ShutDown: Thread LWAsyncJobLogger is being shutdown.
+2018-10-24 15:35:55,314 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 26401 finished.  Summarizing it.
+2018-10-24 15:35:55,342 [1] INFO  [LWDataAcquisitionService] - DAPMain:FinalizeJob: Job 26401 has finished.  3 messages received - 1 messages failed.
+2018-10-24 15:35:55,353 [1] INFO  [AsyncJobLogger] - JobId:2622 JobNumber:26401 JobName:

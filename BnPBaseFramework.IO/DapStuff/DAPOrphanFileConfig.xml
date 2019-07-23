@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DAPDirectives xmlns="http://www.brierley.com/DAPFileProcessing">
+
+  <!-- General Configuration Parameters -->
+  <DAPConfiguration>
+      <DAPDataType>GlobalAttributeSets</DAPDataType>
+      <DateConversionFormat></DateConversionFormat>
+      <TrimStrings>true</TrimStrings>
+      <EmailInformation>
+        <SMTPServer>cypwebmail.brierleyweb.com</SMTPServer>
+        <SenderEmail>dap_admin@brierley.com</SenderEmail>
+        <SenderDisplayName>Brierley DAP Administrator</SenderDisplayName>
+        <RecepientEmail>cchavva@brierley.com</RecepientEmail>
+      </EmailInformation>
+      <!--<DoNotProcess>true</DoNotProcess>-->
+  </DAPConfiguration>
+  
+  <!-- Configuration parameters for message acquisition -->
+  
+  <InputProvider MessageProcessingScheme="Single" DebugOutputPath="##DEVROOT####Organization##\Data\TLog\Stage1Out">
+    <FlatFileInput>
+      <CollectionRoot Name="Transactions" Structure="Delimited" Delimiter="NL" TagName="">
+        <Record Name="Header" Structure="Delimited" Delimiter="|" TagName="H">
+          <Fields>
+            <RecordField Name="TxnId" Justification="Left"/>
+			<RecordField Name="TxnNumber" Justification="Left"/>
+            <RecordField Name="TxnDate" Justification="Left"/>
+            <RecordField Name="StoreNumber" Justification="Left"/>
+            <RecordField Name="RegisterId" Justification="Left"/>
+            <RecordField Name="NmbrOfItems" Justification="Left"/>
+            <RecordField Name="Barcode" Justification="Left"/>
+            <RecordField Name="TenderType" Justification="Left"/>
+            <RecordField Name="TotalTxnAmount" Justification="Left"/>
+			<RecordField Name="TxnDetailId" Justification="Left"/>
+			<RecordField Name="ProcessID" Justification="Left"/>
+          </Fields>
+        </Record>
+      </CollectionRoot>
+    </FlatFileInput>
+  </InputProvider>
+  
+  <!-- Configuration for message transformation -->
+  <MessageTransformationMap SourceCollectionName="Transactions" TargetAttributeSetType="Global" DebugOutputPath="##DEVROOT####Organization##\Data\TLog\Stage2Out">
+      <FieldMap SourceField="Header/TxnId">
+        <Populate TargetNode="Global/HistoryTxnDetail/TxnHeaderId" />
+      </FieldMap>
+	  <FieldMap SourceField="Header/TxnNumber">
+        <Populate TargetNode="Global/HistoryTxnDetail/TxnNumber" />
+      </FieldMap>
+	 	  <FieldMap SourceField="Header/NmbrOfItems">
+        <Populate TargetNode="Global/HistoryTxnDetail/DtlQuantity" />
+      </FieldMap> 
+	  	  <FieldMap SourceField="Header/ProcessId">
+        <Populate TargetNode="Global/HistoryTxnDetail/ProcessID" />
+      </FieldMap>
+	  <FieldMap SourceField="Header/TxnDetailId">
+        <Populate TargetNode="Global/HistoryTxnDetail/TxnDetailId" />
+      </FieldMap>
+      <FieldMap SourceField="Header/TxnDate">
+        <Populate TargetNode="Global/HistoryTxnDetail/TxnDate" />
+      </FieldMap>
+      <FieldMap SourceField="Header/StoreNumber">
+        <Populate TargetNode="Global/HistoryTxnDetail/TxnStoreId" />
+      </FieldMap>
+      <FieldMap SourceField="Header/RegisterId">
+        <Populate TargetNode="Global/HistoryTxnDetail/TxnRegisterNumber" />
+      </FieldMap>
+  
+     
+      <FieldMap SourceField="Header/TotalTxnAmount">
+        <Populate TargetNode="Global/HistoryTxnDetail/TxnAmount" />
+      </FieldMap>
+     
+  </MessageTransformationMap>
+  
+  <!-- Output Provider -->
+  <OutputProvider>
+    <FrameworkOutput>
+      <!-- Configuration for Dispatcher messages over threads -->
+      <DispatcherConfiguration>
+        <ThreadPoolSize>1</ThreadPoolSize>
+        <RequestsPerThread></RequestsPerThread>
+        <SerializeMembers>true</SerializeMembers>
+        <SerializationPolicy>MemberKey</SerializationPolicy>
+      </DispatcherConfiguration>
+      <!-- Final processing directives -->
+      <FrameworkBoundMessageProcessingDirectives>
+        <ClientDataModel>        
+          <AttributeSetCreateDirectives>
+            <AttributeSetUpdate Name="HistoryTxnDetail" FindMethod="Attribute" FindValue="TxnHeaderId" CreateIfNotFound="True"/>
+          </AttributeSetCreateDirectives>
+        </ClientDataModel>
+      </FrameworkBoundMessageProcessingDirectives>
+    </FrameworkOutput>    
+  </OutputProvider>
+</DAPDirectives>

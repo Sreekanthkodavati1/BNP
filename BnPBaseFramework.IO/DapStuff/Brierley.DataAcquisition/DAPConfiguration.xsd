@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" xml:lang="EN"
+	targetNamespace="http://www.brierley.com/DAPFileProcessing"	
+	xmlns="http://www.brierley.com/DAPFileProcessing"		
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Root element -->
+	<xs:element name="DAPDirectives" type="DAPDirectivesType"/>
+		
+	<!-- Enumerations -->
+
+  <xs:simpleType name="MessageProcessingSchemeEnums">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Single"/>
+      <xs:enumeration value="Batch"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="DAPDataTypeEnums">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MemberAttributeSets"/>
+      <xs:enumeration value="GlobalAttributeSets"/>
+      <xs:enumeration value="Coupons"/>
+      <xs:enumeration value="MessageDefs"/>
+      <xs:enumeration value="Products"/>
+      <xs:enumeration value="Stores"/>
+      <xs:enumeration value="Rewards"/>
+      <xs:enumeration value="MemberBonus"/>
+      <xs:enumeration value="MemberCoupon"/>
+      <xs:enumeration value="CSAgents"/>
+      <xs:enumeration value="Certificates"/>
+      <xs:enumeration value="ContactHistory"/>
+      <xs:enumeration value="SocialListening"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="SerializationPolicyType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MessageContent"/>
+      <xs:enumeration value="MemberKey"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="TargetAttributeSetType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Member"/>
+      <xs:enumeration value="Global"/>
+      <xs:enumeration value="Reference"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="FieldJustificationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Left"/>
+      <xs:enumeration value="Right"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="RecordStructureType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Delimited"/>
+      <xs:enumeration value="FixedLength"/>      
+    </xs:restriction>
+  </xs:simpleType>
+    
+  <xs:simpleType name="InputFieldTypeEnums">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="String"/>
+      <xs:enumeration value="Integer"/>
+      <xs:enumeration value="Long"/>
+      <xs:enumeration value="Double"/>
+      <xs:enumeration value="Date"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="AdapterInputMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ClientDataModel"/>
+      <xs:enumeration value="ReferenceData"/>      
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="LoadTypeEnums">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="IpCode"/>
+			<xs:enumeration value="CertificateNumber"/>
+			<xs:enumeration value="AlternateId"/>
+			<xs:enumeration value="EmailAddress"/>
+			<xs:enumeration value="UserName"/>
+			<xs:enumeration value="LoyaltyIdNumber"/>
+			<xs:enumeration value="UseInterceptor"/>
+		</xs:restriction>	
+	</xs:simpleType>
+
+  <xs:simpleType name="AttributeSetFindTypeEnums">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="First"/>
+      <xs:enumeration value="Last"/>
+      <xs:enumeration value="Newest"/>
+      <xs:enumeration value="Index"/>
+      <xs:enumeration value="Attribute"/>      
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!--<xs:simpleType name="StageTlogDetailLoadTypeEnums">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="IpCode"/>
+      <xs:enumeration value="LoyaltyIdNumber"/>      
+    </xs:restriction>
+  </xs:simpleType>-->
+  
+	<xs:simpleType name="CreateTypeEnums">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Create"/>
+			<xs:enumeration value="Update"/>
+		</xs:restriction>	
+	</xs:simpleType>
+
+  <xs:simpleType name="StoreLoadTypeEnums">
+    <xs:restriction base="xs:string">      
+      <xs:enumeration value="StoreId"/>
+      <xs:enumeration value="StoreNumber"/>
+      <xs:enumeration value="StoreNumberAndBrandName"/>
+      <xs:enumeration value="BrandNameAndBrandStoreNumber"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="CSAgentLoadTypeEnums">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Username"/>      
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="ProductLoadTypeEnums">
+    <xs:restriction base="xs:string">      
+      <xs:enumeration value="SkipExistingCheck"/>
+      <xs:enumeration value="ProductId"/>
+      <xs:enumeration value="ProductName"/>
+      <xs:enumeration value="PartNumber"/>      
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="StoredProcReturnParmActionTypeEnums">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SetGlobal"/>
+      <xs:enumeration value="SetArg"/>      
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="SocialMediaType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Facebook"/>
+      <xs:enumeration value="Twitter"/>
+      <xs:enumeration value="GooglePlus"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!-- This can be used to map any data attribute to a column in the database -->
+  <xs:complexType name="DataAttributeMapDirectiveType">
+    <xs:sequence>
+      <xs:element name="AttributeMap" type="DataAttributeToColumnMapDirectiveType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>       
+  </xs:complexType>
+
+  <xs:complexType name="DataAttributeToColumnMapDirectiveType">
+    <xs:attribute name="AttributeName" type="xs:string" use="required"/>
+    <xs:attribute name="ColumnName" type="xs:string" use="required"/>
+    <xs:attribute name="DBType" type="InputFieldTypeEnums" use="required"/>
+  </xs:complexType>
+  
+	<xs:complexType name="LoadDirectiveType">
+		<xs:attribute name="Method" type="LoadTypeEnums"/>
+		<xs:attribute name="ValuePath" type="xs:string"/>
+	</xs:complexType>			
+	<xs:complexType name="AttributeSetsToLoadType">
+		<xs:sequence>
+			<xs:element name="LoadAttributeSet" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--  Promotion List directives -->
+	<xs:complexType name="AddToPromotionListType">
+		<xs:sequence>
+			<xs:choice minOccurs="1" maxOccurs="1">
+				<xs:element name="Name" type="xs:string"/>
+				<xs:element name="ValuePath" type="xs:string"/>					
+			</xs:choice>							
+		</xs:sequence>					
+	</xs:complexType>
+	<xs:complexType name="PromotionListDirectivesType">
+		<xs:sequence>
+			<xs:element name="AddToPromotionList" type="AddToPromotionListType" minOccurs="1" maxOccurs="unbounded"/>										
+		</xs:sequence>					
+	</xs:complexType>
+	<!-- Inbound File processing -->
+	<xs:complexType name="IfAttributeType">				
+		<xs:attribute name="Name" type="xs:string" use="required"/>
+		<xs:attribute name="Value" type="xs:string" use="required"/>
+		<xs:attribute name="Action" type="CreateTypeEnums" use="required"/>
+		<xs:attribute name="FindBy" type="xs:string" use="optional"/>	
+	</xs:complexType>
+	<xs:complexType name="AttributeSetModifyDirectiveType">
+		<xs:sequence>
+			<xs:element name="IfAttribute" type="IfAttributeType" minOccurs="1" maxOccurs="2"/>			
+		</xs:sequence>	
+		<xs:attribute name="Name" type="xs:string" use="required"/>	
+	</xs:complexType>
+	<xs:complexType name="AttributeSetCreateDirectiveType">
+		<xs:sequence>
+			<xs:element name="MarkTrue" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>	
+		<xs:attribute name="Name" type="xs:string" use="required"/>
+		<xs:attribute name="IfPresent" type="xs:string" use="required"/>
+    <xs:attribute name="LoadExisting" type="xs:boolean" use="optional"/>
+    <xs:attribute name="AddMissingPropertyAsTransient" type="xs:boolean" use="optional"/>
+    <xs:attribute name="UpdateLastActivityDate" type="xs:boolean" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="AttributeSetUpdateDirectiveType">		
+		<xs:attribute name="Name" type="xs:string" use="required"/>
+    <xs:attribute name="FindMethod" type="AttributeSetFindTypeEnums" use="required"/>
+		<xs:attribute name="FindValue" type="xs:string" use="optional"/>
+		<xs:attribute name="CreateIfNotFound" type="xs:boolean" default="false"/>
+    <xs:attribute name="AddMissingPropertyAsTransient" type="xs:boolean" use="optional"/>
+    <xs:attribute name="UpdateLastActivityDate" type="xs:boolean" use="optional"/>
+	</xs:complexType>	
+	<xs:complexType name="AttributeSetCreateDirectivesType">
+		<xs:sequence >
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="AttributeSetModify" type="AttributeSetModifyDirectiveType"/>
+				<xs:element name="AttributeSetCreate" type="AttributeSetCreateDirectiveType"/>	
+				<xs:element name="AttributeSetUpdate" type="AttributeSetUpdateDirectiveType"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MemberLoadDirectivesType">
+		<xs:sequence>
+			<xs:element name="LoadDirective" type="LoadDirectiveType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>				
+		<xs:attribute name="ExceptionIfNotFound" type="xs:boolean" default="false"/>
+		<xs:attribute name="ExceptionIfFound" type="xs:boolean" default="false"/>
+    <xs:attribute name="HandleMemberNotFoundInInterceptor" type="xs:boolean" default="false"/>
+	</xs:complexType>
+  
+  <!-- Social Data -->
+
+  <xs:complexType name="CampaignDataLoadRulesExecuteType">
+    <xs:sequence>       
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" use="required"/>
+  </xs:complexType>
+  
+  <xs:complexType name="CampaignDataLoadRulesDirectiveType">
+    <xs:sequence>
+      <xs:element name="Execute" type="CampaignDataLoadRulesExecuteType" minOccurs="0" maxOccurs="unbounded">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CampaignDataLoadDirectiveType">
+    <xs:sequence>
+      <xs:element name="Rules" type="CampaignDataLoadRulesDirectiveType" minOccurs="0" maxOccurs="1">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+	<!--  Reference Data Load directive  -->
+	<xs:complexType name="RefDataAttributeMapDirectiveType">
+		<xs:attribute name="Name" type="xs:string" use="required"/>	
+		<xs:attribute name="ValuePath" type="xs:string" use="required"/>										
+	</xs:complexType>
+    
+	<xs:complexType name="ProductLoadDirectiveType">
+    <xs:sequence>
+      <xs:element name="AttributeMapping" type="RefDataAttributeMapDirectiveType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+		<xs:attribute name="CreateCategoryIfNotFound" type="xs:boolean" default="false"/>
+    <xs:attribute name="ProductLoadMethod" type="ProductLoadTypeEnums" use="optional"/>
+    <xs:attribute name="CreateIfNotExisting" type="xs:boolean" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="RewardLoadDirectiveType">												
+	</xs:complexType>
+	<xs:complexType name="OfferLoadDirectiveType">												
+	</xs:complexType>
+	<xs:complexType name="MemberOfferLoadDirectiveType">
+		<xs:sequence>
+			<xs:element name="MemberLoadDirective" type="MemberLoadDirectivesType"/>
+			<xs:element name="AttributeMapping" type="RefDataAttributeMapDirectiveType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="GenerateMTouch" type="xs:boolean" use="required"/>													
+	</xs:complexType>
+  <xs:complexType name="MemberCouponLoadDirectiveType">
+    <xs:sequence>
+      <xs:element name="MemberLoadDirective" type="MemberLoadDirectivesType"/>
+      <xs:element name="AttributeMapping" type="RefDataAttributeMapDirectiveType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="GenerateMTouch" type="xs:boolean" use="required"/>
+    <!--<xs:attribute name="BulkLoadMethod" type="xs:boolean" default="false"/>-->
+  </xs:complexType>
+	<xs:complexType name="StoreLoadDirectiveType">
+		<xs:sequence>			
+			<xs:element name="AttributeMapping" type="RefDataAttributeMapDirectiveType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>    
+    <xs:attribute name="StoreLoadMethod" type="StoreLoadTypeEnums"/>
+		<xs:attribute name="SanitizeAddress" type="xs:boolean" use="required"/>	
+		<xs:attribute name="SanitizationSvcUrl" type="xs:string"/>
+    <xs:attribute name="CreateIfNotExisting" type="xs:boolean" use="optional"/>
+	</xs:complexType>
+  <xs:complexType name="CSAgentLoadDirectiveType">
+    <xs:sequence>
+      <xs:element name="AttributeMapping" type="RefDataAttributeMapDirectiveType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="CSAgentLoadMethod" type="CSAgentLoadTypeEnums"/>    
+    <xs:attribute name="CreateIfNotExisting" type="xs:boolean" use="optional"/>
+  </xs:complexType>
+	<xs:complexType name="CouponLoadDirectiveType">
+    <xs:sequence>
+      <xs:element name="AttributeMapping" type="RefDataAttributeMapDirectiveType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="CreateCategoryIfNotFound" type="xs:boolean" default="false"/>    
+	</xs:complexType>
+  <xs:complexType name="CertificatesLoadDirectiveType">
+    <xs:sequence>
+      <xs:element name="AttributeMapping" type="RefDataAttributeMapDirectiveType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>    
+  </xs:complexType>
+  <xs:complexType name="ContactHistoryLoadDirectiveType">
+    <xs:sequence>
+      <xs:element name="AttributeMapping" type="RefDataAttributeMapDirectiveType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <!--<xs:attribute name="BulkLoadMethod" type="xs:boolean" default="false"/>-->
+  </xs:complexType>
+  <xs:complexType name="MessageDefLoadDirectiveType">
+    <xs:sequence>
+      <xs:element name="AttributeMapping" type="RefDataAttributeMapDirectiveType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>    
+  </xs:complexType>
+	<xs:complexType name="FrameworkBoundMessageProcessingDirectivesType">
+		<xs:sequence>
+			<xs:element name="InterceptorAssembly" type="InterceptorAssemblyType" minOccurs="0" maxOccurs="1"/>
+			<xs:choice>
+				<xs:element name="ClientDataModel">					
+					<xs:complexType>
+						<xs:sequence>
+              <!--<xs:element name="MessageMap" type="MessageMappingType" minOccurs="0" maxOccurs="1"/>-->
+							<xs:element name="MemberLoadDirectives" type="MemberLoadDirectivesType" minOccurs="0" maxOccurs="1"/>
+							<xs:element name="AttributeSetCreateDirectives" type="AttributeSetCreateDirectivesType" minOccurs="0" maxOccurs="1"/>
+							<xs:element name="PromotionListDirectives" type="PromotionListDirectivesType" minOccurs="0" maxOccurs="1"/>
+						</xs:sequence>
+            <xs:attribute name="UpdateProcessId" type="xs:boolean" default="false" use="optional"/>
+            <xs:attribute name="BulkLoad" type="xs:boolean" default="false" use="optional"/>
+					</xs:complexType>
+				</xs:element>				
+				<xs:element name="FrameworkReferenceData">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:choice>
+								<xs:element name="ProductLoadDirective" type="ProductLoadDirectiveType" minOccurs="0" maxOccurs="1"/>
+								<xs:element name="RewardLoadDirective" type="RewardLoadDirectiveType" minOccurs="0" maxOccurs="1"/>
+								<xs:element name="OfferLoadDirective" type="OfferLoadDirectiveType" minOccurs="0" maxOccurs="1"/>
+								<xs:element name="CouponLoadDirective" type="CouponLoadDirectiveType" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="MessageDefLoadDirective" type="MessageDefLoadDirectiveType" minOccurs="0" maxOccurs="1"/>
+								<xs:element name="MemberOfferLoadDirective" type="MemberOfferLoadDirectiveType" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="MemberCouponLoadDirective" type="MemberCouponLoadDirectiveType" minOccurs="0" maxOccurs="1"/>
+								<xs:element name="StoreLoadDirective" type="StoreLoadDirectiveType" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="CSAgentLoadDirective" type="CSAgentLoadDirectiveType" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="CertificatesLoadDirective" type="CertificatesLoadDirectiveType" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="ContactHistoryLoadDirective" type="ContactHistoryLoadDirectiveType" minOccurs="0" maxOccurs="1"/>
+							</xs:choice>															
+						</xs:sequence>
+            <xs:attribute name="BulkLoad" type="xs:boolean" default="false" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+        <xs:element name="SocialListeningData">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:choice>
+                <xs:element name="CampaignDataLoadDirective" type="CampaignDataLoadDirectiveType" minOccurs="0" maxOccurs="1"/>                
+              </xs:choice>
+            </xs:sequence>
+            <xs:attribute name="BulkLoad" type="xs:boolean" default="false" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>												
+		</xs:sequence>						
+	</xs:complexType>		
+	<!-- General -->
+	<xs:complexType name="InterceptorParmsType">
+		<xs:sequence>
+			<xs:element name="Parm" type="InterceptorParmType" minOccurs="1" maxOccurs="unbounded"/>			
+		</xs:sequence>										
+	</xs:complexType>
+	<xs:complexType name="InterceptorParmType">
+		<xs:attribute name="Name" type="xs:string" use="required"/>	
+		<xs:attribute name="Value" type="xs:string" use="required"/>										
+	</xs:complexType>	
+	<xs:complexType name="InterceptorAssemblyType">
+		<xs:sequence>
+			<xs:element name="InterceptorAssemlyName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="InterceptorTypeName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="InterceptorParms" type="InterceptorParmsType" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="ReuseForFile" type="xs:boolean"/>
+	</xs:complexType>
+				
+  <!-- Adapter Configuration -->
+  <xs:complexType name="TriggerFileInformationType">
+    <xs:sequence>     
+    </xs:sequence>
+    <xs:attribute name="FileExtension" type="xs:string" use="required"/>
+    <xs:attribute name="PollingInterval" type="xs:long" use="required"/>
+    <xs:attribute name="ExclusiveLock" type="xs:boolean" use="optional"/>
+    <xs:attribute name="DeleteFile" type="xs:boolean" use="optional"/>
+  </xs:complexType>
+  
+  <xs:complexType name="EmailInformationType">
+    <xs:sequence>
+      <xs:element name="SMTPServer" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SenderEmail" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="SenderDisplayName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="RecepientEmail" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Subject" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="EmailInterceptor" type="InterceptorAssemblyType" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>  
+  </xs:complexType>
+
+  <xs:complexType name="DAPConfigurationType">
+    <xs:sequence>
+      <xs:element name="Organization" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Environment" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="DAPDataType" type="DAPDataTypeEnums" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="DateConversionFormat" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="TrimStrings" type="xs:boolean"/>
+      <!--<xs:element name="TriggerFileInformation" type="TriggerFileInformationType" minOccurs="0" maxOccurs="1"/>-->
+      <xs:element name="EmailInformation" type="EmailInformationType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="DoNotProcess" type="xs:boolean" default="false" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SerializationMethodType">
+    <xs:sequence>      
+    </xs:sequence>
+    <xs:attribute name="LookupMethod" type="LoadTypeEnums" use="required"/>
+    <xs:attribute name="ValuePath" type="xs:string" use="required"/>
+  </xs:complexType>
+  
+  <!-- Output Provider -->
+  <xs:complexType name="CustomOutputType">
+    <xs:sequence>
+      <xs:element name="TypeName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="AssemblyName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Parameters" type="CustomInputParmsType" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="OutputHeaderRecordType">
+    <xs:sequence>      
+    </xs:sequence>
+    <xs:attribute name="Value" type="xs:string" use="required"/>
+    <xs:attribute name="Length" type="xs:string" use="optional"/>    
+  </xs:complexType>
+  
+  <xs:complexType name="DelimetedFileOutputType">
+    <xs:sequence>
+      <xs:element name="Header" type="OutputFileHeaderType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="FieldMap" type="OutputRecordsType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Trailer" type="OutputFilTrailerType" minOccurs="0" maxOccurs="1"/>      
+    </xs:sequence>
+    <xs:attribute name="CollectionName" type="xs:string" use="required"/>
+    <xs:attribute name="RecordName" type="xs:string" use="required"/>
+    <xs:attribute name="DataInAttributes" type="xs:boolean" use="optional"/>
+    <xs:attribute name="OutputFolder" type="xs:string" use="required"/>
+    <xs:attribute name="FileName" type="xs:string" use="required"/>
+    <xs:attribute name="SFTPKey" type="xs:string" use="optional"/>
+    <xs:attribute name="SFTPTriggerFileName" type="xs:string" use="optional"/>
+    <xs:attribute name="PGPEncrytionKey" type="xs:string" use="optional"/>
+    <xs:attribute name="Delimiter" type="xs:string" use="optional"/>    
+  </xs:complexType>
+
+  <xs:complexType name="OutputRecordType">
+    <xs:sequence>
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" use="required"/>
+    <xs:attribute name="Length" type="xs:string" use="required"/>
+    <xs:attribute name="Justification" type="FieldJustificationType" use="optional"/>
+    <xs:attribute name="Pad" type="xs:string" use="optional"/>
+  </xs:complexType>
+  
+  <xs:complexType name="OutputRecordsType">
+    <xs:sequence>
+      <xs:element name="Field" type="OutputRecordType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:complexType name="FixedRecordFileOutputType">
+    <xs:sequence>
+      <xs:element name="Header" type="OutputFileHeaderType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="FieldMap" type="OutputRecordsType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Trailer" type="OutputFilTrailerType" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+    <xs:attribute name="CollectionName" type="xs:string" use="required"/>
+    <xs:attribute name="RecordName" type="xs:string" use="required"/>
+    <xs:attribute name="DataInAttributes" type="xs:boolean" use="optional"/>
+    <xs:attribute name="OutputFolder" type="xs:string" use="required"/>
+    <xs:attribute name="FileName" type="xs:string" use="required"/>
+    <xs:attribute name="SFTPKey" type="xs:string" use="optional"/>
+    <xs:attribute name="SFTPTriggerFileName" type="xs:string" use="optional"/>
+    <xs:attribute name="PGPEncrytionKey" type="xs:string" use="optional"/>
+    <xs:attribute name="Justification" type="FieldJustificationType" use="optional"/>    
+  </xs:complexType>
+    
+  <xs:complexType name="OutputFileHeaderType">
+    <xs:sequence>
+      <xs:element name="HeaderIdentifier" type="OutputHeaderRecordType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="DateFormat" type="OutputHeaderRecordType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="FromTo" type="OutputHeaderRecordType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="FileType" type="OutputHeaderRecordType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="MessageType" type="OutputHeaderRecordType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="FileDescription" type="OutputHeaderRecordType" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>    
+  </xs:complexType>
+    
+  <xs:complexType name="OutputFilTrailerType">
+    <xs:sequence>
+      <xs:element name="TrailerIdentifier" type="OutputHeaderRecordType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="FileType"  type="OutputHeaderRecordType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="MessageCount"  type="OutputHeaderRecordType" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:complexType name="DispatcherConfigurationType">
+    <xs:sequence>
+      <xs:element name="ThreadPoolSize" type="xs:int" minOccurs="0" maxOccurs="1" default="10"/>
+      <xs:element name="RequestsPerThread" type="xs:int" minOccurs="0" maxOccurs="1" default="100000"/>
+      <xs:element name="NumberOfRetries" type="xs:int" minOccurs="0" maxOccurs="1" default="3"/>
+      <xs:element name="SleepInterval" type="xs:int" minOccurs="0" maxOccurs="1" default="2000"/>
+      <xs:element name="SerializeMembers" type="xs:boolean" default="false" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SerializationPolicy" type="SerializationPolicyType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SerializationMethod" type="SerializationMethodType" minOccurs="0" maxOccurs="1"/>      
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="FrameworkOutputConfigurationType">
+    <xs:sequence>      
+      <xs:element name="DispatcherConfiguration" type="DispatcherConfigurationType" minOccurs="1" maxOccurs="1"/>      
+      <xs:element name="FrameworkBoundMessageProcessingDirectives" type="FrameworkBoundMessageProcessingDirectivesType" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Messaging Output/Input Providers -->
+  <!--<xs:complexType name="SimpleMessageQueueOutputType">
+    <xs:sequence>
+      <xs:element name="EndpointName" type="xs:string" minOccurs="0" maxOccurs="1"/>      
+    </xs:sequence>    
+  </xs:complexType>-->
+  
+  <xs:complexType name="OutProviderType">
+    <xs:choice>
+      <xs:element name="FrameworkOutput" type="FrameworkOutputConfigurationType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="DelimetedFileOutput" type="DelimetedFileOutputType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="FixedRecordFileOutput" type="FixedRecordFileOutputType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SimpleMessageQueueOutput" type="SimpleMessageQueueType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="CustomOutput" type="CustomOutputType" minOccurs="0" maxOccurs="1"/>
+    </xs:choice>
+    <xs:attribute name="CheckForChangedValues" type="xs:boolean" use="optional"/>
+  </xs:complexType>
+  
+  <!-- Input Provider -->
+
+  <!-- Messaging Output/Input Providers -->
+  <xs:complexType name="SimpleMessageQueueType">
+    <xs:sequence>
+      <xs:element name="EndpointName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Uri" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Public" type="xs:boolean" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Transactional" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Timeout" type="xs:int" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="InputProviderType">
+    <xs:choice>
+      <xs:element name="FlatFileInput" type="FlatFileInputType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="XmlFileInput" type="XmlFileInputType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SimpleDatabaseInput" type="SimpleDatabaseInputType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="StagedTlogDatabaseInput" type="StagedTlogDatabaseInputType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="StagedDatabaseInput" type="StagedDatabaseInputType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SimpleMessageQueueInput" type="SimpleMessageQueueType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="CustomInput" type="CustomInputType" minOccurs="0" maxOccurs="1"/>
+    </xs:choice>    
+    <xs:attribute name="MessageProcessingScheme" type="MessageProcessingSchemeEnums" use="required"/>
+    <xs:attribute name="DebugOutputPath" type="xs:string" use="optional"/>
+    <xs:attribute name="StripInvalidCharactersForXml" type="xs:boolean" use="optional"/>
+  </xs:complexType>
+  
+  <!-- Proprocessing Stage -->
+
+  <xs:complexType name="StoredProcParameterType">    
+    <xs:attribute name="Name" type="xs:string" use="required"/>
+    <xs:attribute name="Type" type="InputFieldTypeEnums" use="required"/>
+    <xs:attribute name="Value" type="xs:string" use="optional"/>
+    <xs:attribute name="Required" type="xs:boolean" use="optional"/>
+    <xs:attribute name="DefaultValue" type="xs:string" use="optional"/>    
+  </xs:complexType>
+  
+  <xs:complexType name="StoredProcParametersType">
+    <xs:sequence>
+      <xs:element name="Parm" type="StoredProcParameterType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="StoredProcReturnParmActionType">
+    <xs:sequence>      
+    </xs:sequence>
+    <xs:attribute name="Action" type="StoredProcReturnParmActionTypeEnums" use="required"/>
+    <xs:attribute name="Name" type="xs:string" use="required"/>
+  </xs:complexType>
+  
+  <xs:complexType name="StoredProcReturnParmType">
+    <xs:sequence>      
+      <xs:element name="Parm" type="StoredProcParameterType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="ParmAction" type="StoredProcReturnParmActionType" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:complexType name="StoredProcTaskType">
+    <xs:sequence>
+      <xs:element name="InputParameters" type="StoredProcParametersType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ReturnParameter" type="StoredProcReturnParmType" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" use="required"/>    
+  </xs:complexType>
+
+  <xs:complexType name="RewardsRetrievalCriteriaType">
+    <xs:sequence>
+      <!--<xs:element name="CategoryName" type="xs:string" minOccurs="0" maxOccurs="1"/>-->
+      <xs:choice>
+        <xs:sequence>
+          <xs:element name="StartDate" type="xs:string" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="EndDate" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>        
+        <xs:element name ="ChangedSince" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      </xs:choice>
+      <!--<xs:element name="StartDate" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="EndDate" type="xs:string" minOccurs="0" maxOccurs="1"/>-->
+      <xs:element name="UnRedeemedOnly" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="UnexpiredOnly" type="xs:boolean" minOccurs="0" maxOccurs="1"/>      
+    </xs:sequence>  
+  </xs:complexType>
+  
+  <xs:complexType name="RewardsRedemptionTaskType">
+    <xs:sequence>
+      <xs:element name="FulfillmentProviderName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="RewardsStagingTableName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PrimaryKeyName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="TruncateTable" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="RewardsRetrievalCriteria" type="RewardsRetrievalCriteriaType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="DataAttributeToColumnMap" type="DataAttributeMapDirectiveType" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" use="required"/>
+    <xs:attribute name="MemberRetrievalRange" type="xs:string" use="required"/>
+    <xs:attribute name="MemberRetrievalBatchSize" type="xs:int" use="required"/>
+  </xs:complexType>
+  
+  <xs:complexType name="PreProcessorType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="StoredProcTask" type="StoredProcTaskType"/>
+      <xs:element name="RewardsRedemptionTask" type="RewardsRedemptionTaskType"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="PostProcessorType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="StoredProcTask" type="StoredProcTaskType"/>      
+    </xs:choice>
+  </xs:complexType>
+  
+  <!-- File format -->
+  <xs:complexType name="RecordFieldstype">
+    <xs:sequence>
+      <xs:element name="RecordField" type="RecordFieldType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RecordFieldType">
+    <xs:sequence>      
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" use="required"/>
+    <xs:attribute name="Type" type="InputFieldTypeEnums" use="optional"/>
+    <xs:attribute name="Length" type="xs:string" use="optional"/>
+    <xs:attribute name="Justification" type="FieldJustificationType" use="optional"/>
+    <xs:attribute name="Required" type="xs:boolean" use="optional"/>
+  </xs:complexType>  
+  <xs:complexType name="RecordType">
+    <xs:sequence>      
+      <xs:element name="Fields" type="RecordFieldstype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Record" type="RecordType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" use="required"/>    
+    <xs:attribute name="Structure" type="RecordStructureType" use="required"/>
+    <xs:attribute name="Delimiter" type="xs:string" use="optional"/>
+    <xs:attribute name="TagName" type="xs:string" use="optional"/>
+  </xs:complexType>  
+  <xs:complexType name="FlatFileInputType">
+    <xs:sequence>
+      <xs:element name="CollectionRoot" type="RecordType" minOccurs="1" maxOccurs="1"/>      
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="XmlFileInputType">
+    <xs:sequence>      
+    </xs:sequence>
+    <xs:attribute name="RootName" type="xs:string" use="required"/>    
+    <xs:attribute name="RecordName" type="xs:string" use="required"/>
+    <xs:attribute name="EncapsulatingTargetRoot" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <!-- Mutual Mind Input -->
+  <xs:complexType name="SupportedPublisherType">
+    <xs:sequence>
+    </xs:sequence>
+    <xs:attribute name="Name" type="SocialMediaType" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="PublishersType">
+    <xs:sequence>
+      <xs:element name="Publisher" type="SupportedPublisherType" minOccurs="1" maxOccurs="3"/>
+    </xs:sequence>    
+  </xs:complexType>
+  <xs:complexType name="KeywordType">
+    <xs:sequence>
+      <xs:element name="Keyword" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Database Input -->
+  <xs:complexType name="DatabaseFieldType">
+    <xs:sequence>            
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" use="required"/>
+    <xs:attribute name="Type" type="InputFieldTypeEnums" use="required"/>
+    <xs:attribute name="Required" type="xs:boolean" use="optional"/>
+    <xs:attribute name="DefaultValue" type="xs:string" use="optional"/>
+    <xs:attribute name="SpecialType" type="xs:string" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="DatabaseFieldsType">
+    <xs:sequence>
+      <xs:element name="Field" type="DatabaseFieldType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SimpleDatabaseInputType">
+    <xs:sequence>
+      <xs:element name="QueryString" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Fields" type="DatabaseFieldsType" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+    <xs:attribute name="CollectionName" type="xs:string" use="required"/>
+    <xs:attribute name="RecordName" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="StagedTlogDatabaseInputType">
+    <xs:sequence>
+      <xs:element name="TlogMessageProducer" type="MessageProducerType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="DetailFields" type="DatabaseFieldsType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="TenderFields" type="DatabaseFieldsType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="DiscountFields" type="DatabaseFieldsType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="RewardsFields" type="DatabaseFieldsType" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+    <!--<xs:attribute name="CollectionName" type="xs:string" use="required"/>
+    <xs:attribute name="RecordName" type="xs:string" use="required"/>-->
+    <xs:attribute name="CheckProcessId" type="xs:boolean" use="optional"/>
+    <xs:attribute name="MemberRetrievalRange" type="xs:string" use="required"/>
+    <xs:attribute name="MemberRetrievalBatchSize" type="xs:int" use="required"/>
+    <xs:attribute name="OrderBy" type="xs:string" use="optional"/>
+    <xs:attribute name="ProcessTenders" type="xs:boolean" use="optional"/>
+    <xs:attribute name="ProcessDiscounts" type="xs:boolean" use="optional"/>
+    <xs:attribute name="ProcessRewards" type="xs:boolean" use="optional"/>
+    <xs:attribute name="StagingDetailTable" type="xs:string" use="required"/>
+    <!--<xs:attribute name="StageDetailLoadMethod" type="StageTlogDetailLoadTypeEnums" use="optional"/>-->
+    <xs:attribute name="StagingTenderTable" type="xs:string" use="optional"/>
+    <xs:attribute name="StagingDiscountTable" type="xs:string" use="optional"/>
+    <xs:attribute name="StagingRewardsTable" type="xs:string" use="optional"/>
+  </xs:complexType>
+  
+  <xs:complexType name="MessageProducerType">
+    <xs:sequence>
+      <xs:element name="TypeName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="AssemblyName" type="xs:string" minOccurs="1" maxOccurs="1"/>      
+      <xs:element name="Parameters" type="CustomInputParmsType" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>    
+  </xs:complexType>
+  <xs:complexType name="StagedDatabaseInputType">
+    <xs:sequence>
+      <xs:element name="MessageProducer" type="MessageProducerType" minOccurs="1" maxOccurs="1"/>      
+    </xs:sequence>
+    <xs:attribute name="MemberRetrievalRange" type="xs:string" use="required"/>
+    <xs:attribute name="MemberRetrievalBatchSize" type="xs:int" use="required"/>    
+  </xs:complexType>
+  <!--Custom -->
+  <xs:complexType name="CustomInputType">
+    <xs:sequence>
+      <xs:element name="TypeName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="AssemblyName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Parameters" type="CustomInputParmsType" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CustomInputParmType">
+    <xs:sequence>      
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" use="required"/>
+    <xs:attribute name="Value" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="CustomInputParmsType">
+    <xs:sequence>      
+      <xs:element name="Parameter" type="CustomInputParmType" minOccurs="1" maxOccurs="unbounded"/>      
+    </xs:sequence>
+  </xs:complexType>
+  
+  <!-- Message Mapping -->
+  <xs:complexType name="FieldMapPopulateType">
+    <xs:sequence>      
+    </xs:sequence>
+    <xs:attribute name="TargetNode" type="xs:string" use="required"/>
+    <xs:attribute name="UseScript" type="xs:string" use="optional"/>
+    <xs:attribute name="CreateNewNode" type="xs:boolean" use="optional"/>
+    <xs:attribute name="IsContentAttributeNode" type="xs:boolean" use="optional"/>
+    <xs:attribute name="IsChannelLangNode" type="xs:boolean" use="optional"/>
+    <xs:attribute name="Language" type="xs:string" use="optional"/>
+    <xs:attribute name="Channel" type="xs:string" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="FieldMapType">
+    <xs:sequence>
+      <xs:element name="Populate" type="FieldMapPopulateType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="SourceField" type="xs:string" use="required"/>    
+  </xs:complexType>
+  <xs:complexType name="MissingFieldType">
+    <xs:sequence>
+    </xs:sequence>
+    <xs:attribute name="TargetNode" type="xs:string" use="required"/>    
+    <xs:attribute name="Value" type="xs:string" use="optional"/>
+    <xs:attribute name="UseScript" type="xs:string" use="optional"/>
+    <xs:attribute name="UseMacro" type="xs:string" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="MappingScriptType">
+    <xs:sequence>
+      <xs:element name="Code" type="xs:string" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" use="required"/>
+    <xs:attribute name="InParmName" type="xs:string" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="MappingScriptsType">
+    <xs:sequence>
+      <xs:element name="Script" type="MappingScriptType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MessageMappingType">
+    <xs:sequence>
+      <xs:element name="Scripts" type="MappingScriptsType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="FieldMap" type="FieldMapType" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="MissingField" type="MissingFieldType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>    
+    <xs:attribute name="SourceCollectionName" type="xs:string" use="required"/>
+    <xs:attribute name="TargetAttributeSetType" type="TargetAttributeSetType" use="required"/>
+    <xs:attribute name="TargetCollectionName" type="xs:string" use="optional"/>
+    <xs:attribute name="DebugOutputPath" type="xs:string" use="optional"/>
+  </xs:complexType>
+  <!-- File processing directive -->  
+  <xs:complexType name="DAPDirectivesType">
+		<xs:sequence>
+      <xs:element name="DAPConfiguration" type="DAPConfigurationType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="PreProcessor" type="PreProcessorType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="InputProvider" type="InputProviderType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="MessageTransformationMap" type="MessageMappingType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="OutputProvider" type="OutProviderType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="PostProcessor" type="PostProcessorType" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>    		
+	</xs:complexType>
+</xs:schema>

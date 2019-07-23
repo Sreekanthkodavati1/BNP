@@ -1,0 +1,6 @@
+C||DemoStore9996|Plano Store|BSG|||||Plano|TX|75034|Collin|USA|1|0|12/11/2018 12:21:05 PM||1234|5678|SouthWest|Southwest|
+C||DemoStore9996|Plano Store|BSG||47667|||Plano||75034|Collin|USA|1|0|12/11/2018 12:21:05 PM||1234|5678|SouthWest|Southwest|
+C||DemoStore9996|Plano Store|BSG||3445|3400 Parker Road||||75034|Collin|USA|1|0|12/11/2018 12:21:05 PM||1234|5678|SouthWest|Southwest|
+C||DemoStore9996|Plano Store|BSG||234|3400 Parker Road||Plano|TX|75034|Collin||1|0|12/11/2018 12:21:05 PM||1234|5678|SouthWest|Southwest|
+C||DemoStore9996|Plano Store|BSG||8789|3400 Parker Road||Plano||75034|Collin||1|0|12/11/2018 12:21:05 PM||1234|5678|SouthWest|Southwest|
+C||DemoStore9996|Plano Store|BSG||6667778989|3400 Parker Road||Plano|TX|75034|Collin|USA|1|0|12/11/2018 12:21:05 PM||1234|5678|SouthWest|Southwest|

@@ -1,0 +1,16 @@
+﻿[
+    {
+        "Execution": "API_SOAP_Smoke",
+        "TestCases": [
+            "Bnp.Core.Tests.Web.Navigator.BTA80_Navigator_Create_Organizations_And_Environments.BTA80_Navigator_CreateOrganizationsAndEnvironments"
+        ]
+    }
+]
+            //"Bnp.Core.Tests.API.CDIS_Services.CDIS_E2ETestCases.API_CDIS_addmemberExistingVC",
+            //"Bnp.Core.Tests.API.CDIS_Services.CDIS_E2ETestCases.API_CDIS_addmemberGeneral",
+            //"Bnp.Core.Tests.API.CDIS_Services.CDIS_E2ETestCases.API_CDIS_addmemberInvalidFN",
+            //"Bnp.Core.Tests.API.CDIS_Services.CDIS_E2ETestCases.API_CDIS_addmemberMandatory",
+            //"Bnp.Core.Tests.API.CDIS_Services.CDIS_E2ETestCases.API_CDIS_addmemberNoLoyalityCard",
+            //"Bnp.Core.Tests.API.CDIS_Services.CDIS_E2ETestCases.API_CDIS_getMemberById"
+
+            //"Bnp.Core.Tests.Web.Navigator.BTA80_Navigator_Create_Organizations_And_Environments.BTA80_Navigator_CreateOrganizationAndEnvironment"
